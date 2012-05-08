@@ -1,21 +1,21 @@
 <?php
-include_once('IMDomainObject');
+include_once('IMDomainObject.php');
 
 class MUser implements  IMDomainObject
 {
-    var $userId;
-    var $userName;
-    var $userPass;
+    var $userId = NULL;
+    var $userName = NULL;
+    var $userPass = NULL;
 
     function Init($userName, $userPass)
     {
-        $this->userId = NULL;
-        $this->userName = $userName;
-        $this->userPass = $userPass;
+        $this->userName = mysql_real_escape_string($userName);
+        $this->userPass = mysql_real_escape_string($userPass);
     }
 
     function Select($userName)
     {
+        $userName = mysql_real_escape_string($userName);
         $query = mysql_query("SELECT * FROM users WHERE user_name = '$userName'");
         if(mysql_errno() == 0)
         {
@@ -36,5 +36,11 @@ class MUser implements  IMDomainObject
     function Update(){}
 
     function Delete(){}
+
+    function CheckPass($userPass)
+    {
+        if ($this->userPass == $userPass) return true;
+        else return false;
+    }
 }
 ?>
