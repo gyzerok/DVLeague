@@ -12,9 +12,9 @@ class CUserAuth
             if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_pass']))
             {
                 $user->Select($_COOKIE['user_name']);
-                if ($user->userPass == $_COOKIE['user_pass'])
+                if ($user->pass == $_COOKIE['user_pass'])
                 {
-                    $_SESSION['user_name'] = $user->userName;
+                    $_SESSION['user_name'] = $user->name;
                     return true;
                 }
                 setcookie("user_name", "", time() - 3600, "/");
@@ -24,19 +24,19 @@ class CUserAuth
             else
             {
                 $user->Select($userName);
-                if ($user->userPass == md5($userPass))
+                if ($user->pass == md5($userPass))
                 {
-                    $_SESSION['user_name'] = $user->userName;
+                    $_SESSION['user_name'] = $user->name;
                     if ($cookieChecked)
                     {
-                        setcookie("user_name", $user->userName, time() + 3600 * 24 * 7 * 30, "/");
-                        setcookie("user_pass", $user->userPass, time() + 3600 * 24 * 7 * 30, "/");
+                        setcookie("user_name", $user->name, time() + 3600 * 24 * 7 * 30, "/");
+                        setcookie("user_pass", $user->pass, time() + 3600 * 24 * 7 * 30, "/");
                         setcookie("cookie", "true", time() + 3600, "/");
                     }
                     else
                     {
-                        setcookie("user_name", $user->userName, 0, "/");
-                        setcookie("user_pass", $user->userPass, 0, "/");
+                        setcookie("user_name", $user->name, 0, "/");
+                        setcookie("user_pass", $user->pass, 0, "/");
                     }
                     return true;
                 }

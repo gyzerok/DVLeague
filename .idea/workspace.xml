@@ -31,19 +31,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="not_authed_form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/not_authed_form.html">
+      <file leaf-file-name="MNews.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/MNews.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="50" selection-start="697" selection-end="697" vertical-scroll-proportion="-13.076923">
+            <state line="31" column="95" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CUserAuth.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/CUserAuth.php">
+      <file leaf-file-name="MInitDB.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="24" selection-start="30" selection-end="30" vertical-scroll-proportion="0.030411448">
+            <state line="19" column="52" selection-start="655" selection-end="655" vertical-scroll-proportion="0.57781756">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CAdminController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/CAdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="25" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MUser.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/MUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="8" selection-start="817" selection-end="941" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,22 +107,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/controller/CUserRegistrator.php" />
         <option value="$PROJECT_DIR$/model/IMDomainObject.php" />
         <option value="$PROJECT_DIR$/model/MConnection.php" />
-        <option value="$PROJECT_DIR$/controller/CAdminController.php" />
         <option value="$PROJECT_DIR$/view/admin.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/model/MInitDB.php" />
         <option value="$PROJECT_DIR$/view/register_form.html" />
         <option value="$PROJECT_DIR$/view/auth_form.html" />
         <option value="$PROJECT_DIR$/view/index.html" />
-        <option value="$PROJECT_DIR$/model/MUser.php" />
         <option value="$PROJECT_DIR$/controller/CController.php" />
         <option value="$PROJECT_DIR$/view/not_authed_form.html" />
         <option value="$PROJECT_DIR$/view/authed_form.html" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controller/CUserAuth.php" />
+        <option value="$PROJECT_DIR$/model/MUser.php" />
+        <option value="$PROJECT_DIR$/model/MNews.php" />
+        <option value="$PROJECT_DIR$/controller/CAdminController.php" />
+        <option value="$PROJECT_DIR$/model/MInitDB.php" />
       </list>
     </option>
   </component>
@@ -353,13 +371,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/controller.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/IMDomainObject.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="21" selection-start="110" selection-end="110" vertical-scroll-proportion="0.15205725">
@@ -381,13 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/CAdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="147" selection-end="147" vertical-scroll-proportion="0.21338913">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_7.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="615" column="54" selection-start="18162" selection-end="18207" vertical-scroll-proportion="0.51046026">
@@ -398,27 +402,6 @@
     <entry file="file://$PROJECT_DIR$/import/twig/lib/Twig/Loader/Filesystem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="16" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.40215054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="26" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/CController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -453,7 +436,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/not_authed_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="50" selection-start="697" selection-end="697" vertical-scroll-proportion="-13.076923">
+        <state line="20" column="50" selection-start="697" selection-end="697" vertical-scroll-proportion="0.6378987">
           <folding />
         </state>
       </provider>
@@ -461,6 +444,41 @@
     <entry file="file://$PROJECT_DIR$/controller/CUserAuth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="24" selection-start="30" selection-end="30" vertical-scroll-proportion="0.030411448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/CController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="8" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="8" selection-start="817" selection-end="941" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MNews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="95" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/CAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="25" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="52" selection-start="655" selection-end="655" vertical-scroll-proportion="0.57781756">
           <folding />
         </state>
       </provider>

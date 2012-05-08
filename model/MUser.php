@@ -3,14 +3,14 @@ include_once('IMDomainObject.php');
 
 class MUser implements  IMDomainObject
 {
-    var $userId = NULL;
-    var $userName = NULL;
-    var $userPass = NULL;
+    var $id = NULL;
+    var $name = NULL;
+    var $pass = NULL;
 
     function Init($userName, $userPass)
     {
-        $this->userName = mysql_real_escape_string($userName);
-        $this->userPass = mysql_real_escape_string($userPass);
+        $this->name = mysql_real_escape_string($userName);
+        $this->pass = mysql_real_escape_string($userPass);
     }
 
     function Select($userName)
@@ -20,16 +20,17 @@ class MUser implements  IMDomainObject
         if(mysql_errno() == 0)
         {
             $query = mysql_fetch_assoc($query);
-            $this->userId = $query[user_id];
-            $this->userName = $query[user_name];
-            $this->userPass = $query[user_pass];
+            $this->id = $query[user_id];
+            $this->name = $query[user_name];
+            $this->pass = $query[user_pass];
+            return true;
         }
-        return mysql_errno();
+        return false;
     }
 
     function Insert()
     {
-        mysql_query("INSERT INTO users (user_name, user_pass) VALUES ('$this->userName', '$this->userPass')");
+        mysql_query("INSERT INTO users (user_name, user_pass) VALUES ('$this->name', '$this->pass')");
         return mysql_errno();
     }
 
@@ -39,7 +40,7 @@ class MUser implements  IMDomainObject
 
     function CheckPass($userPass)
     {
-        if ($this->userPass == $userPass) return true;
+        if ($this->pass == $userPass) return true;
         else return false;
     }
 }
