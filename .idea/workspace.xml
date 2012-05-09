@@ -25,7 +25,7 @@
       <file leaf-file-name="CUserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="1" selection-start="500" selection-end="500" vertical-scroll-proportion="0.38163266">
+            <state line="47" column="13" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.9367347">
               <folding />
             </state>
           </provider>
@@ -425,7 +425,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="1" selection-start="500" selection-end="500" vertical-scroll-proportion="0.38163266">
+        <state line="47" column="13" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.9367347">
           <folding />
         </state>
       </provider>
