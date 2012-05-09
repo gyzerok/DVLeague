@@ -4,8 +4,6 @@ session_start();
 include ('..\model\MConnection.php');
 include ('..\model\MUser.php');
 
-echo 'CUserController';
-
 switch ($_POST['do'])
 {
     case "reg":
@@ -36,7 +34,7 @@ function Auth($post)
 
     $user = new MUser();
 
-    if (!isset($_SESSION['session_code']))
+    if (!isset($_SESSION['session_code']) || empty($_SESSION['session_code']))
     {
         $code = md5(time() + rand(-99, 99));
         if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_pass']))
