@@ -10,6 +10,16 @@ class MNews implements IMDomainObject
     var $newsmaker = NULL;
     var $date = NULL;
 
+    function Init($title, $summary, $text, $newsmaker, $date)
+    {
+        $this->id = NULL;
+        $this->title = mysql_real_escape_string($title);
+        $this->summary = mysql_real_escape_string($summary);
+        $this->text = mysql_real_escape_string($text);
+        $this->newsmaker = mysql_real_escape_string($newsmaker);
+        $this->date = mysql_real_escape_string($date);
+    }
+
     function Select($id)
     {
         $id = mysql_real_escape_string($id);
