@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title></title>
+</head>
+<body>
+    <form action="../controller/CNewsController.php" method="post" enctype="multipart/form-data">
+
+        <input name="id" type="hidden" />
+
+        <label>Заголовок</label>
+        <input name="title" value="" type="text" />
+
+        <label>Краткая новость</label>
+        <textarea name="summary" value=""></textarea>
+
+        <label>Основное содержание</label>
+        <textarea name="text" value=""></textarea>
+
+        <input name="submit" type="submit" value="Отправить">
+    </form>
+</body>
+</html>
