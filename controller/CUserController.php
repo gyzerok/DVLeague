@@ -41,7 +41,7 @@ function Auth($post)
         if ($user->pass == $_COOKIE['user_pass'])
         {
             $_SESSION['session_code'] = $code;
-            setcookie("code", $code, 0, "/");
+            setcookie("session_code", $code, 0, "/");
             return true;
         }
         else
@@ -49,7 +49,7 @@ function Auth($post)
             setcookie("user_name", "", time() - 3600, "/");
             setcookie("user_pass", "", time() - 3600, "/");
             setcookie("cookie", "", time() - 3600, "/");
-            setcookie("code", "", time() - 3600, "/");
+            setcookie("session_code", "", time() - 3600, "/");
         }
     }
     else
@@ -69,7 +69,7 @@ function Auth($post)
                 setcookie("user_name", $user->name, 0, "/");
                 setcookie("user_pass", $user->pass, 0, "/");
             }
-            setcookie("code", $code, 0, "/");
+            setcookie("session_code", $code, 0, "/");
             return true;
         }
         else return false;
@@ -85,7 +85,7 @@ function Quit()
     setcookie("user_name", "", time() - 3600, "/");
     setcookie("user_pass", "", time() - 3600, "/");
     setcookie("cookie", "", time() - 3600, "/");
-    setcookie("code", "", time() - 3600, "/");
+    setcookie("session_code", "", time() - 3600, "/");
     session_destroy();
 }
 
