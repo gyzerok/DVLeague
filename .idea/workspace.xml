@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CUserController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CUserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="35" selection-start="858" selection-end="858" vertical-scroll-proportion="0.458159">
+            <state line="86" column="48" selection-start="2179" selection-end="2179" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,16 +52,16 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="91" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+            <state line="13" column="2" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+            <state line="16" column="31" selection-start="511" selection-end="511" vertical-scroll-proportion="0.50209206">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,7 @@
       <file leaf-file-name="MUserAccess.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/MUserAccess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="5" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
+            <state line="3" column="36" selection-start="46" selection-end="62" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,9 +102,9 @@
         <option value="$PROJECT_DIR$/model/MInitDB.php" />
         <option value="$PROJECT_DIR$/model/MUser.php" />
         <option value="$PROJECT_DIR$/controller/MUserAccess.php" />
-        <option value="$PROJECT_DIR$/admin.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controller/CUserController.php" />
+        <option value="$PROJECT_DIR$/admin.php" />
       </list>
     </option>
   </component>
@@ -416,20 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MUserAccess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/CAdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="28" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
@@ -446,14 +432,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="91" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
+        <state line="13" column="2" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="35" selection-start="858" selection-end="858" vertical-scroll-proportion="0.458159">
+        <state line="86" column="48" selection-start="2179" selection-end="2179" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MUserAccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="46" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="511" selection-end="511" vertical-scroll-proportion="0.50209206">
           <folding />
         </state>
       </provider>
