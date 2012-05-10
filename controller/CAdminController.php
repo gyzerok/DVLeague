@@ -3,7 +3,13 @@ include ('..\model\MConnection.php');
 include ('..\model\MInitDB.php');
 
 MConnection::Open();
-echo MInitDB::InitUser();
-echo MInitDB::InitNews();
+
+if (!empty($_POST['user_groups']))
+    echo MInitDB::InitUserGroups() . "<br />";
+if (!empty($_POST['users']))
+    echo MInitDB::InitUsers() . "<br />";
+if (!empty($_POST['news']))
+    echo MInitDB::InitNews() . "<br />";
+
 MConnection::Close();
 ?>

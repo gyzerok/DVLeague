@@ -37,11 +37,5 @@ class MUser implements  IMDomainObject
     function Update(){}
 
     function Delete(){}
-
-    function CheckPass($userPass)
-    {
-        if ($this->pass == $userPass) return true;
-        else return false;
-    }
 }
 ?>

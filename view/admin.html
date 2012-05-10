@@ -7,7 +7,11 @@
 </head>
 <body>
     <form action="../controller/CAdminController.php" method="POST">
-        <input type="hidden" name="controller" value="dbInit">
+        <p><strong>Отметьте все поля для инициализации всех таблиц</strong></p>
+        <p><input type="checkbox" name="users">Таблица пользователей</p>
+        <p><input type="checkbox" name="user_groups">Таблица груп пользователей</p>
+        <p><input type="checkbox" name="news">Таблица новостей</p>
+        <input type="hidden" name="do" value="dbInit">
         <p><input type="submit" value="Инициализировать базу данных"></p>
     </form>
 </body>
