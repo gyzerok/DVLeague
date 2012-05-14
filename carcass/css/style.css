@@ -7,13 +7,13 @@ background-color:grey;
 background-color:white;
 width:800px;
 margin:0 auto;
-border:1px solid black;
 padding:0 10px 10px 10px;
 min-width:650px;
 max-width:1100px;
 }
 
 #enter {
+background-color:white;
 border:1px solid yellow;
 height:60px;
 width:300px;
@@ -23,29 +23,35 @@ padding:5px;
 }
 
 #header {
+background-color:white;
 padding-top:10px;
 padding-left:10px;
 height:30px;
 border:1px solid red;
 margin-bottom:12px;
-border-radius: 20px;
-
+border-radius:20px;
 }
 
 #tournir {
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all browsers*/
 padding:10px;
 width:450px;
 height:150px;
-border:1px solid green;
 margin-bottom:12px;
 border-radius: 20px;
 
 }
 
 #news {
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all browsers*/
 width:450px;
 height:500px;
-border:1px solid magenta;
 margin-bottom:12px;
 float:left;
 border-radius:20px;
@@ -54,20 +60,26 @@ overflow:auto;
 }
 
 #team_top {
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all browsers*/
 padding:5px;
 width:300px;
 height:260px;
-border:1px solid blue;
 margin-bottom:12px;
 float:right;
 border-radius: 20px;
 }
 
 #translation{
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all browsers*/
 padding:10px;
 width:290px;
 height:200px;
-border:1px solid blue;
 margin-bottom:12px;
 float:right;
 border-radius: 20px;
@@ -75,6 +87,7 @@ border-radius: 20px;
 }
 
 #footer {
+background-color:white;
 padding:10px;
 border:1px solid black;
 height:35px;
