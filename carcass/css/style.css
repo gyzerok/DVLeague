@@ -1,74 +1,109 @@
+#body {
+background-color:grey;
+}
+
+
 #wraper {
+background-color:white;
 width:800px;
 margin:0 auto;
-border:1px solid black;
 padding:0 10px 10px 10px;
 min-width:650px;
 max-width:1100px;
 }
 
 #enter {
+background-color:white;
 border:1px solid yellow;
 height:60px;
-width: 300px;
+width:300px;
 margin-left:400px;
 border-radius: 20px;
 padding:5px;
 }
 
 #header {
-padding:5px;
-height: 30px;
+background-color:white;
+padding-top:10px;
+padding-left:10px;
+height:30px;
 border:1px solid red;
 margin-bottom:12px;
-border-radius: 20px;
-
+border-radius:20px;
 }
 
 #tournir {
-width:500px;
-height: 150px;
-border:1px solid green;
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all other browsers*/
+padding:10px;
+width:450px;
+height:150px;
 margin-bottom:12px;
 border-radius: 20px;
 
 }
 
 #news {
-width:500px;
-height: 400px;
-border:1px solid magenta;
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all other browsers*/
+width:450px;
+height:500px;
 margin-bottom:12px;
-overflow:auto;
 float:left;
-border-radius: 20px;
+border-radius:20px;
+padding:10px;
+overflow:auto;
 }
 
 #team_top {
-width:290px;
-height: 260px;
-border:1px solid blue;
+background-color:white;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all other browsers*/
+padding:5px;
+width:300px;
+height:350px;
 margin-bottom:12px;
 float:right;
 border-radius: 20px;
+text-align:center;
+}
+
+#topteam_table {
+margin:0;
 }
 
 #translation{
-width:290px;
-height: 200px;
-border:1px solid blue;
+background-color:white;
+background-image:url(../images/tv_for_translation.jpg);
+background-repeat:no-repeat;
+-moz-box-shadow: 5px 5px 5px #CCC; /*firefox*/
+-webkit-box-shadow: 5px 5px 5px #CCC; /*Chrome and Safari*/
+box-shadow: 1px 1px 10px #030; /*for all other browsers*/
+width:310px;
+height:180px;
 margin-bottom:12px;
 float:right;
 border-radius: 20px;
-
 }
 
 #footer {
+background-color:white;
+padding:10px;
 border:1px solid black;
 height:35px;
 border-radius: 20px;
 }
 
+
 .clear {
 clear:both;
+}
+
+.news {
+font-size:16px;
 }
