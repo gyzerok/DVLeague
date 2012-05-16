@@ -1,5 +1,6 @@
 <?php
-include ('..\model\MNews.php');
+include ('\model\MNews.php');
+$newsArray;
 
     if ( empty( $_POST ) )
         ReadNews();
@@ -14,15 +15,26 @@ include ('..\model\MNews.php');
     {
         $mNews = new MNews();
 
-        //ссылки на новость должны иметь формат href='/news.html?id={id}'
-        $success = $mNews->Select( $_GET[ 'id' ] );
-
+        //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
+        //$success = $mNews->Select( $_GET[ 'id' ] );
+$success = true;
         if ( $success )
         {
-            if ( $_GET[ 'edit' ] == 1 ) //href='/news.html?id={id}&edit=1&'
-                echo 'show form';
+            if ( $_GET[ 'edit' ] == 1 ) //href='/addNews.html?id={id}&edit=1&'
+            {
+                /*$valuesArray[ 'id' ] = $_GET[ 'id' ];
+                $valuesArray[ 'title' ] = $mNews->title;
+                $valuesArray[ 'summary' ] = $mNews->summary;
+                $valuesArray[ 'text' ] = $mNews->text;
+                $valuesArray[ 'newsmaker' ] = $mNews->newsmaker;
+                $valuesArray[ 'date' ] = $mNews->date;*/
+                $valuesArray[ 'id' ] = $_GET[ 'id' ];
+                echo $valuesArray[ 'id' ];
+            }
             else
-                echo 'show web page id = ' . $mNews->id;;
+            {
+                $valuesArray[ 'id' ] = $_GET[ 'id' ];
+            }
         }
         else
             echo 'News not found!';
