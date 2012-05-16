@@ -24,7 +24,7 @@ else
 MConnection::Close();
 
 if (isset($_SESSION['session_code']) && $_SESSION['session_code'] == $_COOKIE['session_code'])
-    echo $twig->render('addNews.html', array('newsArray' => $newsArray ));
+    echo $twig->render('news.html', array('newsArray' => $newsArray ));
 else
     echo $twig->render('not_authed_form.html',array());
 
@@ -34,11 +34,11 @@ function ReadNews()
 {
     $mNews = new MNews();
 
-    //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
+    //ссылки на новость должны иметь формат href='/news.html?id={id}'
     $success = $mNews->Select( $_GET[ 'id' ] );
     if ( $success )
     {
-        if ( $_GET[ 'edit' ] == 1 ) //href='/addNews.html?id={id}&edit=1&'
+        if ( $_GET[ 'edit' ] == 1 ) //href='/news.html?id={id}&edit=1&'
         {
             $newsArray[ 'id' ] = $_GET[ 'id' ];
             $newsArray[ 'title' ] = $mNews->title;

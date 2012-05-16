@@ -15,12 +15,12 @@ $newsArray;
     {
         $mNews = new MNews();
 
-        //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
+        //ссылки на новость должны иметь формат href='/news.html?id={id}'
         //$success = $mNews->Select( $_GET[ 'id' ] );
 $success = true;
         if ( $success )
         {
-            if ( $_GET[ 'edit' ] == 1 ) //href='/addNews.html?id={id}&edit=1&'
+            if ( $_GET[ 'edit' ] == 1 ) //href='/news.html?id={id}&edit=1&'
             {
                 /*$valuesArray[ 'id' ] = $_GET[ 'id' ];
                 $valuesArray[ 'title' ] = $mNews->title;
