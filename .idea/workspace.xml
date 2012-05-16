@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="009e2d85-581d-4e21-93ad-46075126b3ed" name="Default" comment="" />
+    <list default="true" id="009e2d85-581d-4e21-93ad-46075126b3ed" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\WebServers\home\dvleague.ru\www\view\news.html" afterPath="$PROJECT_DIR$/view/addNews.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CNewsController.php" afterPath="$PROJECT_DIR$/controller/CNewsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
+    </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +35,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/news.html">
+      <file leaf-file-name="addNews.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/addNews.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="22" column="11" selection-start="242" selection-end="811" vertical-scroll-proportion="-14.384615">
               <folding />
@@ -70,7 +74,7 @@
       <file leaf-file-name="news.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="30" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+            <state line="79" column="30" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +83,7 @@
       <file leaf-file-name="showNews.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/showNews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="7" selection-start="152" selection-end="152" vertical-scroll-proportion="0.10911425">
+            <state line="10" column="21" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2182285">
               <folding />
             </state>
           </provider>
@@ -88,10 +92,10 @@
       <file leaf-file-name="news.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/home/dvleague.ru/www/news.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="8" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.0">
+            <state line="80" column="8" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1337186450719" expanded="true" signature="1042:1512" placeholder="..." />
-                <marker date="1337186450719" expanded="true" signature="1077:1397" placeholder="..." />
+                <marker date="1337186713080" expanded="true" signature="1051:1521" placeholder="..." />
+                <marker date="1337186713080" expanded="true" signature="1086:1406" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -302,7 +306,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1296" height="1010" extended-state="0" />
+    <frame x="-8" y="22" width="1296" height="1010" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -448,10 +452,10 @@
     </entry>
     <entry file="file://Z:/home/dvleague.ru/www/news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="8" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.0">
+        <state line="80" column="8" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1337186450719" expanded="true" signature="1042:1512" placeholder="..." />
-            <marker date="1337186450719" expanded="true" signature="1077:1397" placeholder="..." />
+            <marker date="1337186713080" expanded="true" signature="1051:1521" placeholder="..." />
+            <marker date="1337186713080" expanded="true" signature="1086:1406" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -472,12 +476,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="30" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+        <state line="79" column="30" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/news.html">
+    <entry file="file://$PROJECT_DIR$/view/addNews.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="11" selection-start="242" selection-end="811" vertical-scroll-proportion="-14.384615">
           <folding />
@@ -486,7 +490,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/showNews.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="152" selection-end="152" vertical-scroll-proportion="0.10911425">
+        <state line="10" column="21" selection-start="284" selection-end="284" vertical-scroll-proportion="0.2182285">
           <folding />
         </state>
       </provider>
