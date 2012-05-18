@@ -6,18 +6,18 @@
     <title></title>
 </head>
 <body>
-    <form action="../controller/CNewsController.php" method="post" enctype="multipart/form-data">
+    <form action="../news.php" method="post" enctype="multipart/form-data">
 
-        <input name="id" type="hidden" />
-
-        <label>Заголовок</label>
-        <input name="title" value="" type="text" />
+        <label>Заголовок4</label>
+        <input name="title" value="{{ newsArray['title'] }}"  type="text" />
 
         <label>Краткая новость</label>
-        <textarea name="summary" value=""></textarea>
+        <textarea name="summary" value="">{{ newsArray['summary'] }}</textarea>
 
         <label>Основное содержание</label>
-        <textarea name="text" value=""></textarea>
+        <textarea name="text" value="">{{ newsArray['text'] }}</textarea>
+
+        <input name="id" type="hidden" value="{{ newsArray['id'] }}"/>
 
         <input name="submit" type="submit" value="Отправить">
     </form>
