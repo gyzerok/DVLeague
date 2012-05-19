@@ -17,16 +17,40 @@ $newsArray = array();
 MConnection::Open();
 
 if ( empty( $_POST ) )
-    $newsArray = ReadNews();
+{
+
+    if ( $_GET[ 'type' ] == 1 ) //href='/news.php?type=1&'
+    {
+        if (isset($_SESSION['session_code']) && $_SESSION['session_code'] == $_COOKIE['session_code'])
+            echo $twig->render('addNews.html', array());
+        else
+            echo $twig->render('not_authed_form.html',array());
+    }
+    else
+    {
+        $newsArray = ReadNews();
+
+        if ( $_GET[ 'type' ] == 2 )//href='/news.php?id={id}&type=2&'
+        {
+            if (isset($_SESSION['session_code']) && $_SESSION['session_code'] == $_COOKIE['session_code'])
+                echo $twig->render('editNews.html', array('newsArray' => $newsArray ));
+            else
+                echo $twig->render('not_authed_form.html',array());
+        }
+        else //href='/news.php?id={id}&type=0&'
+        {
+            echo $twig->render('showNews.html', array('newsArray' => $newsArray ));
+        }
+    }
+}
 else
+{
     WriteNews( $_POST );
+}
 
 MConnection::Close();
 
-if (isset($_SESSION['session_code']) && $_SESSION['session_code'] == $_COOKIE['session_code'])
-    echo $twig->render('addNews.html', array('newsArray' => $newsArray ));
-else
-    echo $twig->render('not_authed_form.html',array());
+
 
 
 //функция для чтения новостей
@@ -38,19 +62,12 @@ function ReadNews()
     $success = $mNews->Select( $_GET[ 'id' ] );
     if ( $success )
     {
-        if ( $_GET[ 'edit' ] == 1 ) //href='/addNews.html?id={id}&edit=1&'
-        {
-            $newsArray[ 'id' ] = $_GET[ 'id' ];
-            $newsArray[ 'title' ] = $mNews->title;
-            $newsArray[ 'summary' ] = $mNews->summary;
-            $newsArray[ 'text' ] = $mNews->text;
-            $newsArray[ 'newsmaker' ] = $mNews->newsmaker;
-            $newsArray[ 'date' ] = $mNews->date;
-        }
-        else
-        {
-            $newsArray[ 'id' ] = $_GET[ 'id' ];
-        }
+        $newsArray[ 'id' ] = $_GET[ 'id' ];
+        $newsArray[ 'title' ] = $mNews->title;
+        $newsArray[ 'summary' ] = $mNews->summary;
+        $newsArray[ 'text' ] = $mNews->text;
+        $newsArray[ 'newsmaker' ] = $mNews->newsmaker;
+        $newsArray[ 'date' ] = $mNews->date;
 
         return $newsArray;
     }
@@ -71,7 +88,7 @@ function WriteNews( $post )
 
     //to do
     //установи имя пользователя в сессии в переменной userName
-    $mNews->newsmaker = $_SESSION[ 'userName' ];
+    $mNews->newsmaker = $_COOKIE['user_name'];
 
     //проверь, правильно ли я указал формат даты = null
     $mNews->date = date(null);

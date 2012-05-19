@@ -9,15 +9,15 @@
 <form action="../news.php" method="post" enctype="multipart/form-data">
 
     <label>Заголовок4</label>
-    <textarea name="title" value="" disabled/>{{ newsArray['title'] }}</textarea>
+    <input name="title" value="{{ newsArray['title'] }}"  type="text" />
 
     <label>Краткая новость</label>
-    <textarea name="summary" value="" disabled>{{ newsArray['summary'] }}</textarea>
+    <textarea name="summary" value="">{{ newsArray['summary'] }}</textarea>
 
     <label>Основное содержание</label>
-    <textarea name="text" value="" disabled>{{ newsArray['text'] }}</textarea>
+    <textarea name="text" value="">{{ newsArray['text'] }}</textarea>
 
-    <textarea name="autor" value="" disabled>{{ newsArray['newsmaker'] }}</textarea>
+    <input name="id" type="hidden" value="{{ newsArray['id'] }}"/>
 
     <input name="submit" type="submit" value="Отправить">
 </form>
