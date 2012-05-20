@@ -1,0 +1,63 @@
+<?php
+include_once('IMDomainObject.php');
+
+class MComments implements IMDomainObject
+{
+    var $id = NULL;
+    var $newsID = NULL;
+    var $text = NULL;
+    var $newsmaker = NULL;
+    var $date = NULL;
+    var $comments = NULL;
+
+    function Init($newsID, $text, $newsmaker, $date)
+    {
+        $this->id = NULL;
+        $this->newsID = mysql_real_escape_string($newsID);
+        $this->text = mysql_real_escape_string($text);
+        $this->newsmaker = mysql_real_escape_string($newsmaker);
+        $this->date = mysql_real_escape_string($date);
+    }
+
+    function Select($newsID)
+    {
+        $newsID = mysql_real_escape_string($newsID);
+        $query = mysql_query("SELECT * FROM comments WHERE comments_newsID = '$newsID'");
+        if(mysql_errno() == 0)
+        {
+            $i = 0;
+            while($comment = mysql_fetch_array($query))
+            {
+                $temp = array();
+
+                $temp['id'] = $comment[comments_id];
+                $temp['newsID'] = $comment[comments_newsID];
+                $temp['text'] = $comment[comments_text];
+                $temp['newsmaker'] = $comment[comments_newsmaker];
+                $temp['date'] = $comment[comments_date];
+
+                $this->comments[$i] = $temp;
+                $i++;
+
+            }
+
+            return true;
+        }
+        return false;
+    }
+   function Insert()
+    {
+        mysql_query("INSERT INTO comments (comments_newsID, comments_text, comments_newsmaker, comments_date)
+                     VALUES ('$this->newsID', '$this->text', '$this->newsmaker', '$this->date')");
+        return mysql_error();
+    }
+    function Update()
+    {
+        mysql_query("UPDATE news SET news_title = '$this->title', news_summary = '$this->summary', news_text = '$this->text',
+                    news_newsmaker = '$this->newsmaker', news_date = '$this->date'
+                     WHERE news_id = '$this->id'");
+        return mysql_error();
+    }
+    function Delete(){}
+}
+?>

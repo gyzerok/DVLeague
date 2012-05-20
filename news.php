@@ -3,6 +3,7 @@ session_start();
 require_once '/import/twig/lib/Twig/Autoloader.php';
 //include ('controller\CNewsController.php');
 include ($_SERVER["DOCUMENT_ROOT"].'\model\MNews.php');
+include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
 include ($_SERVER["DOCUMENT_ROOT"].'\model\MConnection.php');
 
 
@@ -39,13 +40,18 @@ if ( empty( $_POST ) )
         }
         else //href='/news.php?id={id}&type=0&'
         {
-            echo $twig->render('showNews.html', array('newsArray' => $newsArray ));
+            $commentsArray = array();
+            $commentsArray = ReadComments();
+            echo $twig->render('showNews.html', array('newsArray' => $newsArray, 'commentsArray' => $commentsArray ));
         }
     }
 }
 else
 {
-    WriteNews( $_POST );
+    if ( empty( $_POST[ 'newsID' ] ) )
+        WriteNews( $_POST );
+    else
+        WriteComments( $_POST );
 }
 
 MConnection::Close();
@@ -58,10 +64,11 @@ function ReadNews()
 {
     $mNews = new MNews();
 
-    //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
+    //ссылки на новость должны иметь формат
     $success = $mNews->Select( $_GET[ 'id' ] );
     if ( $success )
     {
+        $newsArray = array();
         $newsArray[ 'id' ] = $_GET[ 'id' ];
         $newsArray[ 'title' ] = $mNews->title;
         $newsArray[ 'summary' ] = $mNews->summary;
@@ -97,6 +104,47 @@ function WriteNews( $post )
         $success = $mNews->Insert();
     else
         $success = $mNews->Update();
+
+    if ( empty( $success ) )
+        echo 'Ok';
+    else
+        echo 'Error! ' . $success;
+}
+
+function ReadComments()
+{
+   $mComments = new MComments();
+
+    //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
+    $success = $mComments->Select( $_GET[ 'id' ] );
+    if ( $success )
+    {
+
+        return $mComments->comments;
+    }
+    else
+        echo 'News not found!';
+
+}
+
+//функция для записи новой новости или редактирования старой
+function WriteComments( $post )
+{
+    $mComments = new MComments();
+    $mComments->newsID = $post[ 'newsID' ];
+    $mComments->text = $post[ 'commentText' ];
+
+    //to do
+    //установи имя пользователя в сессии в переменной userName
+    $mComments->newsmaker = $_COOKIE['user_name'];
+
+    //проверь, правильно ли я указал формат даты = null
+    $mComments->date = date(null);
+
+  //  if ( empty( $post[ 'id' ] ) )
+        $success = $mComments->Insert();
+ /*   else
+        $success = $mComments->Update();*/
 
     if ( empty( $success ) )
         echo 'Ok';

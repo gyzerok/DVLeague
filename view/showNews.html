@@ -9,15 +9,27 @@
 <form action="../news.php" method="post" enctype="multipart/form-data">
 
     <label>Заголовок4</label>
-    <textarea name="title" value="" disabled/>{{ newsArray['title'] }}</textarea>
+    <div>{{ newsArray['title'] }}</div>
 
     <label>Краткая новость</label>
-    <textarea name="summary" value="" disabled>{{ newsArray['summary'] }}</textarea>
+    <div>{{ newsArray['summary'] }}</div>
 
     <label>Основное содержание</label>
-    <textarea name="text" value="" disabled>{{ newsArray['text'] }}</textarea>
+    <p>{{ newsArray['text'] }}</p>
 
-    <textarea name="autor" value="" disabled>{{ newsArray['newsmaker'] }}</textarea>
+    <label>Автор</label>
+    <div>{{ newsArray['newsmaker'] }}</div>
+
+    <label>Комментарии</label>
+    {% for item in commentsArray %}
+    <p><div>{{ item['text'] }}</div></p>
+    {% endfor %}
+
+    <label>Оставить комментарий</label>
+    <textarea name="commentText" value="" ></textarea>
+
+
+    <input name="newsID" type="hidden" value="{{ newsArray['id'] }}"/>
 
     <input name="submit" type="submit" value="Отправить">
 </form>

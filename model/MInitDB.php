@@ -18,6 +18,15 @@ class MInitDB
 
     static function InitNews()
     {
+        mysql_query("CREATE TABLE dvl_db.comments (
+                    comments_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                    comments_newsID INT NOT NULL ,
+                    comments_text TEXT NOT NULL ,
+                    comments_newsmaker INT NOT NULL ,
+                    comments_date DATETIME NOT NULL ,
+                    FOREIGN KEY (comments_newsmaker) REFERENCES users(user_id)
+                    )");
+
         mysql_query("CREATE TABLE dvl_db.news (
                     news_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                     news_title VARCHAR( 50 ) NOT NULL ,
@@ -27,6 +36,8 @@ class MInitDB
                     news_date DATETIME NOT NULL ,
                     FOREIGN KEY (news_newsmaker) REFERENCES users(user_id)
                     )");
+
+
 
         return mysql_errno();
     }
