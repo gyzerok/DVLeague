@@ -1,5 +1,5 @@
 <?php
-include_once('IMDomainObject.php');
+include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
 
 class MNews implements IMDomainObject
 {
@@ -23,7 +23,7 @@ class MNews implements IMDomainObject
     function Select($id)
     {
         $id = mysql_real_escape_string($id);
-        $query = mysql_query("SELECT * FROM users WHERE news_id = '$id'");
+        $query = mysql_query("SELECT * FROM news WHERE news_id = '$id'");
         if(mysql_errno() == 0)
         {
             $query = mysql_fetch_assoc($query);
@@ -39,7 +39,7 @@ class MNews implements IMDomainObject
     }
     function Insert()
     {
-        mysql_query("INSERT INTO news (news_title, user_summary, news_text, news_newsmaker, news_date)
+        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date)
                      VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', '$this->date')");
         return mysql_errno();
     }

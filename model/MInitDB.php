@@ -36,30 +36,33 @@ class MInitDB
         mysql_query("CREATE TABLE dvl_db.user_groups (
                     user_group_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                     user_group_name VARCHAR( 50 ) NOT NULL ,
+                    user_group_access_level INT NOT NULL ,
                     UNIQUE ( user_group_name )
                     )");
-        mysql_query("INSERT INTO user_groups (user_group_name) VALUES ('Admin')");
-        mysql_query("INSERT INTO user_groups (user_group_name) VALUES ('User')");
+        mysql_query("INSERT INTO user_groups (user_group_name, user_group_access_level) VALUES ('Admin', 100)");
+        mysql_query("INSERT INTO user_groups (user_group_name, user_group_access_level) VALUES ('User', 1)");
 
-        mysql_query("CREATE TABLE dvl_db.user_access (
-                    user_access_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-                    user_access_name VARCHAR( 50 ) NOT NULL ,
-                    UNIQUE ( user_access_name )
+        mysql_query("CREATE TABLE dvl_db.groups_access (
+                    group_access_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                    group_access_group_id INT NOT NULL ,
+                    group_access_can_use_admin_panel BOOL NOT NULL DEFAULT '0' ,
+                    group_access_can_add_news BOOL NOT NULL DEFAULT '0' ,
+                    group_access_can_edit_his_news BOOL NOT NULL DEFAULT '0' ,
+                    group_access_can_delete_his_news BOOL NOT NULL DEFAULT '0' ,
+                    group_access_can_edit_lower_rank_user_news BOOL NOT NULL DEFAULT '0' ,
+                    group_access_can_delete_lower_rank_user_news BOOL NOT NULL DEFAULT '0' ,
+                    FOREIGN KEY (group_access_group_id) REFERENCES user_groups(user_group_id) ,
+                    UNIQUE ( group_access_group_id )
                     )");
-        mysql_query("INSERT INTO user_access (user_access_name) VALUES ('can_use_admin_panel')");
 
-        mysql_query("CREATE TABLE dvl_db.user_groups_user_access (
-                    user_access_id INT NOT NULL ,
-                    user_group_id INT NOT NULL ,
-                    user_group_have_access BOOL NOT NULL DEFAULT '0' ,
-                    FOREIGN KEY (user_access_id) REFERENCES user_access(user_access_id) ,
-                    FOREIGN KEY (user_group_id) REFERENCES user_groups(user_group_id)
-                    )");
-        $query1 = mysql_query("SELECT user_access_id FROM user_access WHERE user_access_name = 'can_use_admin_panel'");
-        $query1 = mysql_fetch_assoc($query1);
-        $query2 = mysql_query("SELECT user_group_id FROM user_groups WHERE user_group_name = 'Admin'");
-        $query2 = mysql_fetch_assoc($query2);
-        mysql_query("INSERT INTO user_groups_user_access (user_access_id, user_group_id, user_group_have_access) VALUES ('$query1[user_access_id]', '$query2[user_group_id]', '1')");
+        $query = mysql_query("SELECT user_group_id FROM user_groups");
+        $i = 0;
+        while ($i < mysql_num_rows($query))
+        {
+            mysql_query("INSERT INTO groups_access (group_access_group_id) VALUES ('mysql_result($query, $i)')");
+            $i++;
+        }
+        mysql_query("INSERT INTO groups_access (group_access_can_use_admin_panel) VALUES ('1') WHERE group_access_group_id = '1'");
 
         return mysql_errno();
     }

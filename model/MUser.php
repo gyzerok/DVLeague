@@ -1,11 +1,12 @@
 <?php
-include_once('IMDomainObject.php');
+include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
 
 class MUser implements  IMDomainObject
 {
     var $id = NULL;
     var $name = NULL;
     var $pass = NULL;
+    var $groupId = NULL;
 
     function Init($userName, $userPass)
     {
@@ -23,6 +24,8 @@ class MUser implements  IMDomainObject
             $this->id = $query[user_id];
             $this->name = $query[user_name];
             $this->pass = $query[user_pass];
+            $this->groupId = $query[user_group_id];
+
             return true;
         }
         return false;

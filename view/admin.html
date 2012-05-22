@@ -14,5 +14,18 @@
         <input type="hidden" name="do" value="dbInit">
         <p><input type="submit" value="Инициализировать базу данных"></p>
     </form>
+    <form action="../controller/CAdminController.php" method="POST">
+        {% for group in groups %}
+        <p><strong>{{ group.group_name }}</strong></p>
+        <p><input type="checkbox" name="can_use_admin_panel" {% if checked == true %}checked{% end if %}>Имеет доступ в админ панель</p>
+        <p><input type="checkbox" name="can_add_news" {% if checked == true %}checked{% end if %}>Может добавлять новости</p>
+        <p><input type="checkbox" name="can_edit_his_news" {% if checked == true %}checked{% end if %}>Может редактировать свои новости</p>
+        <p><input type="checkbox" name="can_delete_his_news" {% if checked == true %}checked{% end if %}>Может удалять свои новости</p>
+        <p><input type="checkbox" name="can_edit_lower_rank_user_news" {% if checked == true %}checked{% end if %}>Может редактировать новости пользователей рангом ниже</p>
+        <p><input type="checkbox" name="can_delete_lower_rank_user_news" {% if checked == true %}checked{% end if %}>Может удалять новости пользователей рангом ниже</p>
+        {% endfor %}
+        <input type="hidden" name="do" value="setAccess">
+        <p><input type="submit" value="Инициализировать базу данных"></p>
+    </form>
 </body>
 </html>
