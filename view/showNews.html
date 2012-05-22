@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title></title>
+</head>
+<body>
+<form action="../news.php" method="post" enctype="multipart/form-data">
+
+    <label>Заголовок4</label>
+    <div>{{ newsArray['title'] }}</div>
+
+    <label>Краткая новость</label>
+    <div>{{ newsArray['summary'] }}</div>
+
+    <label>Основное содержание</label>
+    <p>{{ newsArray['text'] }}</p>
+
+    <label>Автор</label>
+    <div>{{ newsArray['newsmaker'] }}</div>
+
+    <label>Комментарии</label>
+    {% for item in commentsArray %}
+    <p><div>{{ item['text'] }}</div></p>
+    {% endfor %}
+
+    <label>Оставить комментарий</label>
+    <textarea name="commentText" value="" ></textarea>
+
+
+    <input name="newsID" type="hidden" value="{{ newsArray['id'] }}"/>
+
+    <input name="submit" type="submit" value="Отправить">
+</form>
+</body>
+</html>
