@@ -2,30 +2,30 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title></title>
 </head>
 <body>
     <form action="../controller/CAdminController.php" method="POST">
-        <p><strong>Отметьте все поля для инициализации всех таблиц</strong></p>
-        <p><input type="checkbox" name="users">Таблица пользователей</p>
-        <p><input type="checkbox" name="user_groups">Таблица груп пользователей</p>
-        <p><input type="checkbox" name="news">Таблица новостей</p>
+        <p><strong>РћС‚РјРµС‚СЊС‚Рµ РІСЃРµ РїРѕР»СЏ РґР»СЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РІСЃРµС… С‚Р°Р±Р»РёС†</strong></p>
+        <p><input type="checkbox" name="users">РўР°Р±Р»РёС†Р° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</p>
+        <p><input type="checkbox" name="user_groups">РўР°Р±Р»РёС†Р° РіСЂСѓРї РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</p>
+        <p><input type="checkbox" name="news">РўР°Р±Р»РёС†Р° РЅРѕРІРѕСЃС‚РµР№</p>
         <input type="hidden" name="do" value="dbInit">
-        <p><input type="submit" value="Инициализировать базу данных"></p>
+        <p><input type="submit" value="РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…"></p>
     </form>
     <form action="../controller/CAdminController.php" method="POST">
         {% for group in groups %}
         <p><strong>{{ group.group_name }}</strong></p>
-        <p><input type="checkbox" name="can_use_admin_panel" {% if checked == true %}checked{% end if %}>Имеет доступ в админ панель</p>
-        <p><input type="checkbox" name="can_add_news" {% if checked == true %}checked{% end if %}>Может добавлять новости</p>
-        <p><input type="checkbox" name="can_edit_his_news" {% if checked == true %}checked{% end if %}>Может редактировать свои новости</p>
-        <p><input type="checkbox" name="can_delete_his_news" {% if checked == true %}checked{% end if %}>Может удалять свои новости</p>
-        <p><input type="checkbox" name="can_edit_lower_rank_user_news" {% if checked == true %}checked{% end if %}>Может редактировать новости пользователей рангом ниже</p>
-        <p><input type="checkbox" name="can_delete_lower_rank_user_news" {% if checked == true %}checked{% end if %}>Может удалять новости пользователей рангом ниже</p>
+        <p><input type="checkbox" name="can_use_admin_panel" {% if checked == true %}checked{% end if %}>РРјРµРµС‚ РґРѕСЃС‚СѓРї РІ Р°РґРјРёРЅ РїР°РЅРµР»СЊ</p>
+        <p><input type="checkbox" name="can_add_news" {% if checked == true %}checked{% end if %}>РњРѕР¶РµС‚ РґРѕР±Р°РІР»СЏС‚СЊ РЅРѕРІРѕСЃС‚Рё</p>
+        <p><input type="checkbox" name="can_edit_his_news" {% if checked == true %}checked{% end if %}>РњРѕР¶РµС‚ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ СЃРІРѕРё РЅРѕРІРѕСЃС‚Рё</p>
+        <p><input type="checkbox" name="can_delete_his_news" {% if checked == true %}checked{% end if %}>РњРѕР¶РµС‚ СѓРґР°Р»СЏС‚СЊ СЃРІРѕРё РЅРѕРІРѕСЃС‚Рё</p>
+        <p><input type="checkbox" name="can_edit_lower_rank_user_news" {% if checked == true %}checked{% end if %}>РњРѕР¶РµС‚ СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ РЅРѕРІРѕСЃС‚Рё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СЂР°РЅРіРѕРј РЅРёР¶Рµ</p>
+        <p><input type="checkbox" name="can_delete_lower_rank_user_news" {% if checked == true %}checked{% end if %}>РњРѕР¶РµС‚ СѓРґР°Р»СЏС‚СЊ РЅРѕРІРѕСЃС‚Рё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СЂР°РЅРіРѕРј РЅРёР¶Рµ</p>
         {% endfor %}
         <input type="hidden" name="do" value="setAccess">
-        <p><input type="submit" value="Инициализировать базу данных"></p>
+        <p><input type="submit" value="РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…"></p>
     </form>
 </body>
 </html>

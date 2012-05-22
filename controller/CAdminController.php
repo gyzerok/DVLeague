@@ -12,4 +12,12 @@ if (!empty($_POST['news']))
     echo MInitDB::InitNews() . "<br />";
 
 MConnection::Close();
+
+class CAdminController
+{
+    static function CanUse($userName)
+    {
+
+    }
+}
 ?>

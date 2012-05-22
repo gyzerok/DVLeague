@@ -11,5 +11,5 @@ $twig = new Twig_Environment($loader, array('cache' => 'twig_cache',));
 if (CUserController::Logged())
     echo $twig->render('index.html', array('user_name' => $_COOKIE['user_name']));
 else
-    echo $twig->render('not_authed_form.html',array());
+    echo $twig->render('index.html', array());
 ?>

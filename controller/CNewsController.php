@@ -53,7 +53,7 @@ $success = true;
 
         //to do
         //установи имя пользователя в сессии в переменной userName
-        $mNews->newsmaker = $_SESSION[ 'userName' ];
+        $mNews->newsmaker = $_SESSION[ 'user_name' ];
 
         //проверь, правильно ли я указал формат даты = null
         $mNews->date = date(null);

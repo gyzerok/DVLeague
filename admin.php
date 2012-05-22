@@ -14,6 +14,8 @@ if (CUserController::Logged())
 {
     MConnection::Open();
 
+
+
     if (MGroupAccess::CanUseAdminPanel($_COOKIE['user_name']))
         echo $twig->render('admin.html', array());
     else

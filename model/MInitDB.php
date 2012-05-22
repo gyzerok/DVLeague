@@ -56,12 +56,12 @@ class MInitDB
         mysql_query("CREATE TABLE dvl_db.groups_access (
                     group_access_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                     group_access_group_id INT NOT NULL ,
-                    group_access_can_use_admin_panel BOOL NOT NULL DEFAULT '0' ,
-                    group_access_can_add_news BOOL NOT NULL DEFAULT '0' ,
-                    group_access_can_edit_his_news BOOL NOT NULL DEFAULT '0' ,
-                    group_access_can_delete_his_news BOOL NOT NULL DEFAULT '0' ,
-                    group_access_can_edit_lower_rank_user_news BOOL NOT NULL DEFAULT '0' ,
-                    group_access_can_delete_lower_rank_user_news BOOL NOT NULL DEFAULT '0' ,
+                    can_use_admin_panel BOOL NOT NULL DEFAULT '0' ,
+                    can_add_news BOOL NOT NULL DEFAULT '0' ,
+                    can_edit_his_news BOOL NOT NULL DEFAULT '0' ,
+                    can_delete_his_news BOOL NOT NULL DEFAULT '0' ,
+                    can_edit_lower_rank_user_news BOOL NOT NULL DEFAULT '0' ,
+                    can_delete_lower_rank_user_news BOOL NOT NULL DEFAULT '0' ,
                     FOREIGN KEY (group_access_group_id) REFERENCES user_groups(user_group_id) ,
                     UNIQUE ( group_access_group_id )
                     )");
@@ -73,9 +73,10 @@ class MInitDB
             mysql_query("INSERT INTO groups_access (group_access_group_id) VALUES ('mysql_result($query, $i)')");
             $i++;
         }
-        mysql_query("INSERT INTO groups_access (group_access_can_use_admin_panel) VALUES ('1') WHERE group_access_group_id = '1'");
+        mysql_query("INSERT INTO groups_access (can_use_admin_panel) VALUES ('1') WHERE group_access_group_id = '1'");
+        mysql_query("UPDATE groups_access SET can_use_admin_panel = '1' WHERE group_access_group_id = '1'");
 
-        return mysql_errno();
+        return mysql_error();
     }
 }
 ?>
