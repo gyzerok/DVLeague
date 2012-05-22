@@ -1,0 +1,44 @@
+@import url(reset.css);
+
+#body {
+    background-color: #000000;
+    
+}
+
+#wrapper {
+    position: absolute;
+    width:800px;
+    outline: 0px solid #000000;
+    left: 18.5%;
+    z-index:3;
+}
+
+#header {
+    height: 24px;
+    background-color: #000000;
+    background-image: url(/view/images/headerBg.png);
+    background-repeat: repeat-x;
+}
+
+#header_menu {
+    height: 24px;
+    margin-left: 650px;
+}
+
+
+#header_menu li {
+    margin-top: 3px;
+    margin-right: 25px;
+    float:left;
+}
+
+
+#header_menu li a{
+    color: #ffffff;
+    font: 15px Myriad Pro;
+}
+
+#username a {
+    text-decoration: none;
+    color: aqua;
+}
