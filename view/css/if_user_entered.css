@@ -16,7 +16,7 @@
 #header {
     height: 24px;
     background-color: #000000;
-    background-image: url(/view/images/headerBg.png);
+    background-image: url(view/images/headerBg.png);
     background-repeat: repeat-x;
 }
 
@@ -33,12 +33,14 @@
 }
 
 
-#header_menu li a{
-    color: #ffffff;
+.user {
+    text-decoration: none;
     font: 15px Myriad Pro;
+    color: #0190ff;
 }
 
-#username a {
-    text-decoration: none;
-    color: aqua;
+.exit {
+    color: #ffffff;
+    font: 15px Myriad Pro;
+    
 }

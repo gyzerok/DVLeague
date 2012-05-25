@@ -11,7 +11,7 @@
     width: 246px;
     height: 346px;
     position:absolute;
-    background-image: url(view/images/morf.png);
+    background-image: url(/view/images/morf.png);
     background-repeat: no-repeat;
     left:77px;
     z-index:5;
@@ -21,7 +21,7 @@
     width: 673px;
     height: 530px;
     position:absolute;
-    background-image: url(view/images/razor.png);
+    background-image: url(/view/images/razor.png);
     background-repeat: no-repeat;
     right:-25px;
     z-index:2;
@@ -47,7 +47,7 @@
     height: 24px;
     outline: 0px solid #000000;
     background-color: #000000;
-    background-image: url(view/images/headerBg.png);
+    background-image: url(/view/images/headerBg.png);
     background-repeat: repeat-x;
 }
 
@@ -94,7 +94,10 @@
     
 }
 
-
+#sabmit_button {
+    
+    
+}
 
 #button {
     border-radius: 4px;
@@ -119,6 +122,7 @@
     text-shadow: 1px 1px 10px #bbbbbb;
     margin-top: 4px;
     margin-left:3px;
+
 }
 
 #button:active {
@@ -144,11 +148,13 @@
     font: 15px Myriad Pro;
 }
 
+
+
 /* Конец блока header*/
 
 #logo {
     height: 120px;
-    background-image: url(view/images/logo.png);
+    background-image: url(/view/images/logo.png);
     background-repeat: no-repeat;
 }
 
@@ -157,7 +163,7 @@
 #nav {
     height: 29px;
     background-color: #55b5ff;
-    background-image: url(view/images/navBg.png);
+    background-image: url(/view/images/navBg.png);
     background-repeat: repeat-x;
 }
 
@@ -203,8 +209,9 @@
 /* Конец блока с навигацией*/
 
 #page {
+    height: 692px;
     background-color: gray;
-    background-image: url(view/images/pageBg.png);
+    background-image: url(/view/images/pageBg.png);
     padding: 7px 12px 0 12px;
 
 }
@@ -213,163 +220,187 @@
 
 #news {
     width: 777px;
-    height: 450px;
+    height: 251px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    position: absolute;
     border-radius: 20px;
-    margin: 1px auto;
+
     
 }
 
-
-
-.page_span {
-    text-decoration: none;
-    font: 12px Myriad Pro bold;
-    color: #000000;
-    
+#news_wraper {
+    width:500px;
+    height: 230px;
+    margin-left:10px;
+    margin-top: 10px;
+    background-color: #dddddd;
+    border-radius: 10px;
 }
 
-#registration_wrapper {
-    outline: 1px solid gray;
-    width: 600px;
-    margin: 10px auto;
-    
-}
-
-#join {
-    outline: 1px solid gray;
-    height:29px;
-    background-image: url(view/images/navBg.png);
-    background-repeat: repeat-x;
-    
-}
-
-#join h2 {
-    padding:4px 0 0 5px;
-    color: #000000;
-    font: 20px Myriad Pro bold;
-    
-}
-
-.page {
-    text-decoration: none;
-    font: 12px Myriad Pro bold;
-    color: #000000;
-    margin-left:60px;
-    padding-top: 10px;
-    
-}
-
-#margin {
-    padding-top: 10px;
-}
-
-#personal_page {
-    margin:0 auto;
-    width: 500px;
-    font: 15px Myriad Pro bold;
-    color: #000000;
+#news_full {
+    outline: 0px solid #000000;
+    width: 275px;
+    height: 200px;
     padding:10px;
+    position: absolute;
+    top:19px;
+    left:206px;
+}
+
+#news_image {
+    width: 170px;
+    height: 170px;
+    background-color: gray;
+    position: relative;
+    top:15px;
+    left:20px;
     
 }
 
-.stars {
-    color:red;
-    font: 20px arial;
+#news_full a {
+    color:#55b5ff;
+    font:bold 16px Myriad Pro;
     
 }
 
-#Security_Check {
-    margin:0 auto;
-    width: 500px;
-    border-top: 1px solid #bbbbbb;
-    padding:10px;
+#news_full p {
+    word-spacing:3px;
+    padding-top:5px;
+    color:#616060;
+    font:bold 12px Myriad Pro;
     
 }
 
-
-#Security_Check_image {
-    background-image: url(view/images/kapcha.jpg);
-    position:relative;
-    width: 250px;
-    height: 50px;
-    outline: 1px solid #bbbbbb;
-    top: -28px;
-    left:150px;
-}
-
-.Security_Check_p {
-    padding-top: 10px;
-    padding-left: 15px;
-    font: 20px Myriad Pro bold;
-    color: #000000;
+#news_nav {
+    height: 25px;
+    position: absolute;
+    background-color: #a6afb5;
+    top:180px;
+    left:-10px;
+    
     
 }
 
-.personal_page_text {
-    font: 20px Myriad Pro bold;
-    color: #000000;
-    margin: 15px 125px 15px 0;
-    text-align: right;
-    
+#news_nav_user {
+    outline: 0px solid red;
+    padding:2px;
+    background-image: url(/view/images/users.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    height: 25px;
+    float:left;
 }
 
-#Securyty_Check_field {
-    margin-left: 149px;
-    margin-top: -24px;
-    width:249px;
-    
-}
-
-.term {
+#news_nav_user a {
     text-decoration: none;
+    font: bold 15px Myriad Pro;
+    color: #0190ff;
+    margin-left: 19px;
+}
+
+
+#news_nav_date {
+    outline: 0px solid red;
+    background-image: url(/view/images/date.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    height: 25px;
+    float:left;
+}
+
+
+#news_nav_date p {
+    font: 12px Myriad Pro;
+    color:#000000;
+    margin-left: 11px;
+}
+
+#news_nav_views {
+    outline: 0px solid red;
+    background-image: url(/view/images/views.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    width: 52px;
+    height: 25px;
+    float:left;
+    margin-top: 1px;
+    
+}
+
+#news_nav_views p {
+    font: 12px Myriad Pro;
+    color:#000000;
+    margin-left: 21px;
+}
+
+#news_nav_comments {
+    outline: 0px solid red;
+    background-image: url(/view/images/comments.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    width: 50px;
+    height: 25px;
+    float:left;
+}
+
+#news_nav_comments p {
+    font: 12px Myriad Pro;
+    color:#000000;
+    margin-left: 13px;
+}
+
+#news_list {
+    outline: 0px solid #000000;
+    width: 245px;
+    position: absolute;
+    top:12px;
+    right:11px;
+    padding:3px 0px 10px 10px;
+}
+
+#news_list a {
+    font: 18px Myriad Pro bold;
     color: #0190ff;
     
 }
 
-.Rule_p {
-    width:300px;
-    margin: 10px 0 0 145px;
-    font: 12px bolder;
-}
-
-.input {
-    width: 200px;
-    
-}
-
-#registr_submit {
-    border-radius: 6px;
-    height: 30px;
-    padding:0 10px;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    min-width:110px;
-    font: 300 12px/30px Helvetica,Arial,sans-serif;
-    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
-    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
-    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
-    margin-left: 145px;
+#news_list_table {
     margin-top: 5px;
-    background-image: url(view/images/registration-button.png);
-    border-style: solid;
-    border-color: #0190ff;
-    border-width: 1px 1px 0pt;
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    text-shadow: 1px 1px 10px #000000;
-
-    
-
-}
-
-#registr_submit:active {
-   margin-top:6px;
     
 }
+
+#news_list_table a {
+    text-decoration: none;
+    color: #696969;
+    font: 12px arial bold;
+}
+
+#news_list_table td {
+    outline: 0px solid #000000;
+    height: 19px;
+    width: 230px;
+    
+}
+
+#news_list_table a:hover {
+    color: #5a9ef6;
+    
+}
+
+#news_list_table a.active {
+    display: block;
+    height: 19px;
+    width: 230px;
+    background-color: #5a9ef6;
+    color: #ffffff;
+    
+}
+
+tr.even td {
+    background-color: #d1d1d1;
+}
+
+/*Конец блока с новостями*/
