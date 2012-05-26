@@ -1,65 +1,35 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Dota2_league</title>
-<link href="css/regsitration_form.css" type="text/css" rel="stylesheet">
-</head> 
-<body id="body">
-   
-        <div id="morf"></div>
-        <div id="razor"></div>
-        <div id="wrapper">
-            <div id="header">
-            <div id="registration">
-                <form action="formdata.php" method="POST" name="registration">
-                    <div id="username"><p>username: <input id="username_field" type="text" name="name" size="10"></p></div>
-                    <div id="password"><p>password: <input id="password_field" type="password" name="password" size="10"></p>></div>
-                    <div id="submit_button"><input id="button" type="submit" name="submit" value="Sign In"/></div>
-                </form>
-            </div>
-                <ul id="header_menu">
-                <li><a href="forgotpassword.html">Forgot your password?</a></li>
-                <li><a href="registration_form.html">Sign In</a></li>
-                </ul>
-            </div>
-            <div id="logo"></div>
-            <div id="nav">
-                <ul id="nav_menu">
-                <li><a href="index.html">PAGE</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="partners.html">PARTNERS</a></li>
-                <li><a href="videos.html">VIDEO</a></li>
-                </ul>
-            </div>
-            <div id="page">
-                <div id="news">
-                    <div id="margin"><a class="page" href="index.html">Dota2_LEAGUE</a><span class="page_span"> > Registration form</span></div>
-                    <div id="registration_wrapper">
-                        <div id="join">
-                            <h2>Join our community</h2>
-                        </div>
-                        <div id="personal_page">   
-                            <form action="formdata.php" method="post" name="registration_form">
-                                <p class="personal_page_text"><label>Username <span class="stars">*</span> <input class="input" type="text" name="username"/></label></p>
-                                <p class="personal_page_text"><label>E-mail adress <span class="stars">*</span> <input class="input" type="text" name="E-mail adress"/></label></p>
-                                <p class="personal_page_text"><label>Password <span class="stars">*</span> <input class="input" type="password" name="Password"/></label></p>
-                                <p class="personal_page_text"><label>Confirm Password <span class="stars">*</span> <input class="input" type="password" name="Confirm Password"/></label></p>
-                            </form>
-                        </div>
-                        <div id="Security_Check">
-                            <p class="Security_Check_p">Security Check <span class="stars">*</span></p>
-                            <div id="Security_Check_image"></div> 
-                            <form action="formdata.php" method="post" name="registration_form">
-                                <input  id="Securyty_Check_field" type="text" name="Securyty Check"/>
-                                <p class="Rule_p"><input id="Rule" type="checkbox" name="Rule"/>  I've read and agree to the  <a class="term" href="terms_of_use.html">Terms of Use</a></p>
-                                <p><input id="registr_submit" type="submit" name="submit" value="Create account"/></p>    
-                            </form>    
-                        </div> 
-                    </div>
-                </div>        
-            </div>
-        </div>
-   
-</body>
-</html>
+{% extends "template.html" %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/regsitration_form.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	<div id="news">
+		<div id="margin"><a class="page" href="index.html">Dota2_LEAGUE</a><span class="page_span"> > Registration form</span></div>
+		<div id="registration_wrapper">
+			<div id="join">
+				<h2>Join our community</h2>
+			</div>
+			<div id="personal_page">   
+				<form action="formdata.php" method="post" name="registration_form">
+					<p class="personal_page_text"><label>Username <span class="stars">*</span> <input class="input" type="text" name="user_name"/></label></p>
+					<p class="personal_page_text"><label>E-mail adress <span class="stars">*</span> <input class="input" type="text" name="E-mail adress"/></label></p>
+					<p class="personal_page_text"><label>Password <span class="stars">*</span> <input class="input" type="password" name="user_pass"/></label></p>
+					<p class="personal_page_text"><label>Confirm Password <span class="stars">*</span> <input class="input" type="password" name "user_pass_confirm"/></label></p>
+			<div id="Security_Check">
+				<p class="Security_Check_p">Security Check <span class="stars">*</span></p>
+				<div id="Security_Check_image"></div> 
+					<input  id="Securyty_Check_field" type="text" name="Securyty Check"/>
+					<p class="Rule_p"><input id="Rule" type="checkbox" name="Rule"/>  I've read and agree to the  <a class="term" href="terms_of_use.html">Terms of Use</a></p>
+					<input type="hidden" name="do" value="reg">
+					<p><input id="registr_submit" type="submit" name="submit" value="Create account"/></p>    
+				</form>
+			</div>				
+			</div> 
+		</div>
+	</div>        
+ {% endblock %}
