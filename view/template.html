@@ -5,6 +5,7 @@
 <title>Dota2_league</title>
 {% block css_links %}
 	<link href="/view/css/style1.css" type="text/css" rel="stylesheet">
+    <link href="/view/css/if_user_entered.css" type="text/css" rel="stylesheet">
 {% endblock %}
 </head> 
 <body id="body">
@@ -12,12 +13,13 @@
         <div id="morf"></div>
         <div id="razor"></div>
         <div id="wrapper">
-		{% if username|length == 0 %}
+		{% if authed == false %}
             <div id="header">
             <div id="registration">
-                <form action="formdata.php" method="POST" name="registration">
-                    <div id="username"><p>username: <input id="username_field" type="text" name="name" size="10"></p></div>
-                    <div id="password"><p>password: <input id="password_field" type="password" name="password" size="10"></p>></div>
+                <form action="/controller/CUserController.php" method="POST" name="registration">
+                    <div id="username"><p>username: <input id="username_field" type="text" name="user_name" size="10"></p></div>
+                    <div id="password"><p>password: <input id="password_field" type="password" name="user_pass" size="10"></p>></div>
+                    <input type="hidden" name="do" value="auth">
                     <div id="submit_button"><input id="button" type="submit" name="submit" value="Sign In"/></div>
                 </form>
             </div>
@@ -29,7 +31,7 @@
 		{% else %}
 			<div id="header">
             <ul id="header_menu">
-                <div id="username"><li><a class="user" href="user_id.html.html">UserName</a></li></div>
+                <div id="username"><li><a class="user" href="user_id.html.html">{{ user_name }}</a></li></div>
                 <li><a class="exit" href="index.html">Exit</a></li>
             </ul>
 			</div>

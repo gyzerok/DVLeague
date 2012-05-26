@@ -23,7 +23,7 @@ class MNews implements IMDomainObject
     function Select($id)
     {
         $id = mysql_real_escape_string($id);
-        $query = mysql_query("SELECT * FROM news WHERE news_id = '$id'");
+        $query = mysql_query("SELECT * FROM news INNER JOIN users ON users.user_id = news.news_newsmaker WHERE news_id = '$id'");
         if(mysql_errno() == 0)
         {
             $query = mysql_fetch_assoc($query);
@@ -31,7 +31,7 @@ class MNews implements IMDomainObject
             $this->title = $query[news_title];
             $this->summary = $query[news_summary];
             $this->text = $query[news_text];
-            $this->newsmaker = $query[news_newsmaker];
+            $this->newsmaker = $query[user_name];
             $this->date = $query[news_date];
             return true;
         }

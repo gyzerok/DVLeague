@@ -16,7 +16,7 @@
 #header {
     height: 24px;
     background-color: #000000;
-    background-image: url(view/images/headerBg.png);
+    background-image: url(/view/images/headerBg.png);
     background-repeat: repeat-x;
 }
 
