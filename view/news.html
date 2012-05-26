@@ -1,6 +1,6 @@
 {% extends "template.html" %}
 
-{% block title %}Новости{ % endblock %}
+{% block title %}Новости{% endblock %}
 
 {% block css_links %}
 	{{ parent() }}
@@ -13,11 +13,11 @@
 			<div id="news_page">
 				<div id="news_image"></div>
 				<div id="news_text">
-					<a href="news_id.html">DTS lose three, Darer gain three?</a>
-					<p>Originally scheduled to be two matches. We will still be bringing you DTS vs. Darer though as normally scheduled, prepare yourself for some fireworks with these two teams going at it in the ProDota 2 World League Tournament!</p>
+					<a href="news_id.html">{{ newsArray['title'] }}</a>
+					<p>{{ newsArray['summary'] }}</p>
 				</div>
 				<div id="news_nav">
-					<div id="news_nav_user"><a href="iraq.html">iraq_lobster</a></div>
+					<div id="news_nav_user"><a href="iraq.html">{{ newsArray['newsmaker'] }}</a></div>
 					<div id="news_nav_date"><p>21.05.2012 12:53</p></div>
 					<div id="news_nav_views"><p>1000</p></div>
 					<div id="news_nav_comments"><p>100000</p></div>

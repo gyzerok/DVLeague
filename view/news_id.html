@@ -10,31 +10,37 @@
 {% block content %}
 	<div id="news">
 		<div id="news_wrapper">
-				<h2>DTS lose three, Darer gain three?</h2>
+				<h2>{{ newsArray['title'] }}</h2>
 			<div id="news_image"></div>
 			<div id="news_nav">
-				<div id="news_nav_user"><a href="iraq.html">iraq_lobster</a></div>
+				<div id="news_nav_user"><a href="iraq.html">{{ newsArray['newsmaker'] }}</a></div>
 				<div id="news_nav_date"><p>12.05.2012 12:53</p></div>
 				<div id="news_nav_views"><p>1000</p></div>
 				<div id="news_nav_comments"><p>100000</p></div>
 			</div>
 			<div id="news_text">
 				<h2></h2>
-				News_text News_text News_text  News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text  News_text News_text News_text  News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text  News_text News_text News_text  News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text  News_text News_text News_text  News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text  News_text News_text News_text  News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text News_text
+                {{ newsArray['text'] }}
 			</div>    
 		</div>
 	</div>
 	<div id="comments">
 			<h2>Comments</h2>
-		<div id="comments_wrapper">   
-			<div id="avatar"></div>
-			<div id="user_comments">
-				<a href="user_id.html">user_id</a>
-			</div> 
-			<div id="text_comments">
-				<span>text_comments</span>
-			</div>
-		</div>
+        {% for item in commentsArray %}
+            <div id="comments_wrapper">
+                <div id="avatar"></div>
+                <div id="user_comments">
+                    <a href="user_id.html">user_id</a>
+                </div>
+                <div id="text_comments">
+                    <span>{{ item['text'] }}</span>
+                </div>
+            </div>
+        {% endfor %}
+
+        <label>Оставить комментарий</label>
+        <textarea name="commentText" value="" ></textarea>
 		
 		   
 	</div>
+{% endblock %}
