@@ -51,17 +51,16 @@
     background-repeat: repeat-x;
 }
 
-#registration {
+#autintefication {
     position:relative;
     height: 24px;
     width:410px;
     top:0px;
     left: 135px;
-    float: left;
-    
+	float:left;
 }
 
-#registration p {
+#autintefication p {
     color: #ffffff;
     font: 15px Myriad Pro;
     
@@ -94,10 +93,7 @@
     
 }
 
-#sabmit_button {
-    
-    
-}
+
 
 #button {
     border-radius: 4px;
@@ -131,8 +127,9 @@
 }
 
 #header_menu {
+	width: 240px;
     height: 24px;
-    margin-left: 560px;
+	margin-left:550px;
 }
 
 
@@ -148,7 +145,17 @@
     font: 15px Myriad Pro;
 }
 
+.user {
+    text-decoration: none;
+    font: 15px Myriad Pro;
+    color: #0190ff;
+}
 
+.exit {
+    color: #ffffff;
+    font: 15px Myriad Pro;
+    
+}
 
 /* Конец блока header*/
 
