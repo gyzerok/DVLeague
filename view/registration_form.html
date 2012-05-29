@@ -1,14 +1,12 @@
-{% extends "template.html" %}
-
-{% block title %}Регистрация{% endblock %}
+{% extends "index.html" %}
 
 {% block css_links %}
 	{{ parent() }}
-	<link href="/view/css/regsitration_form.css" type="text/css" rel="stylesheet">
+	<link href="/view/css/registration_form.css" type="text/css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-	<div id="news">
+	<div id="content">
 		<div id="margin"><a class="page" href="index.html">Dota2_LEAGUE</a><span class="page_span"> > Registration form</span></div>
 		<div id="registration_wrapper">
 			<div id="join">
@@ -16,20 +14,19 @@
 			</div>
 			<div id="personal_page">   
 				<form action="formdata.php" method="post" name="registration_form">
-					<p class="personal_page_text"><label>Username <span class="stars">*</span> <input class="input" type="text" name="user_name"/></label></p>
+					<p class="personal_page_text"><label>Username <span class="stars">*</span> <input class="input" type="text" name="username"/></label></p>
 					<p class="personal_page_text"><label>E-mail adress <span class="stars">*</span> <input class="input" type="text" name="E-mail adress"/></label></p>
-					<p class="personal_page_text"><label>Password <span class="stars">*</span> <input class="input" type="password" name="user_pass"/></label></p>
-					<p class="personal_page_text"><label>Confirm Password <span class="stars">*</span> <input class="input" type="password" name "user_pass_confirm"/></label></p>
+					<p class="personal_page_text"><label>Password <span class="stars">*</span> <input class="input" type="password" name="Password"/></label></p>
+					<p class="personal_page_text"><label>Confirm Password <span class="stars">*</span> <input class="input" type="password" name="Confirm Password"/></label></p>
+			</div>
 			<div id="Security_Check">
 				<p class="Security_Check_p">Security Check <span class="stars">*</span></p>
 				<div id="Security_Check_image"></div> 
 					<input  id="Securyty_Check_field" type="text" name="Securyty Check"/>
 					<p class="Rule_p"><input id="Rule" type="checkbox" name="Rule"/>  I've read and agree to the  <a class="term" href="terms_of_use.html">Terms of Use</a></p>
-					<input type="hidden" name="do" value="reg">
 					<p><input id="registr_submit" type="submit" name="submit" value="Create account"/></p>    
-				</form>
-			</div>				
+				</form>    
 			</div> 
 		</div>
-	</div>        
- {% endblock %}
+	</div>  
+{% endblock %}
