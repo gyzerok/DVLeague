@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/news_full.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	<div id="content">
+		<div id="news_wrapper">
+			<h2>DTS lose three, Darer gain three?</h2>
+			<div id="news_image"></div>
+			<div id="pannel">
+				<div id="user"><a href="iraq.html">iraq_lobster</a></div>
+				<div id="date"><p>12.05.2012 12:53</p></div>
+				<div id="views"><p>1000</p></div>
+				<div id="count_of_comments"><p>100000</p></div>
+			</div>
+			<div id="text">
+				<p>As many of you know, ProDotA 2 is a round-robin format, which means every team will play eachother one time, then we repeat the process to decide who makes it into the play-offs.  During the first round we saw what many would consider a huge upset in Na`Vi dropping multiple games (sometimes even two back to back) and stands currently tied for 5th place in the European bracket along with Copenhagen Wolves.
+				Mouz, CLG and Infused are all vying for top positions, within a game each of eachother and grasping that coveted #1 spot.  As we draw closer to the play-offs there will be three teams from the European bracket that will make it to face up against the best of the American teams and Asian as well.
+				Mouz is probably the biggest story of this entire tournament so far, only losing one game so far throughout the entirety of the first round.  Playing often and practicing has definitely proven to pay off for them, along with the acquisition of an old player from Captain Planet, or probably more known as Ex-Gosu: 1437. </p>
+			</div>
+		</div>
+	</div>
+	<div id="comments">
+	<h2>Comments</h2>
+		<div id="comments_wrapper">
+			<div id="avatar"></div>
+			<div id="user_comments">
+				<a href="user_id.html">user_id</a>
+			</div>
+			<div id="text_comments">
+				<span>Text_comments</span>
+			</div>
+		</div>
+	</div>
+{% endblock %}  

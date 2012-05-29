@@ -1,40 +1,28 @@
 <?php
-include ('\model\MNews.php');
-$newsArray;
-
-    if ( empty( $_POST ) )
-        ReadNews();
-    else
-        WriteNews( $_POST );
+include ($_SERVER["DOCUMENT_ROOT"].'\model\MNews.php');
+include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
 
 
-
-
-//функция для чтения новостей
-    function ReadNews()
+class CNewsController
+{
+    //функция для чтения новостей
+    static function ReadNews()
     {
         $mNews = new MNews();
 
-        //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
-        //$success = $mNews->Select( $_GET[ 'id' ] );
-$success = true;
+        //ссылки на новость должны иметь формат
+        $success = $mNews->Select( $_GET[ 'id' ] );
         if ( $success )
         {
-            if ( $_GET[ 'edit' ] == 1 ) //href='/addNews.html?id={id}&edit=1&'
-            {
-                /*$valuesArray[ 'id' ] = $_GET[ 'id' ];
-                $valuesArray[ 'title' ] = $mNews->title;
-                $valuesArray[ 'summary' ] = $mNews->summary;
-                $valuesArray[ 'text' ] = $mNews->text;
-                $valuesArray[ 'newsmaker' ] = $mNews->newsmaker;
-                $valuesArray[ 'date' ] = $mNews->date;*/
-                $valuesArray[ 'id' ] = $_GET[ 'id' ];
-                echo $valuesArray[ 'id' ];
-            }
-            else
-            {
-                $valuesArray[ 'id' ] = $_GET[ 'id' ];
-            }
+            $newsArray = array();
+            $newsArray[ 'id' ] = $_GET[ 'id' ];
+            $newsArray[ 'title' ] = $mNews->title;
+            $newsArray[ 'summary' ] = $mNews->summary;
+            $newsArray[ 'text' ] = $mNews->text;
+            $newsArray[ 'newsmaker' ] = $mNews->newsmaker;
+            $newsArray[ 'date' ] = $mNews->date;
+
+            return $newsArray;
         }
         else
             echo 'News not found!';
@@ -43,7 +31,7 @@ $success = true;
 
 
 //функция для записи новой новости или редактирования старой
-    function WriteNews( $post )
+    static function WriteNews( $post )
     {
         $mNews = new MNews();
         $mNews->id = $post[ 'id' ];
@@ -53,7 +41,7 @@ $success = true;
 
         //to do
         //установи имя пользователя в сессии в переменной userName
-        $mNews->newsmaker = $_SESSION[ 'user_name' ];
+        $mNews->newsmaker = $_COOKIE['user_name'];
 
         //проверь, правильно ли я указал формат даты = null
         $mNews->date = date(null);
@@ -68,4 +56,46 @@ $success = true;
         else
             echo 'Error! ' . $success;
     }
-?>
+
+    static function ReadComments()
+    {
+        $mComments = new MComments();
+
+        //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
+        $success = $mComments->Select( $_GET[ 'id' ] );
+        if ( $success )
+        {
+
+            return $mComments->comments;
+        }
+        else
+            echo 'News not found!';
+
+    }
+
+//функция для записи новой новости или редактирования старой
+    static function WriteComments( $post )
+    {
+        $mComments = new MComments();
+        $mComments->newsID = $post[ 'newsID' ];
+        $mComments->text = $post[ 'commentText' ];
+
+        //to do
+        //установи имя пользователя в сессии в переменной userName
+        $mComments->newsmaker = $_COOKIE['user_name'];
+
+        //проверь, правильно ли я указал формат даты = null
+        $mComments->date = date(null);
+
+        //  if ( empty( $post[ 'id' ] ) )
+        $success = $mComments->Insert();
+        /*   else
+      $success = $mComments->Update();*/
+
+        if ( empty( $success ) )
+            echo 'Ok';
+        else
+            echo 'Error! ' . $success;
+    }
+
+}

@@ -1,287 +1,65 @@
-@import url(reset.css);
-
-#body {
-    background-color: #000000;
-    
-}
-
-
-/* Начало блоков бэкграунда*/
-#morf {
-    width: 246px;
-    height: 346px;
-    position:absolute;
-    background-image: url(view/images/morf.png);
-    background-repeat: no-repeat;
-    left:77px;
-    z-index:5;
-}
-
-#razor {
-    width: 673px;
-    height: 530px;
-    position:absolute;
-    background-image: url(view/images/razor.png);
-    background-repeat: no-repeat;
-    right:-25px;
-    z-index:2;
-}
-/*Конец блоков бэкграунда*/
-
-/* Начало блока Wrapper*/
-
-#wrapper {
-    position: absolute;
-    width:800px;
-    outline: 0px solid #000000;
-    left: 18.5%;
-    z-index:3;
-}
-
-/* Конец блока Wrapper*/
-
-
-/* Начало блока header*/
-
-#header {
-    height: 24px;
-    outline: 0px solid #000000;
-    background-color: #000000;
-    background-image: url(view/images/headerBg.png);
-    background-repeat: repeat-x;
-}
-
-
-#registration {
-    position:relative;
-    height: 24px;
-    width:410px;
-    top:0px;
-    left: 135px;
-    float: left;
-    
-}
-
-#registration p {
-    color: #ffffff;
-    font: 15px Myriad Pro;
-    
-}
-
-#username {
-    float:left;    
-}
-
-#password {
-    float: left;
-    
-}
-
-#username_field {
-    margin-right:10px;
-    margin-top:2px;
-    height: 13px;
-    border-radius:5px;
-    font:12px Myriad Pro bold;
-    
-}
-
-#password_field {
-    margin-top:2px;
-    height: 13px;
-    border-radius:5px;
-    font:12px Myriad Pro bold;
-    
-}
-
-#sabmit_button {
-    
-    
-}
-
-#button {
-    border-radius: 4px;
-    height: 15px;
-    padding:0 10px;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    min-width:60px;
-    font: 12px Helvetica,Arial,sans-serif; 
-    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
-    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
-    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
-    background-color: #bbbbbb;
-    border-style: solid;
-    border-color: #bbbbbb;
-    border-width: 1px 1px 0pt;
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    text-shadow: 1px 1px 10px #bbbbbb;
-    margin-top: 4px;
-    margin-left:3px;
-}
-
-#button:active {
-   margin-top:5px;
-    
-}
-
-#header_menu {
-    height: 24px;
-    margin-left: 560px;
-}
-
-
-#header_menu li {
-    margin-top: 3px;
-    margin-right: 25px;
-    float:left;
-}
-
-#header_menu li a{
-    color: #ffffff;
-    font: 15px Myriad Pro;
-}
-
-/* Конец блока header*/
-
-#logo {
-    height: 120px;
-    background-image: url(view/images/logo.png);
-    background-repeat: no-repeat;
-}
-
-/* Начало блока с навигацией*/
-
-#nav {
-    height: 29px;
-    background-color: #55b5ff;
-    background-image: url(view/images/navBg.png);
-    background-repeat: repeat-x;
-}
-
-#nav_menu {
-    width:500px;
-    height: 29px;
-    outline: 0px solid red;
-    margin-left: 90px;
-    
-}
-
-#nav_menu li {
-    margin-right: 25px;
-    outline: 0px solid red;
-    float:left;
-    
-}
-
-#nav_menu li a{
-    outline: 0px solid #000000;
-    text-decoration: none;
-    color: #ffffff;
-    font: 18px Courier New bold;
-    display: block;
-    height: 24px;
-    padding-top: 4px;
-}
-
-
-#nav_menu li a.active {
-    color:#000000;
-    
-    
-}
-
-
-#nav_menu li:hover {
-    background-color: #9bd3ff;
-    opacity: 0.9;
-    
-}
-
-/* Конец блока с навигацией*/
-
-#page {
-    background-color: gray;
-    background-image: url(view/images/pageBg.png);
-    padding: 7px 12px 0 12px;
-    height: 600px;
-
-}
-
 /* Начало блока с новостями*/
 
-#news {
-    width: 750px;
+
+
+#content {
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
-    margin:0 auto;
-    padding:15px;
-
-
+    padding-top:10px;
     
 }
 
 
-
-#news h2 {
-    margin-left:32px;
+#content h2 {
+    margin-left:40px;
     color:#55b5ff;
     font: bold 18px Myriad Pro;
     
     
 }
 
-#news_page {
+#news_blocks {
     width: 720px;
     height: 265px;
     background-color: #dddddd;
-    position:relative;
-    left:18px;
-    top:10px;
     border-radius:20px;
-    margin-top:10px;
+    margin:2px auto 10px auto;
 }
 
-#news_page:hover {
+#news_blocks:hover {
     background-color: #55b5ff;
     
 }
 
 
-#news_image {
-    position: relative;
+#image{
     width: 225px;
     height: 225px;
-    top: 20px;
-    left:20px;
-    background-color: #ffffff;
-    background-image: url(view/images/1337469553594.png);
+    background-image: url(/view/images/1337469553594.png);
+    margin-left: 10px;
+    margin-top: 15px;
+    float:left;
+    
     
 }
 
-#news_text {
-    position: relative;
+#text {
     width: 450px;
-    height: 190px;
-    left:260px;
-    top:-210px;
-    
-    
+	height: 150px;
+    float:right;
+    margin-right: 25px;
+    margin-top: 15px;
 }
 
-#news_text a {
+#text a {
     color:#000000;
     font: bold 18px Myriad Pro;
 }
 
-#news_text p {
+#text p {
     word-spacing:3px;
     color:#616060;
     font:bold 12px Myriad Pro;
@@ -289,86 +67,85 @@
     
 }
 
-#news_nav {
-    position: absolute;
-    top:225px;
-    left:250px;
-    width: 400px;
+#pannel {
+	width: 450px;
+	float:left;
+	margin-top:35px;
+	margin-left:7px;
     height: 25px;
-    background-color: #9ea4a9;
+    background-color: #cccccc;
     
+
 }
 
-#news_nav_user {
-    outline: 0px solid red;
-    margin-top:2px;
-    margin-right: 2px;
-    background-image: url(view/images/users.png);
+#user {
+	outline: 0px solid red;
+    padding:2px 2px 2px 3px;
+    background-image: url(/view/images/users.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
     height: 25px;
     float:left;
 }
 
-#news_nav_user a {
-    text-decoration: none;
+#user a {
+	text-decoration: none;
     font: bold 15px Myriad Pro;
     color: #0190ff;
     margin-left: 19px;
+
 }
 
-
-#news_nav_date {
-    outline: 0px solid red;
-    background-image: url(view/images/date.png);
+#date {
+	outline: 0px solid red;
+    background-image: url(/view/images/date.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
     height: 25px;
     float:left;
-    margin-top:2px;
 }
 
-
-#news_nav_date p {
-    font: 12px Myriad Pro;
+#date p {
+	margin-top: 5px;
+	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 11px;
-    margin-top:4px;
 }
 
-#news_nav_views {
-    outline: 0px solid red;
-    background-image: url(view/images/views.png);
+#views {
+	outline: 0px solid red;
+    background-image: url(/view/images/views.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-    width: 50px;
+    width: 52px;
     height: 25px;
     float:left;
-    margin-top: 2px;
-    
+    margin-top: 1px;
 }
 
-#news_nav_views p {
-    font: 12px Myriad Pro;
+#views p {
+	margin-top: 5px;
+	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 21px;
-    margin-top:4px;
+
 }
 
-#news_nav_comments {
-    outline: 0px solid red;
-    background-image: url(view/images/comments.png);
+#comments {
+	outline: 0px solid red;
+    background-image: url(/view/images/comments.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
     width: 50px;
     height: 25px;
     float:left;
+
 }
 
-#news_nav_comments p {
-    font: 12px Myriad Pro;
+#comments p {
+	margin-top: 5px;
+	font: 12px Myriad Pro;
     color:#000000;
-    margin-left: 16px;
-    margin-top:6px;
-}
+    margin-left: 13px;
 
+}

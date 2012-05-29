@@ -58,6 +58,7 @@ class CUserController
             if ($user->pass == $_COOKIE['user_pass'])
             {
                 $_SESSION['user_name'] = $user->name;
+                $_SESSION['user_id'] = $user->id;
                 return true;
             }
             else
@@ -72,6 +73,8 @@ class CUserController
             $user->Select($post['user_name']);
             if ($user->pass == md5(sha1($post['user_pass'])))
             {
+                $_SESSION['user_name'] = $user->name;
+                $_SESSION['user_id'] = $user->id;
                 if (!empty($post['cookie']))
                 {
                     setcookie("user_name", $user->name, time() + 3600 * 24 * 7, "/");

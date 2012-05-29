@@ -1,0 +1,225 @@
+/* Начало блока с новостями*/
+
+
+
+#content {
+	margin:0 auto;
+	width: 780px;
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+    padding-top: 10px;
+	margin-bottom: 5px;
+}
+
+
+
+
+#news_wrapper {
+	height:350px;
+	width: 750px;
+	margin:0 auto;
+	background-color: #dddddd;
+	padding-top:10px;
+	border-radius: 15px;
+}
+
+
+#news_wrapper h2 {
+    margin-left:40px;
+    color:#000000;
+    font: bold 18px Myriad Pro;
+    
+    
+}
+
+
+#news_image {
+    width: 225px;
+    height: 225px;
+    outline: 0px solid red;
+    background-image: url(/view/images/1337469553594.png);
+    background-repeat: no-repeat;
+	margin-left: 20px;
+	margin-top: 5px;
+	float:left;
+}
+
+#pannel {
+	width: 470px;
+	float:right;
+	margin-top:5px;
+	margin-right: 30px;
+    height: 25px;
+    background-color: #cccccc;
+    
+
+}
+
+#user {
+	outline: 0px solid red;
+    padding:2px 2px 2px 3px;
+    background-image: url(/view/images/users.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    height: 25px;
+    float:left;
+}
+
+#user a {
+	text-decoration: none;
+    font: bold 15px Myriad Pro;
+    color: #0190ff;
+    margin-left: 19px;
+
+}
+
+#date {
+	outline: 0px solid red;
+    background-image: url(/view/images/date.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    height: 25px;
+    float:left;
+}
+
+#date p {
+	margin-top: 5px;
+	font: 12px Myriad Pro;
+    color:#000000;
+    margin-left: 11px;
+}
+
+#views {
+	outline: 0px solid red;
+    background-image: url(/view/images/views.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    width: 52px;
+    height: 25px;
+    float:left;
+    margin-top: 1px;
+}
+
+#views p {
+	margin-top: 5px;
+	font: 12px Myriad Pro;
+    color:#000000;
+    margin-left: 21px;
+
+}
+
+#count_of_comments {
+	outline: 0px solid red;
+    background-image: url(/view/images/comments.png);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    width: 50px;
+    height: 25px;
+    float:left;
+
+}
+
+#count_of_comments p {
+	margin-top: 5px;
+	font: 12px Myriad Pro;
+    color:#000000;
+    margin-left: 13px;
+
+}
+
+#text {
+	width:470px;
+	float:right;
+	margin-right:30px;
+
+
+}
+
+#text p {
+	word-spacing:3px;
+    color:#616060;
+    font:bold 12px Myriad Pro;
+    padding-top: 10px; 
+
+}
+
+#comments {
+	margin:0 auto;
+	width: 780px;
+	height: 100px;
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+	padding-top:5px;
+
+}
+
+#comments h2 {
+    color:#000000;
+    font: bold 18px Myriad Pro;
+	margin-left: 15px;
+    
+    
+}
+
+#comments_wrapper {
+	padding-top:10px;
+	outline: 0px solid red;
+	width: 700px;
+	height: 60px;
+	margin-left: 15px;
+}
+
+#avatar {
+	margin-left:10px;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius:5px;
+	float:left;
+}
+
+#user_comments {
+	margin-right: 580px;
+	float:right;
+    height: 20px;
+    
+    
+}
+
+#user_comments a{
+    text-decoration: none;
+    font: bold 15px Myriad Pro;
+    color: #0190ff;
+    
+}
+
+#user_comments a:hover {
+    text-decoration: underline;
+    
+}
+
+#text_comments {
+	width:600px;
+	outline: 0px solid red;
+	float:right;
+	margin-right: 30px;
+
+}
+
+#text_comments span {
+    font: bold 12px Myriad Pro;
+    color: #000000;
+    
+    
+}
+
+.clear {
+clear:both;
+
+}
