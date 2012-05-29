@@ -38,9 +38,14 @@ class CUserController
     {
         MConnection::Open();
 
-        $user = new MUser();
-        $user->Init($post['user_name'], md5(sha1($post['user_pass'])));
-        $user->Insert();
+        if ($post['user_pass'] == $post['user_pass_again'])
+        {
+            $user = new MUser();
+            $user->Init($post['user_name'], md5(sha1($post['user_pass'])));
+            $user->Insert();
+        }
+        //TODO Нормальная проверка существования логина, проверка повторного пароля, валидация имейла
+        //TODO Подтверждение регистрации
 
         MConnection::Close();
     }

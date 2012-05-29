@@ -12,33 +12,37 @@
     <div id="morf"></div>
     <div id="razor"></div>
         <div id="wrapper">
-		{% if username|length == 0 %}
+		{% if user_name|length == 0 %}
 		<div id="header">
             <div id="authentication">
-                <form action="formdata.php" method="POST" name="authentication">
-                    <div id="username"><p>username: <input id="username_field" type="text" name="name" size="10"></p></div>
-                    <div id="password"><p>password: <input id="password_field" type="password" name="password" size="10"></p></div>
+                <form action="/controller/CUserController.php" method="POST" name="authentication">
+                    <div id="username"><p>username: <input id="username_field" type="text" name="user_name" size="10"></p></div>
+                    <div id="password"><p>password: <input id="password_field" type="password" name="user_pass" size="10"></p></div>
+                    <input type="hidden" name="do" value="auth">
                     <div id="submit_button"><input id="button" type="submit" name="submit" value="Sign In"/></div>
                 </form>
             </div>
                 <ul id="header_menu">
                 <li><a href="forgotpassword.html">Forgot your password?</a></li>
-                <li><a href="registration_form.html">Sign Up</a></li>
+                <li><a href="registration.php">Sign Up</a></li>
                 </ul>
             </div>
 			{% else %}
 			<div id="another_header">
             <ul id="another_header_menu">
-                <div id="another_username"><li><a class="user" href="user_id.html.html">{ {user_name} }</a></li></div>
-                <li><input type="submit" name="submit" value="Exit"/></li>
+                <div id="another_username"><li><a class="user" href="user_id.html.html">{{ user_name }}</a></li></div>
+                <form action="/controller/CUserController.php" method="POST" name="quit">
+                    <input type="hidden" name="do" value="quit">
+                    <li><input type="submit" name="submit" value="Exit"/></li>
+                </form>
             </ul>
 			</div>
 			{% endif %}
 			<div id="logo"></div>
             <div id="nav">
                 <ul id="nav_li">
-                <li><a href="twig_index.php" class="active">PAGE</a></li>
-                <li><a href="twig_news_index.php">NEWS</a></li>
+                <li><a href="index.php" class="active">PAGE</a></li>
+                <li><a href="news.php">NEWS</a></li>
                 <li><a href="partners.html">PARTNERS</a></li>
                 <li><a href="videos.html">VIDEO</a></li>
                 </ul>
