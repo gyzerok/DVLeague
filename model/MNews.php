@@ -9,6 +9,7 @@ class MNews implements IMDomainObject
     var $text = NULL;
     var $newsmaker = NULL;
     var $date = NULL;
+    var $news = NULL;
 
     function Init($title, $summary, $text, $newsmaker, $date)
     {
@@ -31,12 +32,39 @@ class MNews implements IMDomainObject
             $this->title = $query[news_title];
             $this->summary = $query[news_summary];
             $this->text = $query[news_text];
-            $this->newsmaker = $query[user_name];
+            $this->newsmaker = $query[news_newsmaker];
             $this->date = $query[news_date];
             return true;
         }
         return false;
     }
+
+    function SelectNews()
+    {
+        $query = mysql_query("SELECT * FROM news");
+        if(mysql_errno() == 0)
+        {
+            $i = 0;
+            while($news = mysql_fetch_array($query))
+            {
+                $temp = array();
+
+                $temp['id'] = $news[news_id];
+                $temp['title'] = $news[news_title];
+                $temp['summary'] = $news[news_summary];
+                $temp['text'] = $news[news_text];
+                $temp['newsmaker'] = $news[news_newsmaker];
+                $temp['date'] = $news[news_date];
+
+                $this->news[$i] = $temp;
+                $i++;
+
+            }
+            return true;
+        }
+        return false;
+    }
+
     function Insert()
     {
         mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date)
