@@ -1,53 +1,45 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Dota2_league.ru</title>
+{% extends "template.html" %}
+
 {% block css_links %}
-	<link href="/view/css/style.css" type="text/css" rel="stylesheet">
+	{{ parent() }}
+	<link href="/view/css/news_index.css" type="text/css" rel="stylesheet">
 {% endblock %}
-</head> 
-<body id="body">
-    <div id="order_wrapper">
-    <div id="morf"></div>
-    <div id="razor"></div>
-        <div id="wrapper">
-		{% if username|length == 0 %}
-		<div id="header">
-            <div id="authentication">
-                <form action="formdata.php" method="POST" name="authentication">
-                    <div id="username"><p>username: <input id="username_field" type="text" name="name" size="10"></p></div>
-                    <div id="password"><p>password: <input id="password_field" type="password" name="password" size="10"></p></div>
-                    <div id="submit_button"><input id="button" type="submit" name="submit" value="Sign In"/></div>
-                </form>
-            </div>
-                <ul id="header_menu">
-                <li><a href="forgotpassword.html">Forgot your password?</a></li>
-                <li><a href="registration_form.html">Sign Up</a></li>
-                </ul>
-            </div>
-			{% else %}
-			<div id="another_header">
-            <ul id="another_header_menu">
-                <div id="another_username"><li><a class="user" href="user_id.html.html">{ {user_name} }</a></li></div>
-                <li><input type="submit" name="submit" value="Exit"/></li>
-            </ul>
+
+{% block content %}  
+	<div id="content">
+		<div id="news_wraper">
+			<div id="news_image"></div>
+			<div id="news_full">
+				<h2><a href="news_id.html">��, �� ������ ������ ���������</a></h2>
+				<p>������� ������� ����� ��������� 
+				����, ���, ��������, 
+				�������� �� Navi, M5, �� ���� 
+				������ ���� ������ ������!
+				������ ���������� ������ �����-�� ����������� 
+				������� ����������� ��� ����, � ����� ����� �������������
+				� ����� ����. ��� ����� � ��������� �������� �� 
+				��������� ������������ ����</p>
+				<div id="order_pannel">
+					<div id="order_pannel_user"><a href="iraq.html">iraq_lobster</a></div>
+					<div id="order_pannel_date"><p>12.05.2012 12:53</p></div>
+					<div id="order_pannel_views"><p>1000</p></div>
+					<div id="order_pannel_comments"><p>100000</p></div>
+				</div>
 			</div>
-			{% endif %}
-			<div id="logo"></div>
-            <div id="nav">
-                <ul id="nav_li">
-                <li><a href="twig_index.php" class="active">PAGE</a></li>
-                <li><a href="twig_news_index.php">NEWS</a></li>
-                <li><a href="partners.html">PARTNERS</a></li>
-                <li><a href="videos.html">VIDEO</a></li>
-                </ul>
-            </div>
-            <div id="bg">
-			{% block content %}
-			{% endblock %}
-			</div>
-        </div>
-    </div>
-</body>
-</html>
+		</div>
+		<div id="news_list">
+			<a>������ �������</a>
+			 <table id="news_list_table">
+			<tr><td><a href="news1.html" class="active">DTS takes on Darer & Eclpysia</a></td></tr>
+			<tr class="even"><td><a href="news2.html">An Interview with DK.Burning!</a></td></tr>
+			<tr><td><a href="news3.html">Space Monkeys replaces GizMo</a></td></tr>
+			<tr class="even"><td><a href="news4.html">Week one award video, new trailer released for PD2!</a></td></tr>
+			<tr><td><a href="news5.html">Big games on the way: Na`Vi, DTS, Darer?</a></td></tr>
+			<tr class="even"><td><a href="news6.html">Darer new roster!</a></td></tr>
+			<tr><td><a href="news7.html">Zenith against Asian double-power!</a></td></tr>
+			<tr class="even"><td><a href="news8.html">First play day of EU Pro is finished</a></td></tr>
+			<tr><td><a href="news9.html">America NON Pro Qualification</a></td></tr>
+			</table>
+		</div>
+	</div> 
+{% endblock %}
