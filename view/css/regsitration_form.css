@@ -6,12 +6,12 @@
 }
 
 
-/* Начало блоков бэкграунда*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 #morf {
     width: 246px;
     height: 346px;
     position:absolute;
-    background-image: url(view/images/morf.png);
+    background-image: url(/view/images/morf.png);
     background-repeat: no-repeat;
     left:77px;
     z-index:5;
@@ -21,14 +21,14 @@
     width: 673px;
     height: 530px;
     position:absolute;
-    background-image: url(view/images/razor.png);
+    background-image: url(/view/images/razor.png);
     background-repeat: no-repeat;
     right:-25px;
     z-index:2;
 }
-/*Конец блоков бэкграунда*/
+/*пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
-/* Начало блока Wrapper*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Wrapper*/
 
 #wrapper {
     position: absolute;
@@ -38,16 +38,16 @@
     z-index:3;
 }
 
-/* Конец блока Wrapper*/
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ Wrapper*/
 
 
-/* Начало блока header*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ header*/
 
 #header {
     height: 24px;
     outline: 0px solid #000000;
     background-color: #000000;
-    background-image: url(view/images/headerBg.png);
+    background-image: url(/view/images/headerBg.png);
     background-repeat: repeat-x;
 }
 
@@ -144,20 +144,20 @@
     font: 15px Myriad Pro;
 }
 
-/* Конец блока header*/
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ header*/
 
 #logo {
     height: 120px;
-    background-image: url(view/images/logo.png);
+    background-image: url(/view/images/logo.png);
     background-repeat: no-repeat;
 }
 
-/* Начало блока с навигацией*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 #nav {
     height: 29px;
     background-color: #55b5ff;
-    background-image: url(view/images/navBg.png);
+    background-image: url(/view/images/navBg.png);
     background-repeat: repeat-x;
 }
 
@@ -200,16 +200,16 @@
     
 }
 
-/* Конец блока с навигацией*/
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 #page {
     background-color: gray;
-    background-image: url(view/images/pageBg.png);
+    background-image: url(/view/images/pageBg.png);
     padding: 7px 12px 0 12px;
 
 }
 
-/* Начало блока с новостями*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 #news {
     width: 777px;
@@ -242,7 +242,7 @@
 #join {
     outline: 1px solid gray;
     height:29px;
-    background-image: url(view/images/navBg.png);
+    background-image: url(/view/images/navBg.png);
     background-repeat: repeat-x;
     
 }
@@ -292,7 +292,7 @@
 
 
 #Security_Check_image {
-    background-image: url(view/images/kapcha.jpg);
+    background-image: url(/view/images/kapcha.jpg);
     position:relative;
     width: 250px;
     height: 50px;
@@ -355,7 +355,7 @@
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     margin-left: 145px;
     margin-top: 5px;
-    background-image: url(view/images/registration-button.png);
+    background-image: url(/view/images/registration-button.png);
     border-style: solid;
     border-color: #0190ff;
     border-width: 1px 1px 0pt;
