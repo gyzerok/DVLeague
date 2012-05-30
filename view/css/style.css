@@ -246,7 +246,6 @@
 /* Конец блока с навигацией*/
 
 #bg {
-    height: 692px;
     background-color: gray;
     background-image: url(/view/images/pageBg.png);
     padding: 7px 12px 0 12px;
