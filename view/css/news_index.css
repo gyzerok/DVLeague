@@ -34,31 +34,29 @@
 }
 
 #edit_news_pannel {
-	width:90px;
+	width:60px;
 	margin-top:190px;
-	margin-left:10px;
+	margin-left:430px;
 }
 
 #addnews {
-	outline: 1px solid black;
 	float:left;
-	height: 25px;
-	width:25px;
+	height: 15px;
+	width:15px;
 }
 
 #addnews a {
 	display:block;
 	background: url(/view/images/add_news.png) no-repeat;
-	height: 25px;
-	width:25px;
+	height: 15px;
+	width:15px;
 	cursor:pointer;
 
 }
 
 #editnews {
-	outline: 1px solid black;
-	height: 25px;
-	width:25px;
+	height: 15px;
+	width:15px;
 	float:left;
 	margin-left:5px;
 }
@@ -66,16 +64,15 @@
 #editnews a {
 	display:block;
 	background-image: url(/view/images/edit_news.png);
-	height: 25px;
-	width:25px;
+	height: 15px;
+	width:15px;
 	cursor:pointer;
 
 }
 
 #deletenews {
-	outline: 1px solid black;
-	height: 25px;
-	width:25px;
+	height: 15px;
+	width:15px;
 	float:right;
 	margin-right:5px;
 }
@@ -83,8 +80,8 @@
 #deletenews a {
 	display:block;
 	background-image: url(/view/images/delete_news.png);
-	height: 25px;
-	width:25px;
+	height: 15px;
+	width:15px;
 	cursor:pointer;
 
 }
