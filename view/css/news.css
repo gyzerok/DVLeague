@@ -10,6 +10,7 @@
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top:10px;
+	height: 300px;
     
 }
 
@@ -70,8 +71,7 @@
 
 #pannel {
 	width: 450px;
-	float:left;
-	margin-top:35px;
+	margin-top:120px;
 	margin-left:7px;
     height: 25px;
     background-color: #cccccc;
@@ -81,12 +81,11 @@
 
 #user {
 	outline: 0px solid red;
-    padding:2px 2px 2px 3px;
     background-image: url(/view/images/users.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-    height: 25px;
     float:left;
+	margin-right:3px;
 }
 
 #user a {
@@ -104,10 +103,10 @@
     background-position: 2px 5px;
     height: 25px;
     float:left;
+	margin-right:3px;
 }
 
 #date p {
-	margin-top: 5px;
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 11px;
@@ -118,14 +117,14 @@
     background-image: url(/view/images/views.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-    width: 52px;
     height: 25px;
     float:left;
     margin-top: 1px;
+	margin-right:3px;
 }
 
 #views p {
-	margin-top: 5px;
+	margin-top:2px;
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 21px;
@@ -140,11 +139,12 @@
     width: 50px;
     height: 25px;
     float:left;
+	margin-right:3px;
 
 }
 
 #comments p {
-	margin-top: 5px;
+	margin-top:2px;
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 13px;
