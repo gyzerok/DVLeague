@@ -38,7 +38,7 @@ class CUserController
     {
         MConnection::Open();
 
-        if ($post['user_pass'] == $post['user_pass_again'])
+        if ($post['user_pass'] == $post['Confirm_Password'])
         {
             $user = new MUser();
             $user->Init($post['user_name'], md5(sha1($post['user_pass'])));
