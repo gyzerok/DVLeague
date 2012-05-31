@@ -26,6 +26,7 @@ class CUserController
     {
         if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name']))
             return true;
+
         else if (isset($_COOKIE['user_name']) && isset($_COOKIE['user_pass']))
         {
             $post = NULL;
@@ -45,6 +46,7 @@ class CUserController
             $user->Insert();
         }
         //TODO Нормальная проверка существования логина, проверка повторного пароля, валидация имейла
+        //TODO Подтверждение регистрации
         //TODO Подтверждение регистрации
 
         MConnection::Close();

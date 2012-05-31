@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e84f4a-ed75-48a3-bd5c-415f12291d4c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CNewsController.php" afterPath="$PROJECT_DIR$/controller/CNewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MInitDB.php" afterPath="$PROJECT_DIR$/model/MInitDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MNews.php" afterPath="$PROJECT_DIR$/model/MNews.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news.html" afterPath="$PROJECT_DIR$/view/news.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CUserController.php" afterPath="$PROJECT_DIR$/controller/CUserController.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +45,7 @@
       <file leaf-file-name="CUserController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="9" selection-start="995" selection-end="995" vertical-scroll-proportion="0.25917926">
+            <state line="35" column="5" selection-start="852" selection-end="852" vertical-scroll-proportion="0.25917926">
               <folding />
             </state>
           </provider>
@@ -499,7 +494,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="9" selection-start="995" selection-end="995" vertical-scroll-proportion="0.25917926">
+        <state line="35" column="5" selection-start="852" selection-end="852" vertical-scroll-proportion="0.25917926">
           <folding />
         </state>
       </provider>
