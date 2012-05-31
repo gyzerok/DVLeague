@@ -79,8 +79,8 @@ class MNews implements IMDomainObject
 
     function Insert()
     {
-        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date, news_look)
-                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', '$this->date', '$this->look')");
+        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date)
+                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', '$this->date')");
         return mysql_error();
     }
     function Update()
