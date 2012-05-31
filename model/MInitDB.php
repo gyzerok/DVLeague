@@ -34,6 +34,7 @@ class MInitDB
                     news_text TEXT NOT NULL ,
                     news_newsmaker INT NOT NULL ,
                     news_date DATETIME NOT NULL ,
+                    news_look INT NOT NULL ,
                     FOREIGN KEY (news_newsmaker) REFERENCES users(user_id)
                     )");
 

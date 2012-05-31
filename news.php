@@ -20,17 +20,18 @@ if ( empty( $_POST ) )
         if (CUserController::Logged())
             echo $twig->render('addNews.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
     }
+    else if ( $_GET[ 'type' ] == 2 )//href='/news.php?id={id}&type=2&'
+    {
+        $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
+        if (CUserController::Logged())
+            echo $twig->render('editNews.html', array('newsArray' => $newsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
+    }
     else
     {
 
 
-        if ( $_GET[ 'type' ] == 2 )//href='/news.php?id={id}&type=2&'
-        {
-            $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
-            if (CUserController::Logged())
-                echo $twig->render('editNews.html', array('newsArray' => $newsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
-        }
-        else  if ( $_GET[ 'type' ] == 3 )//href='/news.php?id={id}&type=0&'
+
+        if ( $_GET[ 'type' ] == 3 )//href='/news.php?id={id}&type=0&'
         {
             $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
             $commentsArray = array();

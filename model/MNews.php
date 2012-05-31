@@ -1,5 +1,6 @@
 <?php
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
+include($_SERVER["DOCUMENT_ROOT"].'/model/MComments.php');
 
 class MNews implements IMDomainObject
 {
@@ -10,6 +11,8 @@ class MNews implements IMDomainObject
     var $newsmaker = NULL;
     var $date = NULL;
     var $news = NULL;
+    var $look = 0;
+    var $comments = 0;
 
     function Init($title, $summary, $text, $newsmaker, $date)
     {
@@ -34,6 +37,7 @@ class MNews implements IMDomainObject
             $this->text = $query[news_text];
             $this->newsmaker = $query[news_newsmaker];
             $this->date = $query[news_date];
+            $this->look = $query[news_look];
             return true;
         }
         return false;
@@ -53,8 +57,16 @@ class MNews implements IMDomainObject
                 $temp['title'] = $news[news_title];
                 $temp['summary'] = $news[news_summary];
                 $temp['text'] = $news[news_text];
-                $temp['newsmaker'] = $news[news_newsmaker];
+
+                $query2 = mysql_query("SELECT * FROM users WHERE user_id = $news[news_newsmaker]");
+                $query2 = mysql_fetch_assoc($query2);
+
+                $temp['newsmaker'] = $query2[user_name];
                 $temp['date'] = $news[news_date];
+
+                $mCooments = new MComments();
+                $mCooments->Select( $news[news_id] );
+                $temp['comments'] = count( $mCooments->comments);
 
                 $this->news[$i] = $temp;
                 $i++;
@@ -67,8 +79,8 @@ class MNews implements IMDomainObject
 
     function Insert()
     {
-        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date)
-                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', '$this->date')");
+        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date, new_look)
+                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', '$this->date', '$this->look')");
         return mysql_error();
     }
     function Update()
