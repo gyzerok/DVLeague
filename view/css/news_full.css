@@ -4,6 +4,7 @@
 
 
 #content {
+	height: 400px;
 	width: 780px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
@@ -11,19 +12,21 @@
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top: 10px;
-	margin-bottom: 5px;
+	margin-bottom:7px;
+	overflow:hidden;
 }
 
 
 
 
 #news_wrapper {
-	height:230px;
+	height: 380px;
 	width: 750px;
 	margin:0 auto;
 	background-color: #dddddd;
 	padding-top:10px;
 	border-radius: 15px;
+	overflow:hidden;
 }
 
 
@@ -172,6 +175,7 @@
 	width: 700px;
 	height: 60px;
 	margin-left: 15px;
+	overflow:hidden;
 }
 
 #avatar {

@@ -4,13 +4,14 @@
 
 
 #content {
+	height:800px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top:10px;
-	height: 300px;
+	float:left;
     
 }
 
@@ -25,7 +26,7 @@
 
 #news_blocks {
     width: 720px;
-    height: 265px;
+	overflow:hidden;
     background-color: #dddddd;
     border-radius:20px;
     margin:2px auto 10px auto;
@@ -93,6 +94,7 @@
     font: bold 15px Myriad Pro;
     color: #0190ff;
     margin-left: 19px;
+	margin-bottom:3px;
 
 }
 
