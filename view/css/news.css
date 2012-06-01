@@ -11,7 +11,6 @@
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top:10px;
-	float:left;
     
 }
 
@@ -94,7 +93,6 @@
     font: bold 15px Myriad Pro;
     color: #0190ff;
     margin-left: 19px;
-	margin-bottom:3px;
 
 }
 
@@ -103,7 +101,6 @@
     background-image: url(/view/images/date.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-    height: 25px;
     float:left;
 	margin-right:3px;
 }
@@ -112,6 +109,7 @@
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 11px;
+	margin-top:-5px;
 }
 
 #views {
@@ -119,7 +117,6 @@
     background-image: url(/view/images/views.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-    height: 25px;
     float:left;
     margin-top: 1px;
 	margin-right:3px;
@@ -130,6 +127,7 @@
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 21px;
+	margin-top:-5px;
 
 }
 
@@ -139,7 +137,6 @@
     background-repeat: no-repeat;
     background-position: 2px 5px;
     width: 50px;
-    height: 25px;
     float:left;
 	margin-right:3px;
 
@@ -149,6 +146,7 @@
 	margin-top:2px;
 	font: 12px Myriad Pro;
     color:#000000;
-    margin-left: 13px;
+    margin-left: 15px;
+	margin-top:-5px;
 
 }
