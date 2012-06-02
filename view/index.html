@@ -12,24 +12,24 @@
 			<div id="news_image"></div>
 			<div id="news_full">
 				<h2><a href="news_id.html">��, �� ������ ������ ���������</a></h2>
-				<p>������� ������� ����� ��������� 
-				����, ���, ��������, 
-				�������� �� Navi, M5, �� ���� 
-				������ ���� ������ ������!
-				������ ���������� ������ �����-�� ����������� 
-				������� ����������� ��� ����, � ����� ����� �������������
-				� ����� ����. ��� ����� � ��������� �������� �� 
-				��������� ������������ ����</p>
-				<div id="order_pannel">
+				<p>sdf sdf sdf sdf dsf dsf sd fsd f ds fds f ds f sd f sdf ds f sd f sd f s fd sdf sdf sdf sdf dsf dsf sd fsd f ds fds f ds f sd f sdf ds f sd f sd f s fdsdf sdf sdf sdf dsf dsf sd fsd f ds fds f ds f sd f sdf ds f sd f sd f s fd </p>
+			</div>
+			<div id="order_pannel">
 					<div id="order_pannel_user"><a href="iraq.html">iraq_lobster</a></div>
 					<div id="order_pannel_date"><p>12.05.2012 12:53</p></div>
 					<div id="order_pannel_views"><p>1000</p></div>
 					<div id="order_pannel_comments"><p>100000</p></div>
-				</div>
 			</div>
+			{% if user_access == true %}
+				<div id="edit_news_pannel">
+					<div id="addnews"><a title="Add news" href="addnews.php"></a></div>
+					<div id="editnews"><a title="Edit news" href="editnews.php"></a></div>
+					<div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
+				</div>
+			{% endif %}
 		</div>
 		<div id="news_list">
-			<a>������ �������</a>
+			<a>Latest news</a>
 			<table id="news_list_table">
                 <tr>
                     <td><a href="news1.html" class="active">DTS takes on Darer & Eclpysia</a></td>

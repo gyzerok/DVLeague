@@ -1,6 +1,6 @@
 <?php
 include ($_SERVER["DOCUMENT_ROOT"].'\model\MNews.php');
-include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
+//include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
 
 
 class CNewsController
@@ -11,11 +11,26 @@ class CNewsController
         $mNews = new MNews();
 
         //ссылки на новость должны иметь формат
-        $success = $mNews->Select( $_GET[ 'id' ] );
+        $success = $mNews->SelectNews();
+        if ( $success )
+        {
+              return $mNews->news;
+        }
+        else
+            echo 'News not found!';
+
+    }
+
+    static function ReadNewsID( $id )
+    {
+        $mNews = new MNews();
+
+        //ссылки на новость должны иметь формат
+        $success = $mNews->Select($id);
         if ( $success )
         {
             $newsArray = array();
-            $newsArray[ 'id' ] = $_GET[ 'id' ];
+            $newsArray[ 'id' ] = $id;
             $newsArray[ 'title' ] = $mNews->title;
             $newsArray[ 'summary' ] = $mNews->summary;
             $newsArray[ 'text' ] = $mNews->text;
@@ -41,7 +56,7 @@ class CNewsController
 
         //to do
         //установи имя пользователя в сессии в переменной userName
-        $mNews->newsmaker = $_COOKIE['user_name'];
+        $mNews->newsmaker = $_SESSION['user_id'];
 
         //проверь, правильно ли я указал формат даты = null
         $mNews->date = date(null);
@@ -57,12 +72,12 @@ class CNewsController
             echo 'Error! ' . $success;
     }
 
-    static function ReadComments()
+    static function ReadComments($id)
     {
         $mComments = new MComments();
 
         //ссылки на новость должны иметь формат href='/addNews.html?id={id}'
-        $success = $mComments->Select( $_GET[ 'id' ] );
+        $success = $mComments->Select( $id );
         if ( $success )
         {
 

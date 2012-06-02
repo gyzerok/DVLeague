@@ -1,9 +1,10 @@
+@import url(reset.css);
 /* Начало блока с новостями*/
 
 
 
 #content {
-	margin:0 auto;
+	height: 400px;
 	width: 780px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
@@ -11,19 +12,21 @@
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top: 10px;
-	margin-bottom: 5px;
+	margin-bottom:7px;
+	overflow:hidden;
 }
 
 
 
 
 #news_wrapper {
-	height:350px;
+	height: 380px;
 	width: 750px;
 	margin:0 auto;
 	background-color: #dddddd;
 	padding-top:10px;
 	border-radius: 15px;
+	overflow:hidden;
 }
 
 
@@ -149,7 +152,6 @@
 #comments {
 	margin:0 auto;
 	width: 780px;
-	height: 100px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
@@ -173,6 +175,7 @@
 	width: 700px;
 	height: 60px;
 	margin-left: 15px;
+	overflow:hidden;
 }
 
 #avatar {
@@ -219,7 +222,8 @@
     
 }
 
-.clear {
-clear:both;
+#clear {
+
+	clear:both;
 
 }

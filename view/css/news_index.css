@@ -1,3 +1,4 @@
+@import url(reset.css);
 /* Начало блока с новостями*/
 
 #content {
@@ -29,13 +30,65 @@
     margin-left:10px;
     margin-top: 15px;
     float:left;
-    
+    clear:both;
+}
+
+#edit_news_pannel {
+	width:60px;
+	margin-top:190px;
+	margin-left:430px;
+}
+
+#addnews {
+	float:left;
+	height: 15px;
+	width:15px;
+}
+
+#addnews a {
+	display:block;
+	background: url(/view/images/add_news.png) no-repeat;
+	height: 15px;
+	width:15px;
+	cursor:pointer;
+
+}
+
+#editnews {
+	height: 15px;
+	width:15px;
+	float:left;
+	margin-left:5px;
+}
+
+#editnews a {
+	display:block;
+	background-image: url(/view/images/edit_news.png);
+	height: 15px;
+	width:15px;
+	cursor:pointer;
+
+}
+
+#deletenews {
+	height: 15px;
+	width:15px;
+	float:right;
+	margin-right:5px;
+}
+
+#deletenews a {
+	display:block;
+	background-image: url(/view/images/delete_news.png);
+	height: 15px;
+	width:15px;
+	cursor:pointer;
+
 }
 
 #news_full {
     outline: 0px solid #000000;
     width: 305px;
-    height: 200px;
     padding:5px;
     float:right;
     margin: 5px 5px 5px 0px;
@@ -58,7 +111,8 @@
 }
 
 #order_pannel {
-    margin-top:35px;
+	margin:15px 15px 0 0;
+	float:right;
     height: 25px;
     background-color: #bbbbbb;
     
@@ -76,6 +130,7 @@
 }
 
 #order_pannel_user a {
+	margin-top:5px;
     text-decoration: none;
     font: bold 15px Myriad Pro;
     color: #0190ff;
@@ -94,6 +149,7 @@
 
 
 #order_pannel_date p {
+	margin-top:5px;
     font: 12px Myriad Pro;
     color:#000000;
     margin-left: 11px;
@@ -112,6 +168,7 @@
 }
 
 #order_pannel_views p {
+	margin-top:5px;
     font: 12px Myriad Pro;
     color:#000000;
     margin-left: 21px;
@@ -128,6 +185,7 @@
 }
 
 #order_pannel_comments p {
+	margin-top:5px;
     font: 12px Myriad Pro;
     color:#000000;
     margin-left: 13px;

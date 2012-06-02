@@ -15,7 +15,7 @@
     position:relative;
     background-image: url(/view/images/morf.png);
     background-repeat: no-repeat;
-    left:101px;
+    left:110px;
     z-index:1;
     float:left;
 }
@@ -138,7 +138,7 @@
 
 #header_menu {
     height: 24px;
-    margin-left: 560px;
+    margin-left: 540px;
 }
 
 
@@ -174,6 +174,30 @@
     float:left;
 }
 
+#exit_button {
+	border-radius: 4px;
+    height: 15px;
+    padding:0 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    min-width:60px;
+    font: 12px Helvetica,Arial,sans-serif; 
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    background-color: #bbbbbb;
+    border-style: solid;
+    border-color: #bbbbbb;
+    border-width: 1px 1px 0pt;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    text-shadow: 1px 1px 10px #bbbbbb;
+    margin-left:3px;
+
+}
 
 .user {
     text-decoration: none;
@@ -246,9 +270,8 @@
 /* Конец блока с навигацией*/
 
 #bg {
-    height: 692px;
     background-color: gray;
     background-image: url(/view/images/pageBg.png);
-    padding: 7px 12px 0 12px;
+    padding: 7px 12px 15px 12px;
 
 }
