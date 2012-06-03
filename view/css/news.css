@@ -10,7 +10,7 @@
     -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
-    padding-top: 10px;
+	padding-top:15px;
     padding-bottom: 10px;
 }
 
@@ -60,13 +60,15 @@
 
 #title
 {
+   width:300px;
    height: 30px;
+}
+
+#title a{
+   width:100px;
    color:#000000;
    font: bold 18px Myriad Pro;
 }
-
-/*#title a {
-}*/
 
 #text {
     margin-top: 10px;
@@ -83,24 +85,25 @@
 }
 
 #user {
-	outline: 0px solid red;
+	height: 25px;
     background-image: url(/view/images/users.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
     float:left;
 	margin-right:3px;
+
 }
 
 #user a {
 	text-decoration: none;
     font: bold 15px Myriad Pro;
     color: #0190ff;
-    margin-left: 19px;
-
+    margin-left: 18px;
+	margin-top:4px;
 }
 
 #date {
-	outline: 0px solid red;
+    height: 25px;
     background-image: url(/view/images/date.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
@@ -112,11 +115,11 @@
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 11px;
-	margin-top:-5px;
+	margin-top:4px;
 }
 
 #views {
-	outline: 0px solid red;
+    height: 25px;
     background-image: url(/view/images/views.png);
     background-repeat: no-repeat;
     background-position: 2px 5px;
@@ -130,11 +133,12 @@
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 21px;
-	margin-top:-5px;
+	margin-top:4px;
 
 }
 
 #comments {
+    height: 25px;
 	outline: 0px solid red;
     background-image: url(/view/images/comments.png);
     background-repeat: no-repeat;
@@ -150,6 +154,60 @@
 	font: 12px Myriad Pro;
     color:#000000;
     margin-left: 15px;
-	margin-top:-5px;
+	margin-top:4px;
+
+}
+
+
+#edit_news_pannel {
+	width:45px;
+	float:right;
+	margin-top:5px;
+}
+
+#addnews {
+	float:left;
+	height: 15px;
+	width:15px;
+}
+
+#addnews a {
+	display:block;
+	background: url(/view/images/add_news.png) no-repeat;
+	height: 15px;
+	width:15px;
+	cursor:pointer;
+
+}
+
+#editnews {
+	height: 15px;
+	width:15px;
+	float:left;
+	margin-left:5px;
+}
+
+#editnews a {
+	display:block;
+	background-image: url(/view/images/edit_news.png);
+	height: 15px;
+	width:15px;
+	cursor:pointer;
+
+}
+
+#deletenews {
+	height: 15px;
+	width:15px;
+	float:right;
+	margin-right:5px;
+}
+
+#deletenews a {
+	display:block;
+	background-image: url(/view/images/delete_news.png);
+	height: 15px;
+	width:15px;
+	cursor:pointer;
 
 }
