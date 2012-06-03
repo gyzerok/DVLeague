@@ -1,0 +1,201 @@
+@import url(reset.css);
+
+#content {
+	height: 600px;
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+    padding-top: 10px;
+	margin-bottom:7px;
+	overflow:hidden;
+}
+
+#user_wrapper {
+	height: 550px;
+	width: 750px;
+	margin:0 auto;
+	background-color: #dddddd;
+	border-radius: 15px;
+	overflow:hidden;
+}
+
+#avatar {
+	width:140px;
+	height:140px;
+	background-image: url("/view/images/large_avatar.png");
+	margin: 15px 0 0 15px; 
+	float:left;
+	clear:both;
+}
+
+#activity {
+
+	width: 145px;
+	margin-left:15px;
+	float:left;
+	margin-top:-255px;
+
+
+}
+
+#activity_status {
+	height:16px;
+	width: 70px;
+	border-radius:5px;
+	background-color:green;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom:5px;
+
+}
+
+#activity_status_off {
+	height:16px;
+	width: 70px;
+	border-radius:5px;
+	background-color:gray;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom:5px;
+
+}
+
+p.last_active {
+	color:#000000;
+    font: 12px Myriad Pro;
+}
+
+#nickname {
+	width:330px;
+	height:60px;
+	outline: 0px solid red;
+	margin-left: 170px;
+	margin-top: 15px;
+
+}
+
+#nickname h2 {
+	height:30px;
+	outline: 0px solid black;
+	margin-top: 15px;
+	margin-left:15px;
+	color:#000000;
+    font: bold 22px Myriad Pro;
+	
+}
+
+#nickname p {
+	margin-left:15px;
+	color:#000000;
+    font: 14px Myriad Pro;
+}
+
+#community {
+	width:330px;
+	height:165px;
+	margin-left: 170px;
+	margin-top: 5px;
+	background-color: #ffffff;
+	
+
+}
+
+#community_header {
+	width:330px;
+	height: 30px;	
+	background-image: url("/view/images/navBg.png");
+	background-repeat: x-repeat;
+}
+
+#community_header h2 {
+	color:#ffffff;
+    font: bold 16px Myriad Pro;
+	margin-left: 5px;
+	padding-top:4px;
+
+}
+
+#contact_information {
+	width:330px;
+	height:165px;
+	margin-left: 170px;
+	margin-top: 5px;
+	background-color: #ffffff;
+}
+
+#contact_information_header {
+	width:330px;
+	height: 30px;	
+	background-image: url("/view/images/navBg.png");
+	background-repeat: x-repeat;
+}
+
+#contact_information_header h2 {
+	color:#ffffff;
+    font: bold 16px Myriad Pro;
+	margin-left: 5px;
+	padding-top:4px;
+}
+
+#friends {
+	width:220px;
+	height: 165px;
+	float:right;
+	margin-top: -165px;
+	margin-right: 5px;
+	background-color: #ffffff;
+}
+
+#friends_header {
+	width:220px;
+	height: 30px;	
+	background-image: url("/view/images/navBg.png");
+	background-repeat: x-repeat;
+
+}
+
+#friends_header h2 {
+	color:#ffffff;
+    font: bold 16px Myriad Pro;
+	margin-left: 5px;
+	padding-top:4px;
+
+
+}
+
+#last_posts {
+	width:220px;
+	height: 165px;
+	float:right;
+	margin-top: -165px;
+	margin-right: 5px;
+	background-color: #ffffff;
+}
+
+#last_posts_header {
+	width:220px;
+	height: 30px;	
+	background-image: url("/view/images/navBg.png");
+	background-repeat: x-repeat;	
+}
+
+#last_posts_header h2 {
+	color:#ffffff;
+    font: bold 16px Myriad Pro;
+	margin-left: 5px;
+	padding-top:4px;
+
+
+}
+
+#navigation {
+	width: 145px;
+	height: 200px;
+	margin-left:15px;
+	float:left;
+	margin-top:-200px;
+	outline:1px solid red;
+}
+
