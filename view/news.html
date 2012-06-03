@@ -8,8 +8,8 @@
 {% block content %}
 	<div id="content">
 		<h2>NEWS</h2>
+		<div id="addnews"><a title="Add news" href="addnews.php"></a></div>
         {% for item in newsArray %}
-            <a href="news.php?id={{ item['id'] }}&view=1">
                 <div id="news_blocks">
                     <div id="image"></div>
                     <div id="news_content">

@@ -136,6 +136,7 @@
 	overflow:hidden;
 	width:45px;
 	margin-top:5px;
+	float:right;
 }
 
 
@@ -227,10 +228,11 @@
 }
 
 #user_comments {
-	margin-right: 593px;
+	margin-right: 480px;
 	float:right;
     height: 20px;
     text-align: left;
+	width: 150px;
     
 }
 
@@ -238,6 +240,7 @@
     text-decoration: none;
     font: bold 15px Myriad Pro;
     color: #0190ff;
+	clear:both;
     
 }
 
