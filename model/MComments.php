@@ -34,6 +34,12 @@ class MComments implements IMDomainObject
                 $temp['newsID'] = $comment[comments_newsID];
                 $temp['text'] = $comment[comments_text];
                 $temp['newsmaker'] = $comment[comments_newsmaker];
+
+                $query2 = mysql_query("SELECT * FROM users WHERE user_id = $comment[comments_newsmaker]");
+                $query2 = mysql_fetch_assoc($query2);
+
+                $temp['newsmaker'] = $query2[user_name];
+
                 $temp['date'] = $comment[comments_date];
 
                 $this->comments[$i] = $temp;

@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '/import/twig/lib/Twig/Autoloader.php';
-include ('controller\CNewsController.php');
+include ($_SERVER["DOCUMENT_ROOT"].'/controller/CNewsController.php');
 include ($_SERVER["DOCUMENT_ROOT"].'/controller/CUserController.php');
 
 Twig_Autoloader::register();
@@ -15,12 +15,12 @@ MConnection::Open();
 
 if ( empty( $_POST ) )
 {
-    if ( $_GET[ 'type' ] == 1 ) //href='/news.php?type=1&'
+    if ( $_GET[ 'create' ] == 1 ) //href='/news.php?create=1&'
     {
         if (CUserController::Logged())
             echo $twig->render('addNews.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
     }
-    else if ( $_GET[ 'type' ] == 2 )//href='/news.php?id={id}&type=2&'
+    else if ( $_GET[ 'edit' ] == 1 )//href='/news.php?id={id}&edit=1&'
     {
         $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
         if (CUserController::Logged())
@@ -28,10 +28,7 @@ if ( empty( $_POST ) )
     }
     else
     {
-
-
-
-        if ( $_GET[ 'type' ] == 3 )//href='/news.php?id={id}&type=0&'
+        if ( $_GET[ 'view' ] == 1 )//href='/news.php?id={id}&view=1&'
         {
             $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
             $commentsArray = array();
@@ -48,7 +45,13 @@ if ( empty( $_POST ) )
 else
 {
     if ( empty( $_POST[ 'newsID' ] ) )
+    {
         CNewsController::WriteNews( $_POST );
+
+        $newsArray = CNewsController::ReadNews();
+        echo $twig->render('news.html', array('newsArray' => $newsArray, 'commentsArray' => $commentsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
+
+    }
     else
     {
         CNewsController::WriteComments( $_POST );

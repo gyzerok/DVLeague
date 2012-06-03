@@ -36,6 +36,8 @@ class CNewsController
             $newsArray[ 'text' ] = $mNews->text;
             $newsArray[ 'newsmaker' ] = $mNews->newsmaker;
             $newsArray[ 'date' ] = $mNews->date;
+            $newsArray[ 'views' ] = $mNews->views;
+            $newsArray[ 'comments' ] = $mNews->comments;
 
             return $newsArray;
         }
@@ -59,7 +61,7 @@ class CNewsController
         $mNews->newsmaker = $_SESSION['user_id'];
 
         //проверь, правильно ли я указал формат даты = null
-        $mNews->date = date(null);
+        $mNews->date = date("m.d.y");
 
         if ( empty( $post[ 'id' ] ) )
             $success = $mNews->Insert();
@@ -97,10 +99,10 @@ class CNewsController
 
         //to do
         //установи имя пользователя в сессии в переменной userName
-        $mComments->newsmaker = $_COOKIE['user_name'];
+        $mComments->newsmaker = $_SESSION['user_id'];
 
         //проверь, правильно ли я указал формат даты = null
-        $mComments->date = date(null);
+        $mComments->date = date(m.d.y);
 
         //  if ( empty( $post[ 'id' ] ) )
         $success = $mComments->Insert();

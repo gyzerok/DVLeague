@@ -12,9 +12,9 @@
 			<div id="news_image"></div>
 			<div id="pannel">
 				<div id="user"><a href="iraq.html">{{ newsArray['newsmaker'] }}</a></div>
-				<div id="date"><p>12.05.2012 12:53</p></div>
-				<div id="views"><p>1000</p></div>
-				<div id="count_of_comments"><p>{{ item['comments'] }}</p></div>
+				<div id="date"><p>{{ newsArray['date'] }}</p></div>
+				<div id="views"><p>{{ newsArray['views'] }}</p></div>
+				<div id="count_of_comments"><p>{{ newsArray['comments'] }}</p></div>
 			</div>
 			<div id="text">
                 {% autoescape false %}
