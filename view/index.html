@@ -33,7 +33,7 @@
                 {% set i = 0 %}
                 {% for item in newsArray %}
                     <tr>
-                        <td id="{{ i }}" class="active" onclick="SwapNews(this)">{{ item['title'] }}</td>
+                        <td id="{{ i }}" onclick="SwapNews(this)">{{ item['title'] }}</td>
                     </tr>
                     {% set i = i + 1 %}
                 {% endfor %}
