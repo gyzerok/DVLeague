@@ -32,6 +32,7 @@ class MUser implements  IMDomainObject
             $this->name = $query[user_name];
             $this->pass = $query[user_pass];
             $this->groupId = $query[user_group_id];
+
             $this->group->Select($this->name);
 
             return true;
