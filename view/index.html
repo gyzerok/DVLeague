@@ -4,60 +4,35 @@
 	{{ parent() }}
 	<link href="/view/css/news_index.css" type="text/css" rel="stylesheet">
 {% endblock %}
+{% block js_links %}
+    <script type="text/javascript" src="/view/js/news.js" charset="utf-8"></script>
+{% endblock %}
 
 {% block content %}  
 	<div id="content">
-        <!--TODO javascript для перемещения по новостям -->
-		<div id="news_wraper">
-			<div id="news_image"></div>
-			<div id="news_full">
-				<h2><a href="news_id.html">��, �� ������ ������ ���������</a></h2>
-				<p>sdf sdf sdf sdf dsf dsf sd fsd f ds fds f ds f sd f sdf ds f sd f sd f s fd sdf sdf sdf sdf dsf dsf sd fsd f ds fds f ds f sd f sdf ds f sd f sd f s fdsdf sdf sdf sdf dsf dsf sd fsd f ds fds f ds f sd f sdf ds f sd f sd f s fd </p>
-			</div>
-			<div id="order_pannel">
-					<div id="order_pannel_user"><a href="iraq.html">iraq_lobster</a></div>
-					<div id="order_pannel_date"><p>12.05.2012 12:53</p></div>
-					<div id="order_pannel_views"><p>1000</p></div>
-					<div id="order_pannel_comments"><p>100000</p></div>
-			</div>
-			{% if user_access == true %}
-				<div id="edit_news_pannel">
-					<div id="addnews"><a title="Add news" href="addnews.php"></a></div>
-					<div id="editnews"><a title="Edit news" href="editnews.php"></a></div>
-					<div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
-				</div>
-			{% endif %}
-		</div>
+        {% for %}
+            <div class="news_wrapper">
+                <div id="news_image"></div>
+                <div class="news_full">
+                    <h2><a href="news_id.html">First news</a></h2>
+                    <p>This is my first news</p>
+                </div>
+                <div id="order_pannel">
+                        <div id="order_pannel_user"><a href="iraq.html">iraq_lobster</a></div>
+                        <div id="order_pannel_date"><p>12.05.2012 12:53</p></div>
+                        <div id="order_pannel_views"><p>1000</p></div>
+                        <div id="order_pannel_comments"><p>100000</p></div>
+                </div>
+            </div>
+        {% endfor %}
 		<div id="news_list">
 			<a>Latest news</a>
 			<table id="news_list_table">
-                <tr>
-                    <td><a href="news1.html" class="active">DTS takes on Darer & Eclpysia</a></td>
-                </tr>
-                <tr class="even">
-                    <td><a href="news2.html">An Interview with DK.Burning!</a></td>
-                </tr>
-                <tr>
-                    <td><a href="news3.html">Space Monkeys replaces GizMo</a></td>
-                </tr>
-                <tr class="even">
-                    <td><a href="news4.html">Week one award video, new trailer released for PD2!</a></td>
-                </tr>
-                <tr>
-                    <td><a href="news5.html">Big games on the way: Na`Vi, DTS, Darer?</a></td>
-                </tr>
-                <tr class="even">
-                    <td><a href="news6.html">Darer new roster!</a></td>
-                </tr>
-                <tr>
-                    <td><a href="news7.html">Zenith against Asian double-power!</a></td>
-                </tr>
-                <tr class="even">
-                    <td><a href="news8.html">First play day of EU Pro is finished</a></td>
-                </tr>
-                <tr>
-                    <td><a href="news9.html">America NON Pro Qualification</a></td>
-                </tr>
+                {% for %}
+                    <tr>
+                        <td id="0" class="active" onclick="SwapNews(this)">DTS takes on Darer & Eclpysia</td>
+                    </tr>
+                {% endfor %}
 			</table>
 		</div>
 	</div> 
