@@ -1,8 +1,9 @@
 <?php
-class MGroupsAccess
+class MGroup
 {
     var $id;
-    var $groupName;
+    var $name;
+    var $access_level;
     var $access;
 
     function Select($userName)
@@ -13,6 +14,15 @@ class MGroupsAccess
                               WHERE user_name = '$userName'
                              ");
         $this->access = mysql_fetch_assoc($query);
+
+        $query = mysql_query("SELECT * FROM user_groups
+                              INNER JOIN users ON users.user_group_id = user_groups.group_id
+                              WHERE user_name = '$userName'
+                             ");
+        $query = mysql_fetch_assoc($query);
+        $this->id = $query[user_group_id];
+        $this->name = $query[user_group_name];
+        $this->access_level = $query[user_group_access_level];
 
         return mysql_errno();
     }
