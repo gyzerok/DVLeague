@@ -1,8 +1,7 @@
 <?php
 session_start();
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
-include ($_SERVER["DOCUMENT_ROOT"].'/model/MGroupsAccess.php');
-include ($_SERVER["DOCUMENT_ROOT"].'/controller/CUserController.php');
+include ($_SERVER["DOCUMENT_ROOT"].'/model/MGroup.phplude ($_SERVER["DOCUMENT_ROOT"].'/controller/CUserController.php');
 require_once 'import/twig/lib/Twig/Autoloader.php';
 
 Twig_Autoloader::register();

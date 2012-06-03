@@ -1,19 +1,19 @@
 @import url(reset.css);
-/* Начало блока с новостями*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 #content {
     width: 777px;
     height: 251px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
-    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
 
     
 }
 
-#news_wraper {
+div.news_wrapper {
     float:left;
     width:500px;
     height: 230px;
@@ -33,76 +33,24 @@
     clear:both;
 }
 
-#edit_news_pannel {
-	width:60px;
-	margin-top:190px;
-	margin-left:430px;
-}
-
-#addnews {
-	float:left;
-	height: 15px;
-	width:15px;
-}
-
-#addnews a {
-	display:block;
-	background: url(/view/images/add_news.png) no-repeat;
-	height: 15px;
-	width:15px;
-	cursor:pointer;
-
-}
-
-#editnews {
-	height: 15px;
-	width:15px;
-	float:left;
-	margin-left:5px;
-}
-
-#editnews a {
-	display:block;
-	background-image: url(/view/images/edit_news.png);
-	height: 15px;
-	width:15px;
-	cursor:pointer;
-
-}
-
-#deletenews {
-	height: 15px;
-	width:15px;
-	float:right;
-	margin-right:5px;
-}
-
-#deletenews a {
-	display:block;
-	background-image: url(/view/images/delete_news.png);
-	height: 15px;
-	width:15px;
-	cursor:pointer;
-
-}
-
-#news_full {
+div.news_full {
     outline: 0px solid #000000;
     width: 305px;
     padding:5px;
     float:right;
     margin: 5px 5px 5px 0px;
+	height:150px;
 }
 
 
 
-#news_full a {
+div.news_full a {
     color:#55b5ff;
     font:bold 16px Myriad Pro;
     
 }
 
-#news_full p {
+div.news_full p {
     word-spacing:3px;
     padding-top:5px;
     color:#616060;
@@ -197,12 +145,11 @@
     height: 200px;
     float:right;
     margin: 10px 7px 0 0;
+    /*font: 18px Myriad Pro bold;
+    color: #0190ff;*/
 }
 
 #news_list a {
-    font: 18px Myriad Pro bold;
-    color: #0190ff;
-    
 }
 
 #news_list_table {
@@ -223,22 +170,21 @@
     
 }
 
-#news_list_table a:hover {
+#news_list_table td:hover {
     color: #5a9ef6;
     
 }
 
-#news_list_table a.active {
+#news_list_table td.active {
     display: block;
     height: 19px;
     width: 230px;
     background-color: #5a9ef6;
     color: #ffffff;
-    
 }
 
 tr.even td {
     background-color: #d1d1d1;
 }
 
-/*Конец блока с новостями*/
+/*пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
