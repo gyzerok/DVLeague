@@ -59,6 +59,13 @@
     margin-bottom: 15px;
 }
 
+#number {
+	float:right;
+	color:#000000;
+	font: bold 14px Myriad Pro;
+
+}
+
 #title
 {
    width:300px;

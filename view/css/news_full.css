@@ -29,6 +29,13 @@
 	overflow:hidden;
 }
 
+#number {
+	float:right;
+	color:#000000;
+	font: bold 14px Myriad Pro;
+	margin-right: 5px;
+
+}
 
 #news_wrapper h2 {
     margin-left:40px;
