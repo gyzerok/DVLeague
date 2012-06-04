@@ -197,6 +197,11 @@
 
 }
 
+#exit_button:active {
+   margin-top:3px;
+    
+}
+
 .user {
     text-decoration: none;
     font: 15px Myriad Pro;
