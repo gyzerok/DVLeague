@@ -1,19 +1,18 @@
 @import url(reset.css);
 
 #content {
-	height: 600px;
+	height: 460px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top: 10px;
-	margin-bottom:7px;
 	overflow:hidden;
 }
 
 #user_wrapper {
-	height: 550px;
+	height: 450px;
 	width: 750px;
 	margin:0 auto;
 	background-color: #dddddd;
@@ -92,10 +91,16 @@ p.last_active {
     font: 14px Myriad Pro;
 }
 
+.information_wrapper {
+	width:580px;
+	margin-left:165px;
+
+}
+
+
 #community {
 	width:330px;
 	height:165px;
-	margin-left: 170px;
 	margin-top: 5px;
 	background-color: #ffffff;
 	
@@ -120,8 +125,7 @@ p.last_active {
 #contact_information {
 	width:330px;
 	height:165px;
-	margin-left: 170px;
-	margin-top: 5px;
+	margin-top: 15px;
 	background-color: #ffffff;
 }
 
@@ -140,16 +144,16 @@ p.last_active {
 }
 
 #friends {
-	width:220px;
-	height: 165px;
+	width:229.5px;
+	height:165px;
+	overflow:auto;
 	float:right;
 	margin-top: -165px;
-	margin-right: 5px;
 	background-color: #ffffff;
 }
 
 #friends_header {
-	width:220px;
+	width:229.5px;
 	height: 30px;	
 	background-image: url("/view/images/navBg.png");
 	background-repeat: x-repeat;
@@ -165,17 +169,46 @@ p.last_active {
 
 }
 
+
+.friends_wrapper {
+	width:227.5px;
+	height:53px;	
+	outline:0px solid red;
+	margin: 3px auto 3px auto;
+
+}
+
+.friend {
+	width:40.5px;
+	height:50px;	
+	float:left;
+	margin-right:5px;
+}
+
+.friend a{
+	display:block;
+	width:40.5px;
+	height:50px;	
+	background-image:url("/view/images/small_avatar.png");
+	background-repeat:no-repeat;
+}
+
+.friend:hover {
+	outline:1px solid #55b5ff;
+
+
+} 
+
 #last_posts {
-	width:220px;
+	width:229.5px;
 	height: 165px;
 	float:right;
 	margin-top: -165px;
-	margin-right: 5px;
 	background-color: #ffffff;
 }
 
 #last_posts_header {
-	width:220px;
+	width:229.5px;
 	height: 30px;	
 	background-image: url("/view/images/navBg.png");
 	background-repeat: x-repeat;	
@@ -196,6 +229,95 @@ p.last_active {
 	margin-left:15px;
 	float:left;
 	margin-top:-200px;
-	outline:1px solid red;
 }
 
+#navigation_table {
+	width: 145px;
+	height: 100px;
+}
+
+
+#navigation_table td{
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+	border-left:1px solid gray;
+	background-color: #ffffff;
+	font:bold 14px Myriad Pro;
+	padding:3px;
+	color: gray;	
+}
+
+#navigation_table td:hover {
+	cursor:pointer;
+	background-color: #eeeeee;
+
+
+}
+
+#community_table {
+	outline:0px solid red;
+	height:120px;
+	margin-top:5px;
+	margin-left:10px;	
+
+}
+
+.status_label {
+	text-align: right;
+	margin-right:15px;
+	width: 90px;	
+    font: bold 14px Myriad Pro;
+	color: #000000;
+}
+
+.value_label {	
+	text-align: left;
+	width: 70px;
+	padding-left:7px;
+	font: 14px Myriad Pro;
+	color: gray;	
+}
+
+#contact_table {
+	outline:0px solid red;
+	height:80px;
+	margin-top:15px;
+	margin-left:10px;		
+}
+
+
+.c_value_label {
+	text-align: left;
+	width: 70px;
+	padding-left:2px;
+	font: 14px Myriad Pro;
+	color: gray;			
+}
+
+#email_status_label {
+	width: 50px;
+    font: bold 14px Myriad Pro;
+	color: #000000;	
+	background-image: url("/view/images/e-mail.png");
+	background-repeat:no-repeat;
+	background-position: 50px 0px;
+}
+
+#icq_status_label {
+	width: 50px;
+    font: bold 14px Myriad Pro;
+	color: #000000;	
+	background-image: url("/view/images/icq.png");
+	background-repeat:no-repeat;
+	background-position: 50px 0px;
+	padding-left:20px;
+}
+
+#skype_status_label {
+	width: 50px;
+    font: bold 14px Myriad Pro;
+	color: #000000;	
+	background-image: url("/view/images/skype.png");
+	background-repeat:no-repeat;
+	background-position: 50px 0px;	
+}
