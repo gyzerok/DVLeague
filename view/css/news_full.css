@@ -4,8 +4,8 @@
 
 
 #content {
+	width:777px;
 	height: 400px;
-	width: 780px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
@@ -29,6 +29,13 @@
 	overflow:hidden;
 }
 
+#number {
+	float:right;
+	color:#000000;
+	font: bold 14px Myriad Pro;
+	margin-right: 5px;
+
+}
 
 #news_wrapper h2 {
     margin-left:40px;

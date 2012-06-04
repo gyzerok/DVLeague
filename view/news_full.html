@@ -8,15 +8,16 @@
 {% block content %}
 	<div id="content">
 		<div id="news_wrapper">
+			<div id="number">#1</div>
 			<h2>{{ newsArray['title'] }}</h2>
 			<div id="news_image"></div>
 			<div id="pannel">
-				<div id="user"><a href="iraq.html">{{ newsArray['newsmaker'] }}</a></div>
+				<div id="user"><a href="user.php">{{ newsArray['newsmaker'] }}</a></div>
 				<div id="date"><p>{{ newsArray['date'] }}</p></div>
 				<div id="views"><p>{{ newsArray['views'] }}</p></div>
 				<div id="count_of_comments"><p>{{ newsArray['comments'] }}</p></div>
 				<div id="edit_news_pannel">
-					<div id="editnews"><a title="Edit news" href="editnews.php"></a></div>
+					<div id="editnews"><a title="Edit news" href="news.php?id={{ newsArray['id'] }}&edit=1"></a></div>
 					<div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
 				</div>
 			</div>

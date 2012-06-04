@@ -10,25 +10,33 @@
 
 {% block content %}  
 	<div id="content">
-        <div class="news_wrapper">
-        <div id="news_image"></div>
-        <div class="news_full">
-            <h2><a href="news_id.html">First news</a></h2>
-            <p>This is my first news</p>
-        </div>
-        <div id="order_pannel">
-            <div id="order_pannel_user"><a href="iraq.html">iraq_lobster</a></div>
-            <div id="order_pannel_date"><p>12.05.2012 12:53</p></div>
-            <div id="order_pannel_views"><p>1000</p></div>
-            <div id="order_pannel_comments"><p>100000</p></div>
-        </div>
-    </div>
+        {% for item in newsArray %}
+            <div class="news_wrapper">
+                <div id="news_image"></div>
+                <div class="news_full">
+                    <h2><a href="news.php?id={{ item['id'] }}&view=1">{{ item['title'] }}</a></h2>
+                    {% autoescape false %}
+                        {{ item['summary'] }}
+                    {% endautoescape %}
+                </div>
+                <div id="order_pannel">
+                    <div id="order_pannel_user"><a href="iraq.html">{{ item['newsmaker'] }}</a></div>
+                    <div id="order_pannel_date"><p>{{ item['date'] }}</p></div>
+                    <div id="order_pannel_views"><p>{{ item['views'] }}</p></div>
+                    <div id="order_pannel_comments"><p>{{ item['comments'] }}</p></div>
+                </div>
+            </div>
+        {% endfor %}
 		<div id="news_list">
 			<a>Latest news</a>
 			<table id="news_list_table">
-                <tr>
-                    <td id="0" class="active" onclick="SwapNews(this)">DTS takes on Darer & Eclpysia</td>
-                </tr>
+                {% set i = 0 %}
+                {% for item in newsArray %}
+                    <tr>
+                        <td id="{{ i }}" onclick="SwapNews(this)">{{ item['title'] }}</td>
+                    </tr>
+                    {% set i = i + 1 %}
+                {% endfor %}
 			</table>
 		</div>
 	</div> 

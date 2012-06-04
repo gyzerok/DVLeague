@@ -8,11 +8,12 @@
 {% block content %}
 	<div id="content">
 		<h2>NEWS</h2>
-		<div id="addnews"><a title="Add news" href="addnews.php"></a></div>
+		<div id="addnews"><a title="Add news" href="news.php?create=1"></a></div>
         {% for item in newsArray %}
                 <div id="news_blocks">
                     <div id="image"></div>
                     <div id="news_content">
+						<div id="number">#1</div>
                         <div id="title"><a href="news.php?id={{ item['id'] }}&view=1">{{ item['title'] }}</a></div>
                         <div id="text">
                             {% autoescape false %}
@@ -25,12 +26,24 @@
                             <div id="views"><p>{{ item['views'] }}</p></div>
                             <div id="comments"><p>{{ item['comments'] }}</p></div>
 						<div id="edit_news_pannel">
-							<div id="editnews"><a title="Edit news" href="editnews.php"></a></div>
+							<div id="editnews"><a title="Edit news" href="news.php?id={{ item['id'] }}&edit=1"></a></div>
 							<div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
 						</div>
                         </div>
                     </div>
                 </div>
         {% endfor %}
+		<div id="news_page_nevigation">
+			<div class="number_of_page">
+				<a class="news_page_link" href="">1</a>
+			</div>
+			<div class="number_of_page">
+				<a class="news_page_link" href="">2</a>
+			</div>
+			<div class="number_of_page">
+				<a class="news_page_link" href="">3</a>
+			</div>
+			<a class="next_page" href="">Next</a>
+		</div>
 	</div>
 {% endblock %}  
