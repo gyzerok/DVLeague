@@ -6,19 +6,26 @@ include ($_SERVER["DOCUMENT_ROOT"].'\model\MNews.php');
 class CNewsController
 {
     //функция для чтения новостей
-    static function ReadNews()
+    static function ReadNews( $offset )
     {
         $mNews = new MNews();
 
         //ссылки на новость должны иметь формат
-        $success = $mNews->SelectNews();
+        $success = $mNews->SelectNews($offset);
         if ( $success )
         {
-              return $mNews->news;
+            return $mNews->news;
         }
         else
             echo 'News not found!';
 
+    }
+
+    static function CountNews()
+    {
+        $mNews = new MNews();
+
+        return ceil( $mNews->CountNews() / 10 );
     }
 
     static function ReadNewsID( $id )

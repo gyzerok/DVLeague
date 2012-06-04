@@ -51,6 +51,18 @@ class MComments implements IMDomainObject
         }
         return false;
     }
+
+    function CountCommentsByNews($newsID)
+    {
+        $newsID = mysql_real_escape_string($newsID);
+        $query = mysql_query("SELECT COUNT(*) FROM comments WHERE comments_newsID = '$newsID'");
+        if(mysql_errno() == 0)
+        {
+            $query = mysql_fetch_assoc($query);
+            return $query['COUNT(*)'];
+        }
+    }
+
    function Insert()
     {
         mysql_query("INSERT INTO comments (comments_newsID, comments_text, comments_newsmaker, comments_date)

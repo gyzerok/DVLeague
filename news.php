@@ -37,8 +37,41 @@ if ( empty( $_POST ) )
         }
         else  //href='/news.php
         {
-            $newsArray = CNewsController::ReadNews();
-            echo $twig->render('news.html', array('newsArray' => $newsArray, 'commentsArray' => $commentsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
+            if ( empty( $_GET[ 'id' ] ) )
+                $offset = 0;
+            else
+                $offset = $_GET[ 'id' ] * 10;
+
+            $newsArray = CNewsController::ReadNews( $offset );
+            $count = CNewsController::CountNews();
+
+            $pages = array();
+            if( $offset <= 3 )
+            {
+                $pages[0] = 1;
+                $pages[1] = 2;
+                $pages[2] = 3;
+                $pages[3] = 4;
+                $pages[4] = $count;
+            }
+            elseif( $offset >= $count - 3 )
+            {
+                $pages[0] = 1;
+                $pages[1] = $count - 3;
+                $pages[2] = $count - 2;
+                $pages[3] = $count - 1;
+                $pages[4] = $count;
+            }
+            else
+            {
+                $pages[0] = 1;
+                $pages[1] = $offset - 1;
+                $pages[2] = $offset;
+                $pages[3] = $offset + 1;
+                $pages[4] = $count;
+            }
+
+            echo $twig->render('news.html', array('newsArray' => $newsArray, 'commentsArray' => $commentsArray, 'pages' => $pages, 'count' => $count, 'offset' => $offset, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
         }
     }
 }
@@ -48,7 +81,7 @@ else
     {
         CNewsController::WriteNews( $_POST );
 
-        $newsArray = CNewsController::ReadNews();
+        $newsArray = CNewsController::ReadNews(0);
         echo $twig->render('news.html', array('newsArray' => $newsArray, 'commentsArray' => $commentsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
 
     }

@@ -34,16 +34,27 @@
                 </div>
         {% endfor %}
 		<div id="news_page_nevigation">
-			<div class="number_of_page">
-				<a class="news_page_link" href="">1</a>
-			</div>
-			<div class="number_of_page">
-				<a class="news_page_link" href="">2</a>
-			</div>
-			<div class="number_of_page">
-				<a class="news_page_link" href="">3</a>
-			</div>
-			<a class="next_page" href="">Next</a>
+            {% if count > 1 %}
+                {% if count > 5 %}
+                    {% for i in pages %}
+                        <tr>
+                            <div class="number_of_page">
+                                <a class="news_page_link" href="news.php?id={{ i - 1 }}">{{i}}</a>
+                            </div>
+                        </tr>
+                    {% endfor %}
+
+                {% else %}
+                    {% for i in 1..count %}
+                        <tr>
+                            <div class="number_of_page">
+                                <a class="news_page_link" href="news.php?id={{ i - 1 }}">{{i}}</a>
+                            </div>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+
+            {% endif %}
 		</div>
 	</div>
 {% endblock %}  

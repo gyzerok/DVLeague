@@ -12,7 +12,7 @@ $twig = new Twig_Environment($loader, array('cache' => 'twig_cache',));
 MConnection::Open();
 
 $newsArray = array();
-$newsArray = CNewsController::ReadNews();
+$newsArray = CNewsController::ReadNews(0);
 
 MConnection::Close();
 

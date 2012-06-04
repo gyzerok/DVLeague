@@ -10,7 +10,6 @@ class MNews implements IMDomainObject
     var $text = NULL;
     var $newsmaker = NULL;
     var $date = NULL;
-    var $news = NULL;
     var $views = 0;
     var $comments = 0;
 
@@ -41,8 +40,7 @@ class MNews implements IMDomainObject
             $this->views = $query[news_look];
 
             $mCooments = new MComments();
-            $mCooments->Select( $query[news_id] );
-            $this->comments = count( $mCooments->comments);
+            $this->comments = $mCooments->CountCommentsByNews( $query[news_id] );
             $this->views++;
             $this->Update();
             $this->newsmaker = $query[user_name];
@@ -51,9 +49,9 @@ class MNews implements IMDomainObject
         return false;
     }
 
-    function SelectNews()
+    function SelectNews( $offset )
     {
-        $query = mysql_query("SELECT * FROM news");
+        $query = mysql_query("SELECT * FROM news LIMIT $offset, 10");
         if(mysql_errno() == 0)
         {
             $i = 0;
@@ -74,8 +72,7 @@ class MNews implements IMDomainObject
                 $temp['views'] = $news[news_look];
 
                 $mCooments = new MComments();
-                $mCooments->Select( $news[news_id] );
-                $temp['comments'] = count( $mCooments->comments);
+                $temp['comments'] = $mCooments->CountCommentsByNews( $news[news_id] );
 
                 $this->news[$i] = $temp;
                 $i++;
@@ -84,6 +81,16 @@ class MNews implements IMDomainObject
             return true;
         }
         return false;
+    }
+
+    function CountNews()
+    {
+        $query = mysql_query("SELECT COUNT(*) FROM news");
+        if(mysql_errno() == 0)
+        {
+            $query = mysql_fetch_assoc($query);
+            return $query['COUNT(*)'];
+        }
     }
 
     function Insert()
