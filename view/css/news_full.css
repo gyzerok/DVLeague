@@ -4,7 +4,6 @@
 
 
 #content {
-	width:777px;
 	height: 400px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
@@ -198,7 +197,6 @@
 
 #comments {
 	margin:0 auto;
-	width: 780px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
