@@ -10,13 +10,14 @@ class MComments implements IMDomainObject
     var $date = NULL;
     var $comments = NULL;
 
-    function Init($newsID, $text, $newsmaker, $date)
+    function Init($id, $newsID, $text, $newsmaker, $date)
     {
-        $this->id = NULL;
+        $this->id = $id;
         $this->newsID = mysql_real_escape_string($newsID);
         $this->text = mysql_real_escape_string($text);
         $this->newsmaker = mysql_real_escape_string($newsmaker);
         $this->date = mysql_real_escape_string($date);
+        $this->comments = NULL;
     }
 
     function Select($newsID)
@@ -76,6 +77,6 @@ class MComments implements IMDomainObject
                      WHERE news_id = '$this->id'");
         return mysql_error();
     }
-    function Delete(){}
+    function Delete($id){}
 }
 ?>

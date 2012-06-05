@@ -4,11 +4,13 @@
     <list default="true" id="5f72afcb-a79c-42cc-ba74-c7de610e5c30" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CNewsController.php" afterPath="$PROJECT_DIR$/controller/CNewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/IMDomainObject.php" afterPath="$PROJECT_DIR$/model/IMDomainObject.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MComments.php" afterPath="$PROJECT_DIR$/model/MComments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MNews.php" afterPath="$PROJECT_DIR$/model/MNews.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MUser.php" afterPath="$PROJECT_DIR$/model/MUser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news.html" afterPath="$PROJECT_DIR$/view/news.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news_full.html" afterPath="$PROJECT_DIR$/view/news_full.html" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,61 +35,34 @@
       <file leaf-file-name="news.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="45" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0">
+            <state line="31" column="33" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="news.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="34" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.11111111">
+            <state line="19" column="47" selection-start="735" selection-end="754" vertical-scroll-proportion="-10.461538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MNews.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/MNews.php">
+      <file leaf-file-name="editNews.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/editNews.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="66" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.0">
+            <state line="9" column="14" selection-start="156" selection-end="274" vertical-scroll-proportion="-5.8846154">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CNewsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/CNewsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="47" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news_full.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="news_full.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/news_full.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="35" selection-start="967" selection-end="967" vertical-scroll-proportion="1.3076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="28" selection-start="1277" selection-end="1548" vertical-scroll-proportion="-15.038462">
+            <state line="41" column="21" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.22222222">
               <folding />
             </state>
           </provider>
@@ -107,14 +82,16 @@
         <option value="$PROJECT_DIR$/view/addNews.html" />
         <option value="$PROJECT_DIR$/view/editNews.html" />
         <option value="$PROJECT_DIR$/view/index.html" />
-        <option value="$PROJECT_DIR$/view/news_full.html" />
-        <option value="$PROJECT_DIR$/model/MComments.php" />
-        <option value="Z:/home/dvleague.ru/www/news.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="Z:/home/dvleague.ru/www/news.php" />
         <option value="$PROJECT_DIR$/view/news.html" />
-        <option value="$PROJECT_DIR$/news.php" />
+        <option value="$PROJECT_DIR$/model/IMDomainObject.php" />
         <option value="$PROJECT_DIR$/model/MNews.php" />
         <option value="$PROJECT_DIR$/controller/CNewsController.php" />
+        <option value="$PROJECT_DIR$/news.php" />
+        <option value="$PROJECT_DIR$/model/MComments.php" />
+        <option value="$PROJECT_DIR$/model/MUser.php" />
+        <option value="$PROJECT_DIR$/view/news_full.html" />
       </list>
     </option>
   </component>
@@ -160,16 +137,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -216,32 +183,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="import" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -271,8 +220,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24025974" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24512987" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -341,100 +290,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/template.html">
+    <entry file="file://$PROJECT_DIR$/addNews.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://D:/temp/www/model/MNews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="0" selection-end="3457" vertical-scroll-proportion="0.12561576" />
-      </provider>
-    </entry>
-    <entry file="file://D:/temp/www/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.44458127" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/addNews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="228" selection-end="2233" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/editNews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="42" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="240" selection-end="241" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="88" selection-end="88" vertical-scroll-proportion="0.123636365" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MComments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="5" selection-start="1565" selection-end="1903" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="28" selection-start="1277" selection-end="1548" vertical-scroll-proportion="-15.038462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/home/dvleague.ru/www/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+        <state line="7" column="0" selection-start="248" selection-end="248" vertical-scroll-proportion="0.14655173">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news.php">
+    <entry file="file://Z:/denwer/www/denwer/errors/404.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="45" selection-start="1700" selection-end="1700" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MNews.php">
+    <entry file="file://Z:/home/dvleague.ru/www/news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="66" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.03601695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/IMDomainObject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="23" selection-start="135" selection-end="135" vertical-scroll-proportion="0.21935484">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CNewsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="47" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+        <state line="74" column="30" selection-start="1900" selection-end="1910" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/news_full.html">
+    <entry file="file://$PROJECT_DIR$/news.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="967" selection-end="967" vertical-scroll-proportion="1.3076923">
+        <state line="31" column="33" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="21" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.3340206">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MComments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="23" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.68432206">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="88" selection-end="88" vertical-scroll-proportion="0.21030928">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MNews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="5" selection-start="3663" selection-end="3663" vertical-scroll-proportion="0.4957627">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/temp/tinymce_3.5.0.1/tinymce/examples/skins.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="215" selection-end="294" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/temp/tinymce_3.5.0.1/tinymce/examples/simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="9" selection-start="295" selection-end="398" vertical-scroll-proportion="-7.8461537">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/editNews.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="14" selection-start="156" selection-end="274" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="34" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.11111111">
+        <state line="19" column="47" selection-start="735" selection-end="754" vertical-scroll-proportion="-10.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/news_full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="21" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.22222222">
           <folding />
         </state>
       </provider>

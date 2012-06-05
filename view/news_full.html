@@ -5,7 +5,17 @@
 	<link href="/view/css/news_full.css" type="text/css" rel="stylesheet">
 {% endblock %}
 
+{% block js_links %}
+<script  type="text/javascript" src="../import/tiny_mce/tiny_mce.js"></script>
+{% endblock %}
+
 {% block content %}
+<script type="text/javascript">
+    tinyMCE.init({
+        mode : "textareas",
+        theme : "simple"
+    });
+</script>
 	<div id="content">
 		<div id="news_wrapper">
 			<div id="number">#1</div>
@@ -37,7 +47,9 @@
                     <a href="user_id.html">{{ item['newsmaker'] }}</a>
                 </div>
                 <div id="text_comments">
+                    {% autoescape false %}
                     <span>{{ item['text'] }}</span>
+                    {% endautoescape %}
                 </div>
             </div>
         {% endfor %}

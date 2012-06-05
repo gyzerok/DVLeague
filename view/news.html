@@ -13,7 +13,6 @@
                 <div id="news_blocks">
                     <div id="image"></div>
                     <div id="news_content">
-						<div id="number">#1</div>
                         <div id="title"><a href="news.php?id={{ item['id'] }}&view=1">{{ item['title'] }}</a></div>
                         <div id="text">
                             {% autoescape false %}
@@ -27,7 +26,7 @@
                             <div id="comments"><p>{{ item['comments'] }}</p></div>
 						<div id="edit_news_pannel">
 							<div id="editnews"><a title="Edit news" href="news.php?id={{ item['id'] }}&edit=1"></a></div>
-							<div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
+							<div id="deletenews"><a title="Delete news" href="news.php?id={{ item['id'] }}&delete=1"></a></div>
 						</div>
                         </div>
                     </div>

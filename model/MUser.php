@@ -48,6 +48,6 @@ class MUser implements  IMDomainObject
 
     function Update(){}
 
-    function Delete(){}
+    function Delete($id){}
 }
 ?>

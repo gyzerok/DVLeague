@@ -20,8 +20,9 @@ class MNews implements IMDomainObject
         $this->summary = mysql_real_escape_string($summary);
         $this->text = mysql_real_escape_string($text);
         $this->newsmaker = mysql_real_escape_string($newsmaker);
-        $this->date = mysql_real_escape_string($date);
+        $this->date = $date;
         $this->views = 0;
+        $this->comments = 0;
     }
 
     function Select($id)
@@ -96,7 +97,7 @@ class MNews implements IMDomainObject
     function Insert()
     {
         mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date, news_look)
-                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', '$this->date', '$this->views')");
+                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', NOW(), '$this->views')");
         return mysql_error();
     }
     function Update()
@@ -106,6 +107,10 @@ class MNews implements IMDomainObject
                      WHERE news_id = '$this->id'");
         return mysql_error();
     }
-    function Delete(){}
+    function Delete($id)
+    {
+        $query = mysql_query("DELETE  FROM news WHERE news_id = '$id'");
+        return mysql_error();
+    }
 }
 ?>
