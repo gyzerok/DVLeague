@@ -13,6 +13,15 @@ class MInitDB
                     FOREIGN KEY (user_group_id) REFERENCES user_groups(user_group_id) ,
                     UNIQUE ( user_name )
                     )");
+
+        mysql_query("CREATE TABLE dvl_db.commands (
+                    command_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                    command_name VARCHAR( 20 ) NOT NULL ,
+                    command_people VARCHAR( 252 ) NOT NULL ,
+                    command_games INT NOT NULL ,
+                    command_win INT NOT NULL ,
+                    command_lose INT NOT NULL
+                    )");
         return mysql_errno();
     }
 
