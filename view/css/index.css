@@ -8,7 +8,6 @@
     -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
-
     
 }
 
@@ -183,6 +182,68 @@ div.news_full p {
 
 tr.even td {
     background-color: #d1d1d1;
+}
+
+#command {
+	margin-top: 15px;
+    height: 251px;
+	width: 200px;
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+	float:right;
+}
+
+#command_wrapper {
+	overflow:hidden;
+	background-color: #dddddd;	
+	margin:5px auto;
+	width: 190px;
+    border-radius: 20px;
+}
+
+
+#command h2 {
+	margin-top: 6px;
+	margin-left:15px;
+}
+
+#command h2 a {
+    color:#55b5ff;
+    font:bold 18px Myriad Pro;
+
+
+}
+
+#command_table {
+	margin:4px auto;
+	width: 190px;
+}
+
+#command_table td {
+	outline: 0px solid black;
+	padding-bottom: 3px;
+}
+
+#command_table td  a{
+	text-decoration: none;
+    color:#55b5ff;
+    font:bold 14px Myriad Pro;
+	
+}
+
+.table_title {
+    color:#000000;
+    font:bold 14px Myriad Pro;	
+
+
+}
+
+.table_rows {
+	color: gray;
+    font:bold 14px Myriad Pro;	
 }
 
 /*����� ����� � ���������*/
