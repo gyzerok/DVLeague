@@ -1,6 +1,5 @@
 <?php
 include ($_SERVER["DOCUMENT_ROOT"].'\model\MCommand.php');
-//include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
 
 
 class CCommandController
@@ -11,14 +10,14 @@ class CCommandController
         $mCommand = new MCommand();
 
         //ссылки на новость должны иметь формат
-        $mCommand->Init($_SESSION[ 'user_id' ], $post[ 'commandName' ], '');
+        $mCommand->Init($post[ 'commandName' ], $_SESSION[ 'user_name' ]);
 
         $success = $mCommand->Insert();
 
-        if ( $success )
-            return 'OK';
+        if ( empty( $success ) )
+            echo 'Ok';
         else
-            echo 'News not found!';
+            echo 'Error! ' . $success;
 
     }
 
@@ -44,28 +43,27 @@ class CCommandController
         return ceil( $mNews->CountNews() / 10 );
     }
 
-    static function ReadNewsID( $id )
+    static function ReadCommandID( $id )
     {
-        $mNews = new MNews();
+        $mCommand = new MCommand();
 
         //ссылки на новость должны иметь формат
-        $success = $mNews->Select($id);
+        $success = $mCommand->Select($id);
         if ( $success )
         {
             $newsArray = array();
             $newsArray[ 'id' ] = $id;
-            $newsArray[ 'title' ] = $mNews->title;
-            $newsArray[ 'summary' ] = $mNews->summary;
-            $newsArray[ 'text' ] = $mNews->text;
-            $newsArray[ 'newsmaker' ] = $mNews->newsmaker;
-            $newsArray[ 'date' ] = $mNews->date;
-            $newsArray[ 'views' ] = $mNews->views;
-            $newsArray[ 'comments' ] = $mNews->comments;
+            $newsArray[ 'name' ] = $mCommand->name;
+            $newsArray[ 'people' ] = $mCommand->people;
+            $newsArray[ 'win' ] = $mCommand->win;
+            $newsArray[ 'lose' ] = $mCommand->lose;
+            $newsArray[ 'score' ] = $mCommand->score;
+            $newsArray[ 'data' ] = $mCommand->data;
 
             return $newsArray;
         }
         else
-            echo 'News not found!';
+            echo 'Command not found!';
 
     }
 

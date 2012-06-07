@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f72afcb-a79c-42cc-ba74-c7de610e5c30" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/CCommandController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/MCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/addCommand.html" />
+      <change type="DELETED" beforePath="C:\WebServers\home\dvleague.ru\www\view\command.html.BASE.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebServers\home\dvleague.ru\www\view\command.html.LOCAL.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebServers\home\dvleague.ru\www\view\command.html.REMOTE.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command.php" afterPath="$PROJECT_DIR$/command.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CCommandController.php" afterPath="$PROJECT_DIR$/controller/CCommandController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CUserController.php" afterPath="$PROJECT_DIR$/controller/CUserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MCommand.php" afterPath="$PROJECT_DIR$/model/MCommand.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MInitDB.php" afterPath="$PROJECT_DIR$/model/MInitDB.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/command.html" afterPath="$PROJECT_DIR$/view/command.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/command_full.html" afterPath="$PROJECT_DIR$/view/command_full.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news.html" afterPath="$PROJECT_DIR$/view/news.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news_full.html" afterPath="$PROJECT_DIR$/view/news_full.html" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,19 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="command.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="command.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/command.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="195" selection-end="195" vertical-scroll-proportion="0.23766816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="39" selection-start="1495" selection-end="1514" vertical-scroll-proportion="-14.384615">
+            <state line="19" column="125" selection-start="698" selection-end="718" vertical-scroll-proportion="-12.423077">
               <folding />
             </state>
           </provider>
@@ -53,34 +49,7 @@
       <file leaf-file-name="command.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/command.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="46" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CCommandController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/CCommandController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MCommand.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/MCommand.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="command.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/home/dvleague.ru/www/command.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
+            <state line="17" column="61" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,7 +58,43 @@
       <file leaf-file-name="news.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="368" selection-end="389" vertical-scroll-proportion="0.0">
+            <state line="29" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="command_full.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/command_full.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="0.09933775">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/news.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="32" selection-start="2156" selection-end="2168" vertical-scroll-proportion="-10.230769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CUserController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="13" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CCommandController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/CCommandController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,22 +113,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="Z:/home/dvleague.ru/www/news.php" />
-        <option value="$PROJECT_DIR$/view/news.html" />
-        <option value="$PROJECT_DIR$/model/IMDomainObject.php" />
         <option value="$PROJECT_DIR$/model/MNews.php" />
-        <option value="$PROJECT_DIR$/controller/CNewsController.php" />
         <option value="$PROJECT_DIR$/model/MComments.php" />
         <option value="$PROJECT_DIR$/model/MUser.php" />
+        <option value="$PROJECT_DIR$/view/addCommand.html" />
+        <option value="Z:/home/dvleague.ru/www/command.php" />
+        <option value="$PROJECT_DIR$/model/MInitDB.php" />
+        <option value="$PROJECT_DIR$/view/command.html" />
+        <option value="$PROJECT_DIR$/model/MCommand.php" />
+        <option value="$PROJECT_DIR$/controller/CNewsController.php" />
+        <option value="$PROJECT_DIR$/controller/CUserController.php" />
+        <option value="$PROJECT_DIR$/view/news.html" />
+        <option value="$PROJECT_DIR$/controller/CCommandController.php" />
         <option value="$PROJECT_DIR$/view/news_full.html" />
         <option value="$PROJECT_DIR$/news.php" />
-        <option value="$PROJECT_DIR$/controller/CUserController.php" />
-        <option value="$PROJECT_DIR$/view/addCommand.html" />
-        <option value="$PROJECT_DIR$/model/MInitDB.php" />
         <option value="$PROJECT_DIR$/command.php" />
-        <option value="$PROJECT_DIR$/controller/CCommandController.php" />
-        <option value="$PROJECT_DIR$/model/MCommand.php" />
-        <option value="$PROJECT_DIR$/view/command.html" />
+        <option value="$PROJECT_DIR$/view/command_full.html" />
       </list>
     </option>
   </component>
@@ -132,6 +137,8 @@
       <server host="dvleague.ru" name="dvleague.ru">
         <path_mappings>
           <path_mapping local_path="$PROJECT_DIR$/news.php" remote_path="Z:\home\dvleague.ru\www\news.php" />
+          <path_mapping local_path="$PROJECT_DIR$/command.php" remote_path="Z:\home\dvleague.ru\www\command.php" />
+          <path_mapping local_path="$PROJECT_DIR$/controller/CUserController.php" remote_path="Z:\home\dvleague.ru\www\controller\CUserController.php" />
         </path_mappings>
       </server>
     </option>
@@ -255,7 +262,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -273,14 +280,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1296" height="1010" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2564935" sideWeight="0.6082353" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3917647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -349,129 +356,121 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/command.php</url>
-          <line>27</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/command.php</url>
-          <line>17</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/model/MCommand.php</url>
-          <line>57</line>
+          <url>file://$PROJECT_DIR$/controller/CNewsController.php</url>
+          <line>25</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/addNews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="10" selection-start="2218" selection-end="2685" vertical-scroll-proportion="-25.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.76770186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/addCommand.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="159" selection-end="159" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="33" selection-start="936" selection-end="949" vertical-scroll-proportion="0.0">
+        <state line="23" column="41" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/CNewsController.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MNews.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="27" selection-start="2655" selection-end="2659" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="368" selection-end="389" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/news_full.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="20" selection-start="1753" selection-end="1765" vertical-scroll-proportion="0.9148936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.5025445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/CCommandController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/MCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1674" selection-end="1674" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/home/dvleague.ru/www/command.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8286385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="39" selection-start="1495" selection-end="1514" vertical-scroll-proportion="-14.384615">
+        <state line="65" column="0" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.33195022">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/command.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="195" selection-end="195" vertical-scroll-proportion="0.23766816">
+        <state line="19" column="125" selection-start="698" selection-end="718" vertical-scroll-proportion="-12.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="944" selection-end="944" vertical-scroll-proportion="0.57883817">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="29" selection-start="553" selection-end="562" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/MNews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="35" selection-start="2667" selection-end="2667" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/CNewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="20" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/denwer/www/denwer/errors/phperror_js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="13" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/CCommandController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/news_full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="12" selection-start="770" selection-end="770" vertical-scroll-proportion="-3.9230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/command.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="61" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.24944812">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="32" selection-start="2156" selection-end="2168" vertical-scroll-proportion="-10.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/command_full.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="0.09933775">
           <folding />
         </state>
       </provider>

@@ -101,6 +101,9 @@ class CUserController
     }
     static function CheckUser($userNameEditor, $userNameAuthor)
     {
+        if( empty($userNameEditor) )
+            return false;
+
         if ( $userNameEditor == $userNameAuthor )
             return true;
 
