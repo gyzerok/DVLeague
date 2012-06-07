@@ -23,7 +23,7 @@
 #avatar {
 	width:140px;
 	height:140px;
-	background-image: url("/view/images/large_avatar.png");
+	/*background-image: url("/view/images/large_avatar.png");*/
 	margin: 15px 0 0 15px; 
 	float:left;
 	clear:both;
