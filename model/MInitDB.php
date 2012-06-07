@@ -10,6 +10,7 @@ class MInitDB
                     user_name VARCHAR( 20 ) NOT NULL ,
                     user_pass VARCHAR( 32 ) NOT NULL ,
                     user_group_id INT NOT NULL DEFAULT '$query[user_group_id]' ,
+                    user_avatar VARCHAR ( 100 ) NULL ,
                     FOREIGN KEY (user_group_id) REFERENCES user_groups(user_group_id) ,
                     UNIQUE ( user_name )
                     )");

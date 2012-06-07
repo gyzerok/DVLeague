@@ -4,21 +4,22 @@ session_start();
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
 include ($_SERVER["DOCUMENT_ROOT"].'/model/MUser.php');
 
-switch ($_POST['do'])
-{
-    case "reg":
-        CUserController::Register($_POST);
-        CUserController::Back();
-        break;
-    case "auth":
-        CUserController::Auth($_POST);
-        CUserController::Back();
-        break;
-    case "quit":
-        CUserController::Quit();
-        CUserController::Back();
-        break;
-}
+if (!empty($_POST))
+    switch ($_POST['do'])
+    {
+        case "reg":
+            CUserController::Register($_POST);
+            CUserController::Back();
+            break;
+        case "auth":
+            CUserController::Auth($_POST);
+            CUserController::Back();
+            break;
+        case "quit":
+            CUserController::Quit();
+            CUserController::Back();
+            break;
+    }
 
 class CUserController
 {
@@ -131,6 +132,21 @@ class CUserController
         setcookie("cookie", "", time() - 3600, "/");
         setcookie("session_code", "", time() - 3600, "/");
         session_destroy();
+    }
+
+    static function Show($name)
+    {
+        MConnection::Open();
+
+        $user = new MUser();
+        if(empty($name))
+            $user->Select($_SESSION['user_name']);
+        else
+            $user->Select($name);
+
+        MConnection::Close();
+
+        return $user;
     }
 
     static function Back()

@@ -8,9 +8,9 @@
 {% block content %}
 	<div id="content">
 		<div id="user_wrapper">
-			<div id="avatar"></div>
+			<div id="avatar"><img src="{{ user.avatar }}" alt=""></div>
 			<div id="nickname">
-				<h2>AJIekseys</h2>
+				<h2>{{ user.name }}</h2>
 				<p>Member since: 12.12.2012</p>
 			</div>
 			<div class="information_wrapper">
@@ -20,7 +20,7 @@
 					</div>
 						<table id="community_table">
 							<tr>
-								<td class="status_label">Group</td><td class="value_label">Member</td>						
+								<td class="status_label">Group</td><td class="value_label">{{ user.group.name }}</td>
 							</tr>
 							<tr>
 								<td class="status_label">Active Posts</td><td class="value_label">9999</td>							
@@ -121,6 +121,11 @@
 					</tr>				
 				</table>
 			</div>
-		</div>		
+		</div>
+        <form action=/controller/CUploadController.php method=post enctype=multipart/form-data>
+            <input type="file" name="uploadfile">
+            <input type="hidden" name="upload" value="user">
+            <input type="submit" value="Upload">
+        </form>
 	</div>
 {% endblock %}  

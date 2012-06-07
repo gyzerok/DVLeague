@@ -1,7 +1,8 @@
 <?php
 session_start();
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
-include ($_SERVER["DOCUMENT_ROOT"].'/model/MGroup.phplude ($_SERVER["DOCUMENT_ROOT"].'/controller/CUserController.php');
+include ($_SERVER["DOCUMENT_ROOT"].'/model/MGroup.php');
+include ($_SERVER["DOCUMENT_ROOT"].'/controller/CUserController.php');
 require_once 'import/twig/lib/Twig/Autoloader.php';
 
 Twig_Autoloader::register();
@@ -11,15 +12,14 @@ $twig = new Twig_Environment($loader, array('cache' => 'twig_cache',));
 
 if (CUserController::Logged())
 {
-    MConnection::Open();
-
-
+    echo $twig->render('admin.html', array());
+/*    MConnection::Open();
 
     if (MGroupAccess::CanUseAdminPanel($_COOKIE['user_name']))
         echo $twig->render('admin.html', array());
     else
         echo "Please login as Admin";
 
-    MConnection::Close();
+    MConnection::Close();*/
 }
 ?>

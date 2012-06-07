@@ -1,6 +1,5 @@
 <?php
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
-include($_SERVER["DOCUMENT_ROOT"].'/model/MComments.php');
 
 class MCommand implements IMDomainObject
 {

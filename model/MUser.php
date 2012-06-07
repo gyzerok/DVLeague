@@ -2,13 +2,14 @@
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/MGroup.php');
 
-class MUser implements  IMDomainObject
+class MUser implements IMDomainObject
 {
     var $id = NULL;
     var $name = NULL;
     var $pass = NULL;
     var $group = NULL;
     var $groupId = NULL;
+    var $avatar = NULL;
 
     function MUser()
     {
@@ -32,7 +33,7 @@ class MUser implements  IMDomainObject
             $this->name = $query[user_name];
             $this->pass = $query[user_pass];
             $this->groupId = $query[user_group_id];
-
+            $this->avatar = $query[user_avatar];
             $this->group->Select($this->name);
 
             return true;
@@ -49,5 +50,12 @@ class MUser implements  IMDomainObject
     function Update(){}
 
     function Delete($id){}
+
+    function SetAvatar($path)
+    {
+        mysql_query("UPDATE users SET user_avatar = '$path' WHERE user_id = '$this->id'");
+
+        return mysql_errno();
+    }
 }
 ?>

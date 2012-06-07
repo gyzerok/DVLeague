@@ -32,7 +32,7 @@
 			{% else %}
 			<div id="another_header">
             <ul id="another_header_menu">
-                <div id="another_username"><li><a class="user" href="user.php">{{ user_name }}</a></li></div>
+                <div id="another_username"><li><a class="user" href="user.php?name={{ user_name }}">{{ user_name }}</a></li></div>
                 <form action="/controller/CUserController.php" method="POST" name="quit">
                     <input type="hidden" name="do" value="quit">
                     <li><input id="exit_button" type="submit" name="submit" value="Exit"/></li>
