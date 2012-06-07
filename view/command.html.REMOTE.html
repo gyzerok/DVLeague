@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/command.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+	<div id="content">
+		<div id="command_wrapper">
+			<h2><a href="command.php">�������</a></h2>
+			<table id="command_table">
+			<tr>
+				<td class="table_title">��������</td><td class="table_title">�-�</td><td class="table_title">�-�</td><td class="table_title">��</td>
+			</tr>
+            {% set i = 1 %}
+            {% for item in commandArray %}
+                <tr>
+                    <td class="table_rows">{{ 'i' }}  <a href="">{{ item[ 'name' ] }}</a></td><td class="table_rows">{{ item[ 'games' ] }}</td><td class="table_rows">{{ item[ 'win' ] }}</td><td class="table_rows">6400</td>
+                </tr>
+                {% set i = i + 1 %}
+            {% endfor %}
+			</table>
+		</div>
+		<form method="post" action="../command.php" name="registration_form" enctype="multipart/form-data">
+			<input id="registr_submit" type="submit" name="submit" value="Create command"/>
+		</form>
+	</div>
+{% endblock %} 

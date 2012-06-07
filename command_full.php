@@ -9,12 +9,5 @@ Twig_Autoloader::register();
 $loader = new Twig_Loader_Filesystem('view');
 $twig = new Twig_Environment($loader, array('cache' => 'twig_cache',));
 
-MConnection::Open();
-
-$newsArray = array();
-$newsArray = CNewsController::ReadNews(0);
-
-MConnection::Close();
-
-echo $twig->render('index.html', array('newsArray' => $newsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+echo $twig->render('command_full.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
 ?>

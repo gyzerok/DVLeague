@@ -1,11 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-    <title></title>
+{% extends "template.html" %}
 
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/editNews.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block js_links %}
     <script  type="text/javascript" src="../import/tiny_mce/tiny_mce.js"></script>
+{% endblock %}
+
+{% block content %}
     <script  type="text/javascript">
         tinyMCE.init({
             // General options
@@ -40,23 +44,22 @@
                 staffid : "991234"
             }
         });
-    </script>
-</head>
-<body>
-<form action="../news.php" method="post" enctype="multipart/form-data">
+	</script>
+	<div id="content">
+		<form id="form" action="../news.php" method="post" enctype="multipart/form-data">
 
-    <label>Заголовок4</label>
-    <input name="title" value="{{ newsArray['title'] }}"  type="text" />
+			<p><label>Заголовок</label></p>
+			<input name="title" value="{{ newsArray['title'] }}"  type="text" />
 
-    <label>Краткая новость</label>
-    <textarea name="summary" value="">{{ newsArray['summary'] }}</textarea>
+			<p><label>Краткая новость</label></p>
+			<textarea name="summary" value="">{{ newsArray['summary'] }}</textarea>
 
-    <label>Основное содержание</label>
-    <textarea name="text" value="">{{ newsArray['text'] }}</textarea>
+			<p><label>Основное содержание</label></p>
+			<textarea name="text" value="">{{ newsArray['text'] }}</textarea>
 
-    <input name="id" type="hidden" value="{{ newsArray['id'] }}"/>
+			<input name="id" type="hidden" value="{{ newsArray['id'] }}"/>
 
-    <input name="submit" type="submit" value="Отправить">
-</form>
-</body>
-</html>
+			<input id="button" name="submit" type="submit" value="Отправить">
+		</form>
+	</div>
+{% endblock %}

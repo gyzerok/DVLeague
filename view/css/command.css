@@ -1,0 +1,96 @@
+@import url(reset.css);
+
+
+#content {
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+
+#command_wrapper {
+	overflow:hidden;
+	background-color: #dddddd;	
+	width: 350px;
+    border-radius: 20px;
+	margin-top: 15px;
+	margin-left: 50px;
+}
+
+
+#command_wrapper h2 {
+	margin-top: 15px;
+	margin-left:15px;
+}
+
+#command_wrapper h2 a {
+    color:#55b5ff;
+    font:bold 18px Myriad Pro;
+	text-decoration: none;
+
+}
+
+#command_table {
+	width: 400px;
+	margin: 10px;
+}
+
+#command_table td {
+	outline: 0px solid black;
+	padding-bottom: 3px;
+}
+
+#command_table td  a{
+	text-decoration: none;
+    color:#55b5ff;
+    font:bold 14px Myriad Pro;
+}
+
+.table_title {
+    color:#000000;
+    font:bold 14px Myriad Pro;	
+
+
+}
+
+.table_rows {
+	color: gray;
+    font:bold 14px Myriad Pro;	
+}
+
+#registr_submit {
+    border-radius: 6px;
+    height: 30px;
+    padding:0 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    min-width:110px;
+    font: 300 12px/30px Helvetica,Arial,sans-serif;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    margin-top: 10px;
+    margin-left: 280px;
+	margin-bottom: 10px;
+    background-image: url(/view/images/registration-button.png);
+    border-style: solid;
+    border-color: #0190ff;
+    border-width: 1px 1px 0pt;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    text-shadow: 1px 1px 10px #000000;
+    
+
+}
+
+#registr_submit:active {
+    margin-top: 13px;
+
+
+}

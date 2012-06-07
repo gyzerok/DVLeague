@@ -1,23 +1,39 @@
 <?php
-include ($_SERVER["DOCUMENT_ROOT"].'\model\MNews.php');
+include ($_SERVER["DOCUMENT_ROOT"].'\model\MCommand.php');
 //include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
 
 
-class CNewsController
+class CCommandController
 {
     //функция для чтения новостей
-    static function ReadNews( $offset )
+    static function CreateCommand( $post )
     {
-        $mNews = new MNews();
+        $mCommand = new MCommand();
 
         //ссылки на новость должны иметь формат
-        $success = $mNews->SelectNews($offset);
+        $mCommand->Init($_SESSION[ 'user_id' ], $post[ 'commandName' ], '');
+
+        $success = $mCommand->Insert();
+
         if ( $success )
-        {
-            return $mNews->news;
-        }
+            return 'OK';
         else
             echo 'News not found!';
+
+    }
+
+    static function ReadCommands( )
+    {
+        $mCommand = new MCommand();
+
+        //ссылки на новость должны иметь формат
+        $success = $mCommand->SelectCommands();
+        if ( $success )
+        {
+            return $mCommand->commands;
+        }
+        else
+            echo 'Commands not found!';
 
     }
 

@@ -276,5 +276,12 @@
     background-color: gray;
     background-image: url(/view/images/pageBg.png);
     padding: 7px 12px 15px 12px;
+	overflow:hidden;
 
+}
+
+#footer {
+	height: 24px;
+    background-image: url(/view/images/navBg.png);
+    background-repeat: repeat-x;
 }

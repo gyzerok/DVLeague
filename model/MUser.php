@@ -2,7 +2,7 @@
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/MGroup.php');
 
-class MUser implements  IMDomainObject
+class MUser implements IMDomainObject
 {
     var $id = NULL;
     var $name = NULL;
@@ -49,7 +49,7 @@ class MUser implements  IMDomainObject
 
     function Update(){}
 
-    function Delete(){}
+    function Delete($id){}
 
     function SetAvatar($path)
     {

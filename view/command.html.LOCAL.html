@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/command.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+	<div id="content">
+		<div id="command_wrapper">
+			<h2><a href="command.php">Команды</a></h2>
+			<table id="command_table">
+			<tr>
+				<td class="table_title">Название</td><td class="table_title">П-б</td><td class="table_title">П-р</td><td class="table_title">Оч</td>
+			</tr>
+			<tr>
+				<td class="table_rows">1  <a href="command_full.php">NaVi</a></td><td class="table_rows">12</td><td class="table_rows">5</td><td class="table_rows">6400</td>
+			</tr>
+			<tr>
+				<td class="table_rows">2  <a href="command_full.php">Darer</a></td><td class="table_rows">10</td><td class="table_rows">10</td><td class="table_rows">4000</td>
+			</tr>
+			</table>
+		</div>
+		<form method="post" name="registration_form">
+			<input id="registr_submit" type="submit" name="submit" value="Create command"/>
+		</form>
+	</div>
+{% endblock %} 

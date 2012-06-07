@@ -1,0 +1,56 @@
+{% extends "template.html" %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/command_full.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+	<div id="content">
+		<div id="command_wrapper">
+			<div id="command_logo"></div>
+			<h2 class="team_name">Super Team</h2>
+			<div id="result">
+				<table id="command_table">
+				<tr>
+					<td class="table_title">Curent Place</td><td class="table_title">Wins</td><td class="table_title">Loses</td><td class="table_title">Score</td>
+				</tr>
+				<tr>
+					<td class="table_rows">1</td><td class="table_rows">12</td><td class="table_rows">5</td><td class="table_rows">6400</td>
+				</tr>
+				</table>			
+			</div>
+			<div id="team">
+				<div class="player">
+					<h2><a href="user.php">AJIekseys</a></h2>
+					<p>Aleksey Borozdin</p>
+				</div>
+				<div class="player">
+					<h2><a href="user.php">AJIekseys</a></h2>
+					<p>Aleksey Borozdin</p>
+				</div>
+				<div class="player">
+					<h2><a href="user.php">AJIekseys</a></h2>
+					<p>Aleksey Borozdin</p>
+				</div>
+				<div class="player">
+					<h2><a href="user.php">AJIekseys</a></h2>
+					<p>Aleksey Borozdin</p>
+				</div>
+				<div class="player">
+					<h2><a href="user.php">AJIekseys</a></h2>
+					<p>Aleksey Borozdin</p>
+				</div>
+			</div>
+		</div>
+		<div id="latest_games">
+			<h2>LAST GAME</h2>
+			<table id="last_game_table">
+				<tr>
+					<td class="first_command">Super Team</td><td class="date"><a href="">25.04</a></td><td class="second_command">Moscow five</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+{% endblock %}  

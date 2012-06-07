@@ -4,7 +4,6 @@
 
 
 #content {
-	width:777px;
 	height: 400px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
@@ -197,8 +196,7 @@
 }
 
 #comments {
-	margin:0 auto;
-	width: 780px;
+	margin:0 auto 5px auto;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
@@ -220,7 +218,6 @@
 	padding-top:10px;
 	outline: 0px solid red;
 	width: 700px;
-	height: 60px;
 	margin-left: 15px;
 	overflow:hidden;
 }
@@ -274,5 +271,35 @@
 #clear {
 
 	clear:both;
+
+}
+
+.Write_Comment {
+	margin-top:3px;
+    font: bold 14px Myriad Pro;
+    color: #000000;	
+}
+
+#button {
+	border-radius: 4px;
+    height: 15px;
+    padding:0 10px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    min-width:60px;
+    font: 12px Helvetica,Arial,sans-serif; 
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    background-color: #bbbbbb;
+    border-style: solid;
+    border-color: #bbbbbb;
+    border-width: 1px 1px 0pt;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    text-shadow: 1px 1px 10px #bbbbbb;
 
 }
