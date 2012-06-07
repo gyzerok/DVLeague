@@ -55,11 +55,11 @@
         {% endfor %}
 	</div>
 <form action="../news.php" method="post" enctype="multipart/form-data">
-    <label>Your comment</label>
+    <label class="Write_Comment">Write Comment</label>
     <textarea name="commentText" value="" ></textarea>
 
     <input name="newsID" type="hidden" value="{{ newsArray['id'] }}"/>
 
-    <input name="submit" type="submit" value="submit">
+    <input id="button" name="submit" type="submit" value="SUBMIT">
 </form>
 {% endblock %}

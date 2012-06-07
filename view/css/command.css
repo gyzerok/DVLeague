@@ -75,6 +75,7 @@
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     margin-top: 10px;
     margin-left: 280px;
+	margin-bottom: 10px;
     background-image: url(/view/images/registration-button.png);
     border-style: solid;
     border-color: #0190ff;
@@ -85,5 +86,11 @@
     -moz-border-left-colors: none;
     text-shadow: 1px 1px 10px #000000;
     
+
+}
+
+#registr_submit:active {
+    margin-top: 13px;
+
 
 }

@@ -1,0 +1,185 @@
+@import url(reset.css);
+
+#content {
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+	overflow:hidden;
+    
+}
+
+#command_wrapper {
+    float:left;
+    width:500px;
+    height: 330px;
+    margin-left:10px;
+    margin-top: 10px;
+    background-color: #dddddd;
+    border-radius: 10px;
+}
+
+#latest_games {
+	float:right;
+    width:240px;
+    height: 330px;
+    margin-right:10px;
+    margin-top: 10px;
+    background-color: #dddddd;
+    border-radius: 10px;
+}
+
+#latest_games h2 {
+	margin-top:10px;
+	margin-left:10px;
+	color:#55b5ff;
+    font:bold 18px Myriad Pro;	
+
+
+}
+
+
+#last_game_table {
+	margin: 3px auto;
+}
+
+
+
+
+.first_command {
+    width:90px;
+	height: 20px;
+	text-align: left;
+	background-color: #ffffff;
+	border-radius: 10px 0px 0px 10px;
+	padding-left:5px;
+	color: #000000;
+    font:bold 13px Myriad Pro;
+}
+
+.date {	
+	background-color:  #ffffff;
+}
+
+.date a {	
+	display:block;
+	width: 40px;
+	height: 20px;
+	background-color: #dddddd;
+	margin:2px;
+	border-radius: 5px;
+	color:#55b5ff;
+    font:bold 14px Myriad Pro;
+	text-decoration: none;
+	text-align:center;
+}
+
+.second_command {
+    width:90px;
+	height: 20px;
+	text-align: right;
+	background-color: #ffffff;
+	border-radius: 0px 10px 10px 0px;
+	padding-right:5px;
+	color: #000000;
+    font:bold 13px Myriad Pro;
+}
+
+
+
+
+#command_logo {
+	width: 110px;
+	height: 110px;
+	background-image: url("/view/images/command_logo.png");
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	margin-left: 10px;
+	float:left;
+	outline:0px solid red;
+
+
+}
+
+
+.team_name {
+	margin-left: 25px;
+	margin-top: 25px;
+	color:#55b5ff;
+    font:bold 18px Myriad Pro;
+
+}
+
+#result {
+	width: 365px;
+	height: 50px;	
+	background-color: #ffffff;
+    border-radius: 10px;
+	margin-left: 120px;
+	margin-top: 25px;
+}
+
+#command_table {
+	height: 50px;
+	margin-left: 5px	
+}
+
+#command_table td {
+	outline: 0px solid black;
+	text-align: center;
+}
+
+
+.table_title {
+    color:#000000;
+    font:bold 14px Myriad Pro;
+	width: 91px;
+
+}
+
+.table_rows {
+	color: gray;
+    font:bold 14px Myriad Pro;
+	width: 91px;	
+}
+
+#team {
+	width: 490px;
+	height: 180px;
+	background-color: #ffffff;
+	margin: 10px auto;
+	border-radius: 10px;
+	padding-top: 5px;
+
+}
+
+div.player {
+	overflow:hidden;
+	width: 150px;
+	height: 80px;
+	background-color: #dddddd;
+	border-radius: 10px;
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	float:left;
+}
+
+div.player h2 {
+	margin-top:5px;
+	margin-left:5px;
+} 
+
+div.player h2 a {
+	color:#55b5ff;
+    font:bold 15px Myriad Pro;
+	text-decoration: none;
+} 
+
+
+div.player p {
+	color:#000000;
+    font:12px Myriad Pro;
+	margin-left:5px;
+}
