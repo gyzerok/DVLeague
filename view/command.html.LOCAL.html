@@ -9,10 +9,9 @@
 {% block content %}
 	<div id="content">
 		<div id="command_wrapper">
-			<h2><a href="command.php">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></h2>
+			<h2><a href="command.php">Команды</a></h2>
 			<table id="command_table">
 			<tr>
-<<<<<<< HEAD
 				<td class="table_title">Название</td><td class="table_title">П-б</td><td class="table_title">П-р</td><td class="table_title">Оч</td>
 			</tr>
 			<tr>
@@ -20,20 +19,10 @@
 			</tr>
 			<tr>
 				<td class="table_rows">2  <a href="command_full.php">Darer</a></td><td class="table_rows">10</td><td class="table_rows">10</td><td class="table_rows">4000</td>
-=======
-				<td class="table_title">пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</td><td class="table_title">пїЅ-пїЅ</td><td class="table_title">пїЅ-пїЅ</td><td class="table_title">пїЅпїЅ</td>
->>>>>>> 70e8cd4bb4cb1c75a06b40652e3cfb4b46b54ad1
 			</tr>
-            {% set i = 1 %}
-            {% for item in commandArray %}
-                <tr>
-                    <td class="table_rows">{{ 'i' }}  <a href="">{{ item[ 'name' ] }}</a></td><td class="table_rows">{{ item[ 'games' ] }}</td><td class="table_rows">{{ item[ 'win' ] }}</td><td class="table_rows">6400</td>
-                </tr>
-                {% set i = i + 1 %}
-            {% endfor %}
 			</table>
 		</div>
-		<form method="post" action="../command.php" name="registration_form" enctype="multipart/form-data">
+		<form method="post" name="registration_form">
 			<input id="registr_submit" type="submit" name="submit" value="Create command"/>
 		</form>
 	</div>

@@ -23,7 +23,7 @@ if ( empty( $_POST ) )
     else if ( $_GET[ 'edit' ] == 1 )//href='/news.php?id={id}&edit=1&'
     {
         $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
-        if (CUserController::Logged())
+        if (CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[ 'newsmaker' ] ))
             echo $twig->render('editNews.html', array('newsArray' => $newsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
     }
     else if ( $_GET[ 'view' ] == 1 )//href='/news.php?id={id}&view=1&'

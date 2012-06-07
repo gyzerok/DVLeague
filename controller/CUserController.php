@@ -99,6 +99,27 @@ class CUserController
 
         MConnection::Close();
     }
+    static function CheckUser($userNameEditor, $userNameAuthor)
+    {
+        if ( $userNameEditor == $userNameAuthor )
+            return true;
+
+        MConnection::Open();
+
+        $userEditor = new MUser();
+        $userEditor->Select($userNameEditor);
+
+        $userAuthor = new MUser();
+        $userAuthor->Select($userNameAuthor);
+
+        MConnection::Close();
+
+        if ( $userEditor->group->access_level > $userAuthor->group->access_level )
+            return true;
+
+        return false;
+    }
+
 
     static function Quit()
     {
