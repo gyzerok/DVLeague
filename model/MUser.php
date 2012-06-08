@@ -10,6 +10,13 @@ class MUser implements IMDomainObject
     var $group = NULL;
     var $groupId = NULL;
     var $avatar = NULL;
+    var $regdate = NULL;
+    var $firstname = NULL;
+    var $lastname = NULL;
+    var $team = NULL;
+    var $mail = NULL;
+    var $skype = NULL;
+    var $icq = NULL;
 
     function MUser()
     {
@@ -35,6 +42,13 @@ class MUser implements IMDomainObject
             $this->groupId = $query[user_group_id];
             $this->avatar = $query[user_avatar];
             $this->group->Select($this->name);
+            $this->regdate = $query[user_regdate];
+            $this->firstname = $query[user_firstname];
+            $this->lastname = $query[user_lastname];
+            $this->team = $query[user_team];
+            $this->mail = $query[user_mail];
+            $this->icq = $query[user_icq];
+            $this->skype = $query[user_skype];
 
             return true;
         }
@@ -43,18 +57,26 @@ class MUser implements IMDomainObject
 
     function Insert()
     {
-        mysql_query("INSERT INTO users (user_name, user_pass) VALUES ('$this->name', '$this->pass')");
+        mysql_query("INSERT INTO users (user_name, user_pass, user_regdate) VALUES ('$this->name', '$this->pass', NOW())");
         return mysql_errno();
     }
 
-    function Update(){}
+    function Update()
+    {
+        mysql_query("UPDATE users SET
+                            user_firstname = '$this->firstname',
+                            user_lastname = '$this->lastname'
+                            user_mail = '$this->mail'
+                            user_icq = '$this->icq'
+                            user_skype = '$this->skype'
+                            user_avatar = '$this->avatar'
+                            WHERE user_id = '$this->id'");
+    }
 
     function Delete($id){}
 
     function SetAvatar($path)
     {
-        mysql_query("UPDATE users SET user_avatar = '$path' WHERE user_id = '$this->id'");
-
         return mysql_errno();
     }
 }

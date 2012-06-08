@@ -15,20 +15,14 @@ if (!empty($_POST))
 
 class CUploadController
 {
-    static function User($name)
+    static function User()
     {
         $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/user_ava/';
         $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
         if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
         {
-            MConnection::Open();
-
-            $user = new MUser();
-            $user->Select($name);
             $path = '/upload/user_ava/'.basename($_FILES['uploadfile']['name']);
-            $user->SetAvatar($path);
-
-            MConnection::Close();
+            return $path;
         }
     }
 

@@ -7,6 +7,5 @@
 
     $loader = new Twig_Loader_Filesystem('view');
     $twig = new Twig_Environment($loader, array('cache' => 'twig_cache',));
-    echo $twig->render('registration_form.html', array());
-    //echo $twig->render('template.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+    echo $twig->render('registration_form.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
 ?>
