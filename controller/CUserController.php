@@ -177,7 +177,10 @@ class CUserController
 
     static function Comments($name)
     {
-
+        MConnection::Open();
+        $comments = MComments::SelectByUser($name);
+        MConnection::Close();
+        return $comments;
     }
 
     static function Back()

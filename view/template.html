@@ -14,7 +14,7 @@
     <div id="morf"></div>
     <div id="razor"></div>
         <div id="wrapper">
-		{% if user_name|length == 0 %}
+		{% if authed == false %}
 		<div id="header">
             <div id="authentication">
                 <form action="/controller/CUserController.php" method="POST" name="authentication">

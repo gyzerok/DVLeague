@@ -54,33 +54,23 @@ class MComments implements IMDomainObject
         return false;
     }
 
-    function SelectByUser($name)
+    static function SelectByUser($name)
     {
         $query = mysql_query("SELECT * FROM comments
                                 INNER JOIN users ON users.user_id = comments.comments_newsmaker
                                 WHERE users.user_name = '$name'
+                                ORDER BY comments_date DESC
+                                LIMIT 0, 10
                              ");
-        if(mysql_errno() == 0)
+
+        $temp = array();
+        $i = 0;
+        while($comments = mysql_fetch_array($query))
         {
-            $i = 0;
-            while($comment = mysql_fetch_array($query))
-            {
-                $temp = array();
-
-                $temp['id'] = $comment[comments_id];
-                $temp['newsID'] = $comment[comments_newsID];
-                $temp['text'] = $comment[comments_text];
-                $temp['newsmaker'] = $comment[user_name];
-                $temp['date'] = $comment[comments_date];
-
-                $this->comments[$i] = $temp;
-                $i++;
-
-            }
-
-            return true;
+            $temp[$i] = $comments;
+            $i++;
         }
-        return false;
+        return $temp;
     }
 
     function CountCommentsByNews($newsID)
@@ -97,7 +87,7 @@ class MComments implements IMDomainObject
    function Insert()
     {
         mysql_query("INSERT INTO comments (comments_newsID, comments_text, comments_newsmaker, comments_date)
-                     VALUES ('$this->newsID', '$this->text', '$this->newsmaker', '$this->date')");
+                     VALUES ('$this->newsID', '$this->text', '$this->newsmaker', NOW())");
         return mysql_error();
     }
     function Update()

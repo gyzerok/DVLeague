@@ -106,31 +106,6 @@ class MNews implements IMDomainObject
             $i++;
         }
         return $temp;
-        /*if(mysql_errno() == 0)
-        {
-            $i = 0;
-            while($news = mysql_fetch_array($query))
-            {
-                $temp = array();
-
-                $temp['id'] = $news[news_id];
-                $temp['title'] = $news[news_title];
-                $temp['summary'] = $news[news_summary];
-                $temp['text'] = $news[news_text];
-                $temp['newsmaker'] = $news[user_name];
-                $temp['date'] = $news[news_date];
-                $temp['views'] = $news[news_look];
-
-                $mComments = new MComments();
-                $temp['comments'] = $mComments->CountCommentsByNews( $news[news_id] );
-
-                $this->news[$i] = $temp;
-                $i++;
-
-            }
-            return true;
-        }
-        return false;*/
     }
 
     function CountNews()
