@@ -34,7 +34,8 @@ class MCommand implements IMDomainObject
             $query = mysql_fetch_assoc($query);
             $this->id = $query[command_id];
             $this->name = $query[command_name];
-            $this->people = explode(" ", $query[command_people] );
+            $this->people = $query[command_people];
+            $this->code = $query[command_code];
             $this->win = $query[command_win];
             $this->lose = $query[command_lose];
             $this->score = $query[command_score];
@@ -57,6 +58,7 @@ class MCommand implements IMDomainObject
                 $temp['id'] = $command[command_id];
                 $temp['name'] = $command[command_name];
                 $temp['people'] = explode(" ", $command[command_people] );
+                $temp['code'] = $command[command_code];
                 $temp['win'] = $command[command_win];
                 $temp['lose'] = $command[command_lose];
                 $temp['score'] = $command[command_score];
@@ -70,16 +72,6 @@ class MCommand implements IMDomainObject
         }
         return false;
     }
-
-   /* function CountNews()
-    {
-        $query = mysql_query("SELECT COUNT(*) FROM news");
-        if(mysql_errno() == 0)
-        {
-            $query = mysql_fetch_assoc($query);
-            return $query['COUNT(*)'];
-        }
-    }*/
 
     function Insert()
     {
