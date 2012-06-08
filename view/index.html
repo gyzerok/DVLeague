@@ -12,7 +12,7 @@
 	<div id="content">
         {% for item in newsArray %}
             <div class="news_wrapper">
-                <div id="news_image"></div>
+                <div id="news_images"><img src="{{ item['picture'] }}" alt=""></div>
                 <div class="news_full">
                     <h2><a href="news.php?id={{ item['id'] }}&view=1">{{ item['title'] }}</a></h2>
                     {% autoescape false %}

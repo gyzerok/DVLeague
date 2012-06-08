@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_template.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="user_template.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/user_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="31" selection-start="303" selection-end="303" vertical-scroll-proportion="-6.076923">
+            <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.36">
               <folding />
             </state>
           </provider>
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CUserController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CUserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="28" selection-start="4725" selection-end="4725" vertical-scroll-proportion="0.4722838">
+            <state line="163" column="28" selection-start="4754" selection-end="4754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,12 +126,12 @@
         <option value="$PROJECT_DIR$/user.php" />
         <option value="$PROJECT_DIR$/view/user_last_comments.html" />
         <option value="$PROJECT_DIR$/model/MComments.php" />
-        <option value="$PROJECT_DIR$/view/user_template.html" />
         <option value="$PROJECT_DIR$/registration.php" />
         <option value="$PROJECT_DIR$/model/MInitDB.php" />
         <option value="$PROJECT_DIR$/model/MUser.php" />
         <option value="$PROJECT_DIR$/controller/CUploadController.php" />
         <option value="$PROJECT_DIR$/controller/CUserController.php" />
+        <option value="$PROJECT_DIR$/view/user_template.html" />
       </list>
     </option>
   </component>
@@ -407,13 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/user_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="303" selection-end="303" vertical-scroll-proportion="-6.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/MComments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="57" selection-start="3092" selection-end="3092" vertical-scroll-proportion="0.53078556">
@@ -472,7 +465,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="28" selection-start="4725" selection-end="4725" vertical-scroll-proportion="0.4722838">
+        <state line="163" column="28" selection-start="4754" selection-end="4754" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/user_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="217" selection-end="217" vertical-scroll-proportion="0.36">
           <folding />
         </state>
       </provider>

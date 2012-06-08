@@ -226,3 +226,17 @@ div.player p {
     font:12px Myriad Pro;
 	margin-left:5px;
 }
+
+#delete_player {
+	margin-top: 20px;
+	margin-left: 125px;
+
+}
+
+#delete_player a {
+	display:block;
+	width: 15px;
+	height:15px;
+	background-image: url("/view/images/delete_player.png");
+	cursor:pointer;
+}

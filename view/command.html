@@ -23,8 +23,12 @@
                 {% endfor %}
 			</table>
 		</div>
+
+        {% if authed %}
 		<form method="post" action="../command.php" name="registration_form" enctype="multipart/form-data">
 			<input id="registr_submit" type="submit" name="submit" value="Create command"/>
 		</form>
+        {% endif %}
+
 	</div>
 {% endblock %} 
