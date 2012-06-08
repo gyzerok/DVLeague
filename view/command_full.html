@@ -11,19 +11,25 @@
 		<div id="command_wrapper">
 			<div id="command_logo"></div>
 			<h2 class="team_name">{{ commandArray[ 'name' ] }}</h2>
-			<form action="command.php" method="post" name="join_in_team">
-				<label class="label">Code<input id="code" type="text" name="code" value=""/></label>
+            {% if authed %}
+            {% if notJoin %}
+                <form action="command.php" method="post" name="join_in_team">
 
-                {% if commandArray[ 'people' ][0] == user_name %}
-                    {% set buttonName = 'Set' %}
-                    <input name="commandSetID" type="hidden" value="{{ commandArray['id'] }}"/>
-                {% else %}
-                    {% set buttonName = 'Join' %}
-                    <input name="commandJoinID" type="hidden" value="{{ commandArray['id'] }}"/>
-                {% endif %}
+                    {% if commandArray[ 'people' ][0] == user_name %}
+                        {% set buttonName = 'Set' %}
+                        <label class="label">Code<input id="code" type="text" name="code" value="{{ commandArray['code'] }}"/></label>
+                        <input name="commandSetID" type="hidden" value="{{ commandArray['id'] }}"/>
+                    {% else %}
+                        {% set buttonName = 'Join' %}
+                        <label class="label">Code<input id="code" type="text" name="code" value=""/></label>
+                        <input name="commandJoinID" type="hidden" value="{{ commandArray['id'] }}"/>
+                    {% endif %}
 
-				<input id="submit" type="submit" name="submit" value="{{ buttonName }}"/>
-			</form>
+                    <input id="submit" type="submit" name="submit" value="{{ buttonName }}"/>
+
+                </form>
+            {% endif %}
+            {% endif %}
 			<div id="result">
 				<table id="command_table">
 				<tr>
@@ -36,10 +42,10 @@
 			</div>
 			<div id="team">
 
-                {% for i in 1..countUsers %}
+                {% for i in 0..countUsers-1 %}
 
                     <div class="player">
-                        <h2><a href="user.php">{{ commandArray[ 'people' ][0] }}</a></h2>
+                        <h2><a href="user.php?name={{ commandArray[ 'people' ][i] }}">{{ commandArray[ 'people' ][i] }}</a></h2>
                     </div>
 
                 {% endfor %}
