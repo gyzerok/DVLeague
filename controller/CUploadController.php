@@ -4,48 +4,49 @@ include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MUser.php');
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MNews.php');
 
-if (!empty($_POST))
-    switch($_POST['upload'])
-    {
-        case 'user':
-            CUploadController::User($_SESSION['user_name']);
-            CUploadController::Back();
-            break;
-    }
-
 class CUploadController
 {
     static function User()
     {
-        $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/user_ava/';
-        $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
-        if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+        if (basename(!empty($_FILES['uploadfile']['name'])))
         {
-            $path = '/upload/user_ava/'.basename($_FILES['uploadfile']['name']);
-            return $path;
+            $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/user_ava/';
+            $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
+            if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+            {
+                $path = '/upload/user_ava/'.basename($_FILES['uploadfile']['name']);
+                return $path;
+            }
         }
+        return false;
     }
 
     static function News()
     {
-        $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/news_pic/';
-        $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
-        if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+        if (basename(!empty($_FILES['uploadfile']['name'])))
         {
-            $path = '/upload/news_pic/'.basename($_FILES['uploadfile']['name']);
-            return $path;
+            $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/news_pic/';
+            $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
+            if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+            {
+                $path = '/upload/news_pic/'.basename($_FILES['uploadfile']['name']);
+                return $path;
+            }
         }
         return false;
     }
 
     static function Team()
     {
-        $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/team_pic/';
-        $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
-        if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+        if (basename(!empty($_FILES['uploadfile']['name'])))
         {
-            $path = '/upload/team_pic/'.basename($_FILES['uploadfile']['name']);
-            return $path;
+            $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/team_pic/';
+            $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
+            if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+            {
+                $path = '/upload/team_pic/'.basename($_FILES['uploadfile']['name']);
+                return $path;
+            }
         }
         return false;
     }

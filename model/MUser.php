@@ -65,10 +65,10 @@ class MUser implements IMDomainObject
     {
         mysql_query("UPDATE users SET
                             user_firstname = '$this->firstname',
-                            user_lastname = '$this->lastname'
-                            user_mail = '$this->mail'
-                            user_icq = '$this->icq'
-                            user_skype = '$this->skype'
+                            user_lastname = '$this->lastname',
+                            user_mail = '$this->mail',
+                            user_icq = '$this->icq',
+                            user_skype = '$this->skype',
                             user_avatar = '$this->avatar'
                             WHERE user_id = '$this->id'");
     }

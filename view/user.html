@@ -15,13 +15,13 @@
 						<td class="status_label">Group</td><td class="value_label">{{ user.group.name }}</td>
 					</tr>
 					<tr>
-						<td class="status_label">First Name</td><td class="value_label">9999</td>							
+						<td class="status_label">First Name</td><td class="value_label">{{ user.firstname }}</td>
 					</tr>
 					<tr>
-						<td class="status_label">Last Name</td><td class="value_label">nobody</td>							
+						<td class="status_label">Last Name</td><td class="value_label">{{ user.lastname }}</td>
 					</tr>
 					<tr>
-						<td class="status_label">Team</td><td class="value_label">12.12.12</td>							
+						<td class="status_label">Team</td><td class="value_label">{{ user.team }}</td>
 					</tr>
 				</table>
 		</div>
@@ -31,13 +31,13 @@
 			</div>
 				<table id="contact_table">
 					<tr>
-						<td id="email_status_label">E-MAIL</td><td class="c_value_label">borozdin.aleksey@gmail.com</td>						
+						<td id="email_status_label">E-MAIL</td><td class="c_value_label">{{ user.mail }}</td>
 					</tr>
 					<tr>
-						<td id="icq_status_label">ICQ</td><td class="c_value_label">333-333-333</td>							
+						<td id="icq_status_label">ICQ</td><td class="c_value_label">{{ user.icq }}</td>
 					</tr>
 					<tr>
-						<td id="skype_status_label">SKYPE</td><td class="c_value_label">AJIekseys</td>							
+						<td id="skype_status_label">SKYPE</td><td class="c_value_label">{{ user.skype }}</td>
 					</tr>
 				</table>
 		</div>
