@@ -10,38 +10,30 @@
 	<div id="content">
 		<div id="command_wrapper">
 			<div id="command_logo"></div>
-			<h2 class="team_name">Super Team</h2>
+			<h2 class="team_name">{{ commandArray[ 'name' ] }}</h2>
+			<form action="user.php" name="join_in_team">
+				<label class="label">Code<input id="code" type="text" name="text" value=""/></label>
+				<input id="submit" type="submit" name="submit" value="Join"/>
+			</form>
 			<div id="result">
 				<table id="command_table">
 				<tr>
 					<td class="table_title">Curent Place</td><td class="table_title">Wins</td><td class="table_title">Loses</td><td class="table_title">Score</td>
 				</tr>
 				<tr>
-					<td class="table_rows">1</td><td class="table_rows">12</td><td class="table_rows">5</td><td class="table_rows">6400</td>
+					<td class="table_rows">1</td><td class="table_rows">{{ commandArray[ 'win' ] }}</td><td class="table_rows">{{ commandArray[ 'lose' ] }}</td><td class="table_rows">{{ commandArray[ 'score' ] }}</td>
 				</tr>
 				</table>			
 			</div>
 			<div id="team">
-				<div class="player">
-					<h2><a href="user.php">AJIekseys</a></h2>
-					<p>Aleksey Borozdin</p>
-				</div>
-				<div class="player">
-					<h2><a href="user.php">AJIekseys</a></h2>
-					<p>Aleksey Borozdin</p>
-				</div>
-				<div class="player">
-					<h2><a href="user.php">AJIekseys</a></h2>
-					<p>Aleksey Borozdin</p>
-				</div>
-				<div class="player">
-					<h2><a href="user.php">AJIekseys</a></h2>
-					<p>Aleksey Borozdin</p>
-				</div>
-				<div class="player">
-					<h2><a href="user.php">AJIekseys</a></h2>
-					<p>Aleksey Borozdin</p>
-				</div>
+
+                {% for i in 1..countUsers %}
+
+                    <div class="player">
+                        <h2><a href="user.php">{{ commandArray[ 'people' ][0] }}</a></h2>
+                    </div>
+
+                {% endfor %}
 			</div>
 		</div>
 		<div id="latest_games">

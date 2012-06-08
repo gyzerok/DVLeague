@@ -26,10 +26,14 @@
 				<div id="date"><p>{{ newsArray['date'] }}</p></div>
 				<div id="views"><p>{{ newsArray['views'] }}</p></div>
 				<div id="count_of_comments"><p>{{ newsArray['comments'] }}</p></div>
-				<div id="edit_news_pannel">
-					<div id="editnews"><a title="Edit news" href="news.php?id={{ newsArray['id'] }}&edit=1"></a></div>
-					<div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
-				</div>
+                    <div id="edit_news_pannel">
+                        {% if newsArray[ 'accessEdit' ] %}
+                            <div id="editnews"><a title="Edit news" href="news.php?id={{ newsArray['id'] }}&edit=1"></a></div>
+                        {% endif %}
+                        {% if newsArray[ 'accessDelete' ] %}
+                            <div id="deletenews"><a title="Delete news" href="deletenews.php"></a></div>
+                        {% endif %}
+                    </div>
 			</div>
 			<div id="text">
                 {% autoescape false %}

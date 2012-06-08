@@ -12,7 +12,7 @@ class MComments implements IMDomainObject
 
     function Init($id, $newsID, $text, $newsmaker, $date)
     {
-        $this->id = $id;
+        $this->id = mysql_real_escape_string($id);;
         $this->newsID = mysql_real_escape_string($newsID);
         $this->text = mysql_real_escape_string($text);
         $this->newsmaker = mysql_real_escape_string($newsmaker);

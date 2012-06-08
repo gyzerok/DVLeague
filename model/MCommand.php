@@ -1,49 +1,42 @@
 <?php
 include_once($_SERVER["DOCUMENT_ROOT"].'/model/IMDomainObject.php');
-include($_SERVER["DOCUMENT_ROOT"].'/model/MComments.php');
 
 class MCommand implements IMDomainObject
 {
     var $id = NULL;
     var $name = NULL;
     var $people = NULL;
-    var $games = 0;
     var $win = 0;
     var $lose = 0;
+    var $score = 0;
+    var $date = null;
     var $commands = array();
 
-    function Init($id, $name, $people)
+    function Init($name, $people)
     {
-        $this->id = $id;
         $this->name = mysql_real_escape_string($name);
         $this->people = mysql_real_escape_string($people);
-        $this->games = 0;
         $this->win = 0;
         $this->lose = 0;
-        $this->views = 0;
-        $this->comments = 0;
+        $this->score = 0;
+        $this->date = date(null);
+        $this->commands = null;
     }
 
     function Select($id)
     {
         $id = mysql_real_escape_string($id);
-        $query = mysql_query("SELECT * FROM command WHERE news_id = '$id'");
+        $query = mysql_query("SELECT * FROM commands WHERE command_id = '$id'");
         if(mysql_errno() == 0)
         {
             $query = mysql_fetch_assoc($query);
-            $this->id = $query[news_id];
-            $this->title = $query[news_title];
-            $this->summary = $query[news_summary];
-            $this->text = $query[news_text];
-            $this->newsmaker = $query[news_newsmaker];
-            $this->date = $query[news_date];
-            $this->views = $query[news_look];
-
-            $mCooments = new MComments();
-            $this->comments = $mCooments->CountCommentsByNews( $query[news_id] );
-            $this->views++;
-            $this->Update();
-            $this->newsmaker = $query[user_name];
+            $this->id = $query[command_id];
+            $this->name = $query[command_name];
+            $this->people = explode(" ", $query[command_people] );
+            $this->win = $query[command_win];
+            $this->lose = $query[command_lose];
+            $this->score = $query[command_score];
+            $this->date = $query[command_date];
             return true;
         }
         return false;
@@ -61,10 +54,11 @@ class MCommand implements IMDomainObject
 
                 $temp['id'] = $command[command_id];
                 $temp['name'] = $command[command_name];
-                $temp['people'] = explode(" ", $command[command_people] ) ;
-                $temp['games'] = $command[command_games];
+                $temp['people'] = explode(" ", $command[command_people] );
                 $temp['win'] = $command[command_win];
                 $temp['lose'] = $command[command_lose];
+                $temp['score'] = $command[command_score];
+                $temp['data'] = $command[command_data];
 
                 $this->commands[$i] = $temp;
                 $i++;
@@ -75,7 +69,7 @@ class MCommand implements IMDomainObject
         return false;
     }
 
-    function CountNews()
+   /* function CountNews()
     {
         $query = mysql_query("SELECT COUNT(*) FROM news");
         if(mysql_errno() == 0)
@@ -83,12 +77,12 @@ class MCommand implements IMDomainObject
             $query = mysql_fetch_assoc($query);
             return $query['COUNT(*)'];
         }
-    }
+    }*/
 
     function Insert()
     {
-        mysql_query("INSERT INTO commands (command_name, command_people, command_games, command_win, command_lose)
-                     VALUES ('$this->name', '$this->people', '$this->games', '$this->win', '$this->lose')");
+        mysql_query("INSERT INTO commands (command_name, command_people, command_win, command_lose, command_score, command_date)
+                     VALUES ('$this->name', '$this->people', '$this->win', '$this->lose' , '$this->score' , '$this->date') ");
         return mysql_error();
     }
     function Update()

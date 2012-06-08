@@ -23,12 +23,14 @@ if ( empty( $_POST ) )
     else if ( $_GET[ 'edit' ] == 1 )//href='/news.php?id={id}&edit=1&'
     {
         $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
-        if (CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[ 'newsmaker' ] ))
+        if (CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[ 'newsmaker' ], 'edit' ))
             echo $twig->render('editNews.html', array('newsArray' => $newsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
     }
     else if ( $_GET[ 'view' ] == 1 )//href='/news.php?id={id}&view=1&'
     {
         $newsArray = CNewsController::ReadNewsID( $_GET[ 'id' ] );
+        $newsArray['accessEdit'] = CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[ 'newsmaker' ], 'edit' );
+        $newsArray['accessDelete'] = CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[ 'newsmaker' ], 'delete' );
         $commentsArray = array();
         $commentsArray = CNewsController::ReadComments( $_GET[ 'id' ] );
         echo $twig->render('news_full.html', array('newsArray' => $newsArray, 'commentsArray' => $commentsArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
@@ -52,6 +54,14 @@ if ( empty( $_POST ) )
             $offset = $_GET[ 'id' ] * 10;
 
         $newsArray = CNewsController::ReadNews( $offset );
+
+        for( $i = 0; $i < count( $newsArray ); $i++ )
+        {
+            $newsArray[$i]['accessEdit'] = CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[$i][ 'newsmaker' ], 'edit' );
+            $newsArray[$i]['accessDelete'] = CUserController::CheckUser( $_SESSION[ 'user_name' ], $newsArray[$i][ 'newsmaker' ], 'delete' );
+
+        }
+
         $count = CNewsController::CountNews();
 
         $pages = array();

@@ -15,8 +15,16 @@ MConnection::Open();
 
 if ( empty( $_POST ) )
 {
-    $commandArray = CCommandController::ReadCommands();
-    echo $twig->render('command.html', array('commandArray' => $commandArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+    if ( $_GET[ 'view' ] == 1 )//href='/news.php?id={id}&view=1&'
+    {
+        $commandArray = CCommandController::ReadCommandID( $_GET[ 'id' ] );
+        echo $twig->render('command_full.html', array('commandArray' => $commandArray, 'countUsers' => count($commandArray['people']), 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
+    }
+    else
+    {
+        $commandArray = CCommandController::ReadCommands();
+        echo $twig->render('command.html', array('commandArray' => $commandArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+    }
 }
 else
 {
