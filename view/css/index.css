@@ -21,14 +21,18 @@ div.news_wrapper {
     border-radius: 10px;
 }
 
-#news_image {
+#news_images {
     width: 170px;
     height: 170px;
-    background-color: gray;
     margin-left:10px;
     margin-top: 15px;
     float:left;
     clear:both;
+}
+
+#news_images img {
+    width: 170px;
+    height: 170px;
 }
 
 div.news_full {

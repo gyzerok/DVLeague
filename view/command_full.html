@@ -47,9 +47,13 @@
                     <div class="player">
                         <h2><a href="user.php?name={{ commandArray[ 'people' ][i] }}">{{ commandArray[ 'people' ][i] }}</a></h2>
 						<p></p>
-						<div id="delete_player">
-							<a href=""></a>
-						</div>
+                        {% if commandArray[ 'people' ][0] == user_name %}
+                        {% if i!= 0 %}
+                            <div id="delete_player">
+                                <a href="command.php?id={{ commandArray[ 'id' ] }}&name={{ commandArray[ 'people' ][i] }}&delete=1"></a>
+                            </div>
+                        {% endif %}
+                        {% endif %}
                     </div>
 
                 {% endfor %}
