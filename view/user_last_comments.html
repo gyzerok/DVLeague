@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/user_last_comments.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	<div id="content">
+		<div id="user_wrapper">
+			<div id="avatar"><img src="{{ user.avatar }}" alt=""></div>
+			<div id="nickname">
+				<h2>{{ user.name }}</h2>
+				<p>Member since: 12.12.2012</p>
+			</div>
+			<div id="activity">
+				{% if user_online == true %}
+					<div id="activity_status">Online</div>
+				{% else %}
+					<div id="activity_status_off">Offline</div>
+				{% endif %}
+				<p class="last_active">Last Active: 12.12.2012 13.45</p>
+			</div>
+			<div id="navigation">
+				<table id="navigation_table">
+					<tr>
+						<td>Personal Infromation</td>					
+					</tr>
+					<tr>
+						<td>Friends</td>					
+					</tr>
+					<tr>
+						<td>Posts</td>					
+					</tr>				
+				</table>
+			</div>
+			<div id="last_comments">
+				<div id="last_comments_header">
+					<h2>Last News</h2>
+				</div>
+				<div class="comment">
+					<p>Comments text Comments text Comments text Comments text  Comments text Comments text Comments text Comments text</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}  
