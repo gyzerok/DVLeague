@@ -4,7 +4,7 @@
 	height: 460px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
-    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     padding-top: 10px;
@@ -27,6 +27,11 @@
 	margin: 15px 0 0 15px; 
 	float:left;
 	clear:both;
+}
+
+#avatar img {
+    width: 140px;
+    height: 140px;
 }
 
 #activity {

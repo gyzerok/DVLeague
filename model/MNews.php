@@ -6,6 +6,7 @@ class MNews implements IMDomainObject
 {
     var $id = NULL;
     var $title = NULL;
+    var $picture = NULL;
     var $summary = NULL;
     var $text = NULL;
     var $newsmaker = NULL;
@@ -13,10 +14,11 @@ class MNews implements IMDomainObject
     var $views = 0;
     var $comments = 0;
 
-    function Init($id, $title, $summary, $text, $newsmaker, $date)
+    function Init($id, $title, $picture, $summary, $text, $newsmaker, $date)
     {
         $this->id = $id;
         $this->title = mysql_real_escape_string($title);
+        $this->picture = $picture;
         $this->summary = mysql_real_escape_string($summary);
         $this->text = mysql_real_escape_string($text);
         $this->newsmaker = mysql_real_escape_string($newsmaker);
@@ -34,6 +36,7 @@ class MNews implements IMDomainObject
             $query = mysql_fetch_assoc($query);
             $this->id = $query[news_id];
             $this->title = $query[news_title];
+            $this->picture = $query[news_pic];
             $this->summary = $query[news_summary];
             $this->text = $query[news_text];
             $this->newsmaker = $query[news_newsmaker];
@@ -52,7 +55,7 @@ class MNews implements IMDomainObject
 
     function SelectNews( $offset )
     {
-        $query = mysql_query("SELECT * FROM news LIMIT $offset, 10");
+        $query = mysql_query("SELECT * FROM news ORDER BY news_date DESC LIMIT $offset, 10");
         if(mysql_errno() == 0)
         {
             $i = 0;
@@ -62,6 +65,7 @@ class MNews implements IMDomainObject
 
                 $temp['id'] = $news[news_id];
                 $temp['title'] = $news[news_title];
+                $temp['picture'] = $news[news_pic];
                 $temp['summary'] = $news[news_summary];
                 $temp['text'] = $news[news_text];
 
@@ -84,6 +88,40 @@ class MNews implements IMDomainObject
         return false;
     }
 
+    function SelectByUser($name)
+    {
+        $query = mysql_query("SELECT * FROM news
+                                INNER JOIN users ON news.news_newsmaker = users.user_id
+                                WHERE users.user_name = '$name'
+                                LIMIT 0, 3
+                            ");
+        if(mysql_errno() == 0)
+        {
+            $i = 0;
+            while($news = mysql_fetch_array($query))
+            {
+                $temp = array();
+
+                $temp['id'] = $news[news_id];
+                $temp['title'] = $news[news_title];
+                $temp['summary'] = $news[news_summary];
+                $temp['text'] = $news[news_text];
+                $temp['newsmaker'] = $news[user_name];
+                $temp['date'] = $news[news_date];
+                $temp['views'] = $news[news_look];
+
+                $mComments = new MComments();
+                $temp['comments'] = $mComments->CountCommentsByNews( $news[news_id] );
+
+                $this->news[$i] = $temp;
+                $i++;
+
+            }
+            return true;
+        }
+        return false;
+    }
+
     function CountNews()
     {
         $query = mysql_query("SELECT COUNT(*) FROM news");
@@ -96,8 +134,8 @@ class MNews implements IMDomainObject
 
     function Insert()
     {
-        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date, news_look)
-                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', NOW(), '$this->views')");
+        mysql_query("INSERT INTO news (news_title, news_pic, news_summary, news_text, news_newsmaker, news_date, news_look)
+                     VALUES ('$this->title', '$this->picture', '$this->summary', '$this->text', '$this->newsmaker', NOW(), '$this->views')");
         return mysql_error();
     }
     function Update()
@@ -111,6 +149,13 @@ class MNews implements IMDomainObject
     {
         $query = mysql_query("DELETE  FROM news WHERE news_id = '$id'");
         return mysql_error();
+    }
+
+    function SetPicture($path)
+    {
+        mysql_query("UPDATE news SET news_pic = '$path' WHERE news_id = '$this->id'");
+
+        return mysql_errno();
     }
 }
 ?>

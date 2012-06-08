@@ -19,6 +19,7 @@ class MInitDB
                     command_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                     command_name VARCHAR( 20 ) NOT NULL ,
                     command_people VARCHAR( 252 ) NOT NULL ,
+                    command_code VARCHAR( 10 ) NOT NULL ,
                     command_win INT NOT NULL,
                     command_lose INT NOT NULL,
                     command_score INT NOT NULL,
@@ -41,6 +42,7 @@ class MInitDB
         mysql_query("CREATE TABLE dvl_db.news (
                     news_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                     news_title VARCHAR( 50 ) NOT NULL ,
+                    news_pic VARCHAR ( 100 ) NULL ,
                     news_summary VARCHAR( 100 ) NOT NULL ,
                     news_text TEXT NOT NULL ,
                     news_newsmaker INT NOT NULL ,

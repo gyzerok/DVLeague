@@ -2,7 +2,7 @@
 session_start();
 
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
-include ($_SERVER["DOCUMENT_ROOT"].'/model/MUser.php');
+include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MUser.php');
 
 if (!empty($_POST))
     switch ($_POST['do'])

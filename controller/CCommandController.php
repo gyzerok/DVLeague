@@ -18,7 +18,6 @@ class CCommandController
             echo 'Ok';
         else
             echo 'Error! ' . $success;
-
     }
 
     static function ReadCommands( )
@@ -69,16 +68,11 @@ class CCommandController
 
 
 //функция для записи новой новости или редактирования старой
-    static function WriteNews( $post )
+    static function SetCode( $post )
     {
-        $mNews = new MNews();
+        $mCommand = new MCommand();
+        $mCommand->SetCode($post['commandID'], $post['code']);
 
-        $mNews->Init($post[ 'id' ], $post[ 'title' ], $post[ 'summary' ], $post[ 'text' ], $_SESSION['user_id'], date("F j, Y g:i a") );
-
-        if ( empty( $post[ 'id' ] ) )
-            $success = $mNews->Insert();
-        else
-            $success = $mNews->Update();
 
         if ( empty( $success ) )
             echo 'Ok';

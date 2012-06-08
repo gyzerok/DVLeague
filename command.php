@@ -28,15 +28,27 @@ if ( empty( $_POST ) )
 }
 else
 {
-    if ( empty( $_POST[ 'commandName' ] ) )
-        echo $twig->render('addCommand.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
-    else
+    if ( empty( $_POST[ 'code' ] ) )
     {
-        CCommandController::CreateCommand($_POST);
-        $commandArray = CCommandController::ReadCommands();
-        echo $twig->render('command.html', array('commandArray' => $commandArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+        if ( empty( $_POST[ 'commandName' ] ) )
+            echo $twig->render('addCommand.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+        else
+        {
+            CCommandController::CreateCommand($_POST);
+            $commandArray = CCommandController::ReadCommands();
+            echo $twig->render('command.html', array('commandArray' => $commandArray, 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name']));
+        }
 
     }
+    else
+    {
+        if ( empty( $_POST[ 'commandSetID' ] ) )
+            CCommandController::SetCode($_POST);
+        else
+            CCommandController::SetCode($_POST);
+    }
+
+
 }
 
 MConnection::Close();

@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f72afcb-a79c-42cc-ba74-c7de610e5c30" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\WebServers\home\dvleague.ru\www\view\command.html.BASE.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\dvleague.ru\www\view\command.html.LOCAL.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\dvleague.ru\www\view\command.html.REMOTE.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/command.php" afterPath="$PROJECT_DIR$/command.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CCommandController.php" afterPath="$PROJECT_DIR$/controller/CCommandController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/CUserController.php" afterPath="$PROJECT_DIR$/controller/CUserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MCommand.php" afterPath="$PROJECT_DIR$/model/MCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/MInitDB.php" afterPath="$PROJECT_DIR$/model/MInitDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news.php" afterPath="$PROJECT_DIR$/news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/command.html" afterPath="$PROJECT_DIR$/view/command.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/command_full.html" afterPath="$PROJECT_DIR$/view/command_full.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news.html" afterPath="$PROJECT_DIR$/view/news.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/news_full.html" afterPath="$PROJECT_DIR$/view/news_full.html" />
-    </list>
+    <list default="true" id="30719260-0e04-4a71-89f4-df621138bcf2" name="Default" comment="" />
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,64 +22,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="command.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/command.html">
+      <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="125" selection-start="698" selection-end="718" vertical-scroll-proportion="-12.423077">
+            <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="command.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/command.php">
+      <file leaf-file-name="user.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/user.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="61" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
+            <state line="10" column="33" selection-start="242" selection-end="242" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news.php">
+      <file leaf-file-name="user.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/css/user.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
+            <state line="33" column="18" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="command_full.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/command_full.html">
+      <file leaf-file-name="MNews.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/MNews.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="0.09933775">
+            <state line="18" column="24" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/news.html">
+      <file leaf-file-name="MUser.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/MUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="32" selection-start="2156" selection-end="2168" vertical-scroll-proportion="-10.230769">
+            <state line="57" column="29" selection-start="1431" selection-end="1544" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CUserController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
+      <file leaf-file-name="template.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="13" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0">
+            <state line="33" column="41" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CCommandController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/CCommandController.php">
+      <file leaf-file-name="MInitDB.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+            <state line="34" column="49" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CUploadController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/CUploadController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="18" selection-start="407" selection-end="407" vertical-scroll-proportion="0.34056762">
               <folding />
             </state>
           </provider>
@@ -113,42 +107,32 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/model/MNews.php" />
-        <option value="$PROJECT_DIR$/model/MComments.php" />
-        <option value="$PROJECT_DIR$/model/MUser.php" />
-        <option value="$PROJECT_DIR$/view/addCommand.html" />
-        <option value="Z:/home/dvleague.ru/www/command.php" />
-        <option value="$PROJECT_DIR$/model/MInitDB.php" />
-        <option value="$PROJECT_DIR$/view/command.html" />
-        <option value="$PROJECT_DIR$/model/MCommand.php" />
-        <option value="$PROJECT_DIR$/controller/CNewsController.php" />
         <option value="$PROJECT_DIR$/controller/CUserController.php" />
-        <option value="$PROJECT_DIR$/view/news.html" />
-        <option value="$PROJECT_DIR$/controller/CCommandController.php" />
-        <option value="$PROJECT_DIR$/view/news_full.html" />
-        <option value="$PROJECT_DIR$/news.php" />
-        <option value="$PROJECT_DIR$/command.php" />
-        <option value="$PROJECT_DIR$/view/command_full.html" />
+        <option value="$PROJECT_DIR$/admin.php" />
+        <option value="$PROJECT_DIR$/view/admin.html" />
+        <option value="$PROJECT_DIR$/user.php" />
+        <option value="$PROJECT_DIR$/controller/upload.php" />
+        <option value="$PROJECT_DIR$/view/user.html" />
+        <option value="$PROJECT_DIR$/model/MUser.php" />
+        <option value="$PROJECT_DIR$/view/template.html" />
+        <option value="$PROJECT_DIR$/model/MInitDB.php" />
+        <option value="$PROJECT_DIR$/view/css/user.css" />
+        <option value="$PROJECT_DIR$/model/MNews.php" />
+        <option value="$PROJECT_DIR$/controller/CUploadController.php" />
       </list>
     </option>
   </component>
   <component name="PhpServers">
     <option name="servers">
-      <server host="dvleague.ru" name="dvleague.ru">
-        <path_mappings>
-          <path_mapping local_path="$PROJECT_DIR$/news.php" remote_path="Z:\home\dvleague.ru\www\news.php" />
-          <path_mapping local_path="$PROJECT_DIR$/command.php" remote_path="Z:\home\dvleague.ru\www\command.php" />
-          <path_mapping local_path="$PROJECT_DIR$/controller/CUserController.php" remote_path="Z:\home\dvleague.ru\www\controller\CUserController.php" />
-        </path_mappings>
-      </server>
+      <server host="dvleague.ru" name="dvleague.ru" />
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="22" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+    <option name="x" value="54" />
+    <option name="y" value="-8" />
+    <option name="width" value="1320" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -218,6 +202,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -252,42 +268,40 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method>
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method>
+        <option name="PhingTarget" enabled="false" />
+      </method>
     </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5f72afcb-a79c-42cc-ba74-c7de610e5c30" name="Default" comment="" />
-      <created>1338613480635</created>
-      <updated>1338613480635</updated>
+      <changelist id="30719260-0e04-4a71-89f4-df621138bcf2" name="Default" comment="" />
+      <created>1338816027243</created>
+      <updated>1338816027243</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1296" height="1010" extended-state="0" />
-    <editor active="false" />
+    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2564935" sideWeight="0.6082353" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3917647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22213376" sideWeight="0.838141" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16185898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -295,7 +309,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -353,124 +367,100 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/controller/CNewsController.php</url>
-          <line>25</line>
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
+    <entry file="file://$PROJECT_DIR$/view/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="27" column="61" selection-start="1919" selection-end="1919" vertical-scroll-proportion="-7.8461537" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+    <entry file="file://$PROJECT_DIR$/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.33195022">
-          <folding />
-        </state>
+        <state line="21" column="39" selection-start="769" selection-end="769" vertical-scroll-proportion="0.61419755" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/command.html">
+    <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="125" selection-start="698" selection-end="718" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
+        <state line="18" column="28" selection-start="619" selection-end="619" vertical-scroll-proportion="0.68" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MCommand.php">
+    <entry file="file://$PROJECT_DIR$/import/twig/lib/Twig/Environment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="944" selection-end="944" vertical-scroll-proportion="0.57883817">
-          <folding />
-        </state>
+        <state line="282" column="0" selection-start="7879" selection-end="7879" vertical-scroll-proportion="0.029010238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MUser.php">
+    <entry file="file://$PROJECT_DIR$/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="553" selection-end="562" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/MNews.php">
+    <entry file="file://$PROJECT_DIR$/view/template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="35" selection-start="2667" selection-end="2667" vertical-scroll-proportion="0.0">
+        <state line="33" column="41" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CNewsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="20" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
+        <state line="87" column="5" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/denwer/www/denwer/errors/phperror_js.php">
+    <entry file="file://$PROJECT_DIR$/model/MGroup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="-1.9615384">
+        <state line="4" column="14" selection-start="48" selection-end="48" vertical-scroll-proportion="0.11352254">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="13" selection-start="2966" selection-end="2966" vertical-scroll-proportion="0.0">
+        <state line="22" column="0" selection-start="6" selection-end="22" vertical-scroll-proportion="0.028380634">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/CCommandController.php">
+    <entry file="file://$PROJECT_DIR$/model/MInitDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+        <state line="34" column="49" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/news_full.html">
+    <entry file="file://$PROJECT_DIR$/model/MUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="770" selection-end="770" vertical-scroll-proportion="-3.9230769">
+        <state line="57" column="29" selection-start="1431" selection-end="1544" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news.php">
+    <entry file="file://$PROJECT_DIR$/view/user.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
+        <state line="10" column="33" selection-start="242" selection-end="242" vertical-scroll-proportion="-6.5384617">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/command.php">
+    <entry file="file://$PROJECT_DIR$/view/css/user.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="61" selection-start="505" selection-end="505" vertical-scroll-proportion="0.0">
+        <state line="33" column="18" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/index.html">
+    <entry file="file://$PROJECT_DIR$/model/MNews.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.24944812">
+        <state line="18" column="24" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/news.html">
+    <entry file="file://$PROJECT_DIR$/controller/CUploadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="32" selection-start="2156" selection-end="2168" vertical-scroll-proportion="-10.230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/command_full.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="808" selection-end="808" vertical-scroll-proportion="0.09933775">
+        <state line="12" column="18" selection-start="407" selection-end="407" vertical-scroll-proportion="0.34056762">
           <folding />
         </state>
       </provider>
