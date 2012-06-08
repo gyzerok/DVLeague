@@ -10,7 +10,13 @@ class MInitDB
                     user_name VARCHAR( 20 ) NOT NULL ,
                     user_pass VARCHAR( 32 ) NOT NULL ,
                     user_group_id INT NOT NULL DEFAULT '$query[user_group_id]' ,
-                    user_avatar VARCHAR ( 100 ) NULL ,
+                    user_avatar VARCHAR ( 100 ) NULL DEFAULT '/upload/user_ava/default_avatar.png' ,
+                    user_regdate DATETIME NOT NULL ,
+                    user_firstname VARCHAR( 20 ) NOT NULL ,
+                    user_lastname VARCHAR( 20 ) NOT NULL ,
+                    user_mail VARCHAR( 40 ) NOT NULL ,
+                    user_icq VARCHAR( 20 ) NOT NULL ,
+                    user_skype VARCHAR( 20 ) NOT NULL ,
                     FOREIGN KEY (user_group_id) REFERENCES user_groups(user_group_id) ,
                     UNIQUE ( user_name )
                     )");
