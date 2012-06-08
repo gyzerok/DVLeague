@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "template.html" %}
 
 {% block css_links %}
 	{{ parent() }}
@@ -7,7 +7,6 @@
 
 {% block content %}
 	<div id="content">
-		<div id="margin"><a class="page" href="template.html">Dota2_LEAGUE</a><span class="page_span"> > Registration form</span></div>
 		<div id="registration_wrapper">
 			<div id="join">
 				<h2>Join our community</h2>
@@ -16,12 +15,11 @@
 				<form action="/controller/CUserController.php" method="post" name="registration_form">
 					<p class="personal_page_text"><label>Username <span class="stars">*</span> <input class="input" type="text" name="user_name"/></label></p>
 					<p class="personal_page_text"><label>Password <span class="stars">*</span> <input class="input" type="password" name="user_pass"/></label></p>
-					<p class="personal_page_text"><label>Confirm Password <span class="stars">*</span> <input class="input" type="password" name="Confirm Password"/></label></p>
+					<p class="personal_page_text"><label>Confirm Password <span class="stars">*</span> <input class="input" type="password" name="Confirm_Password"/></label></p>
                     <input type="hidden" name="do" value="reg">
 					<p><input id="registr_submit" type="submit" name="submit" value="Create account"/></p>
 				</form>	
 			</div>   
 		</div>
-	</div>
-	</div>  
+	</div> 
 {% endblock %}

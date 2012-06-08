@@ -34,13 +34,7 @@
 }
 
 #command_table {
-	width: 400px;
 	margin: 10px;
-}
-
-#command_table td {
-	outline: 0px solid black;
-	padding-bottom: 3px;
 }
 
 #command_table td  a{
@@ -51,20 +45,21 @@
 
 .table_title {
     color:#000000;
-    font:bold 14px Myriad Pro;	
-	
+    font:bold 14px Myriad Pro;
+	width: 30px;	
 
 }
 
 .table_title_name {
 	color:#000000;
     font:bold 14px Myriad Pro;
-	outline: 1px solid red;
+	width: 300px;
 }
 
 .table_rows {
 	color: gray;
-    font:bold 14px Myriad Pro;	
+    font:bold 14px Myriad Pro;
+	width: 80px;	
 }
 
 #registr_submit {

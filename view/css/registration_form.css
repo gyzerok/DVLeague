@@ -3,13 +3,13 @@
 
 #content {
     width: 777px;
-    height: 450px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     border-radius: 20px;
     margin: 1px auto;
+	overflow:hidden;
     
 }
 

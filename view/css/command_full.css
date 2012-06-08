@@ -97,7 +97,6 @@
 	margin-top: 10px;
 	margin-left: 10px;
 	float:left;
-	outline:0px solid red;
 
 
 }
@@ -165,11 +164,10 @@
 
 #command_table {
 	height: 50px;
-	margin-left: 5px	
+	margin-left: 5px;	
 }
 
 #command_table td {
-	outline: 0px solid black;
 	text-align: center;
 }
 

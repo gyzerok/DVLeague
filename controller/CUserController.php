@@ -5,13 +5,14 @@ include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MUser.php');
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MNews.php');
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MComments.php');
+include_once ($_SERVER["DOCUMENT_ROOT"].'/controller/CUploadController.php');
 
 if (!empty($_POST))
     switch ($_POST['do'])
     {
         case "reg":
             CUserController::Register($_POST);
-            CUserController::Back();
+            CUserController::BackFromReg();
             break;
         case "auth":
             CUserController::Auth($_POST);
@@ -19,6 +20,10 @@ if (!empty($_POST))
             break;
         case "quit":
             CUserController::Quit();
+            CUserController::Back();
+            break;
+        case "edit":
+            CUserController::Edit($_POST);
             CUserController::Back();
             break;
     }
@@ -152,6 +157,25 @@ class CUserController
         session_destroy();
     }
 
+    static function Edit($post)
+    {
+        MConnection::Open();
+
+        $user = new MUser();
+        $user->Select($_SESSION['user_name']);
+        $user->firstname = $post['firstname'];
+        $user->lastname = $post['lastname'];
+        $user->mail = $post['mail'];
+        $user->icq = $post['icq'];
+        $user->skype = $post['skype'];
+        $path = CUploadController::User();
+        if ($path != false)
+            $user->avatar = $path;
+        $user->Update();
+
+        MConnection::Close();
+    }
+
     static function Show($name)
     {
         MConnection::Open();
@@ -188,6 +212,11 @@ class CUserController
     {
         if (!empty($_SERVER['HTTP_REFERER']))
             header('Location: '.$_SERVER['HTTP_REFERER']);
+    }
+
+    static function BackFromReg()
+    {
+        header('Location: '.'http://dvleague.ru');
     }
 }
 ?>
