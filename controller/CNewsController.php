@@ -1,5 +1,6 @@
 <?php
 include ($_SERVER["DOCUMENT_ROOT"].'\model\MNews.php');
+include ($_SERVER["DOCUMENT_ROOT"].'/controller/CUploadController.php');
 //include ($_SERVER["DOCUMENT_ROOT"].'\model\MComments.php');
 
 
@@ -39,6 +40,7 @@ class CNewsController
             $newsArray = array();
             $newsArray[ 'id' ] = $id;
             $newsArray[ 'title' ] = $mNews->title;
+            $newsArray[ 'picture' ] = $mNews->picture;
             $newsArray[ 'summary' ] = $mNews->summary;
             $newsArray[ 'text' ] = $mNews->text;
             $newsArray[ 'newsmaker' ] = $mNews->newsmaker;
@@ -58,8 +60,9 @@ class CNewsController
     static function WriteNews( $post )
     {
         $mNews = new MNews();
+        $path = CUploadController::News();
 
-        $mNews->Init($post[ 'id' ], $post[ 'title' ], $post[ 'summary' ], $post[ 'text' ], $_SESSION['user_id'], date("F j, Y g:i a") );
+        $mNews->Init($post[ 'id' ], $post[ 'title' ], $path, $post[ 'summary' ], $post[ 'text' ], $_SESSION['user_id'], date("F j, Y g:i a") );
 
         if ( empty( $post[ 'id' ] ) )
             $success = $mNews->Insert();

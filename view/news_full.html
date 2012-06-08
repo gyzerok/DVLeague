@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "template.html" %}
 
 {% block css_links %}
 	{{ parent() }}
@@ -20,9 +20,9 @@
 		<div id="news_wrapper">
 			<div id="number">#1</div>
 			<h2>{{ newsArray['title'] }}</h2>
-			<div id="news_image"></div>
+			<div id="news_image"><img src="{{ newsArray['picture'] }}" alt=""></div>
 			<div id="pannel">
-				<div id="user"><a href="user.php">{{ newsArray['newsmaker'] }}</a></div>
+				<div id="user"><a href="user.php?name={{ newsArray['newsmaker'] }}">{{ newsArray['newsmaker'] }}</a></div>
 				<div id="date"><p>{{ newsArray['date'] }}</p></div>
 				<div id="views"><p>{{ newsArray['views'] }}</p></div>
 				<div id="count_of_comments"><p>{{ newsArray['comments'] }}</p></div>
@@ -46,9 +46,9 @@
 	<h2>Comments</h2>
         {% for item in commentsArray %}
             <div id="comments_wrapper">
-                <div id="avatar"></div>
+                <div id="avatar"><img src="{{ item['avatar'] }}" alt=""></div>
                 <div id="user_comments">
-                    <a href="user_id.html">{{ item['newsmaker'] }}</a>
+                    <a href="user.php?name={{ item['newsmaker'] }}">{{ item['newsmaker'] }}</a>
                 </div>
                 <div id="text_comments">
                     {% autoescape false %}

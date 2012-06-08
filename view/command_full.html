@@ -11,9 +11,18 @@
 		<div id="command_wrapper">
 			<div id="command_logo"></div>
 			<h2 class="team_name">{{ commandArray[ 'name' ] }}</h2>
-			<form action="user.php" name="join_in_team">
-				<label class="label">Code<input id="code" type="text" name="text" value=""/></label>
-				<input id="submit" type="submit" name="submit" value="Join"/>
+			<form action="command.php" method="post" name="join_in_team">
+				<label class="label">Code<input id="code" type="text" name="code" value=""/></label>
+
+                {% if commandArray[ 'people' ][0] == user_name %}
+                    {% set buttonName = 'Set' %}
+                    <input name="commandSetID" type="hidden" value="{{ commandArray['id'] }}"/>
+                {% else %}
+                    {% set buttonName = 'Join' %}
+                    <input name="commandJoinID" type="hidden" value="{{ commandArray['id'] }}"/>
+                {% endif %}
+
+				<input id="submit" type="submit" name="submit" value="{{ buttonName }}"/>
 			</form>
 			<div id="result">
 				<table id="command_table">

@@ -1,0 +1,191 @@
+@import url(reset.css);
+
+#content {
+	height: 460px;
+    background-color: white;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    border-radius: 20px;
+    padding-top: 10px;
+	overflow:hidden;
+}
+
+#user_wrapper {
+	height: 450px;
+	width: 750px;
+	margin:0 auto;
+	background-color: #dddddd;
+	border-radius: 15px;
+	overflow:hidden;
+}
+
+#avatar {
+	width:140px;
+	height:140px;
+	/*background-image: url("/view/images/large_avatar.png");*/
+	margin: 15px 0 0 15px; 
+	float:left;
+}
+
+#activity {
+	width: 145px;
+	margin-left:15px;
+	margin-top: 90px;
+
+
+}
+
+#activity_status {
+	height:16px;
+	width: 70px;
+	border-radius:5px;
+	background-color:green;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom:5px;
+
+}
+
+#activity_status_off {
+	height:16px;
+	width: 70px;
+	border-radius:5px;
+	background-color:gray;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom:5px;
+
+}
+
+p.last_active {
+	color:#000000;
+    font: 12px Myriad Pro;
+}
+
+#nickname {
+	width:330px;
+	height:60px;
+	outline: 0px solid red;
+	margin-left: 170px;
+	margin-top: 15px;
+
+}
+
+#nickname h2 {
+	height:30px;
+	margin-top: 15px;
+	margin-left:0px;
+	color:#000000;
+    font: bold 22px Myriad Pro;
+	
+}
+
+#nickname p {
+	margin-left:0px;
+	color:#000000;
+    font: 14px Myriad Pro;
+}
+
+
+#navigation {
+	width: 145px;
+	height: 200px;
+	margin-left:15px;
+	float:left;
+}
+
+#navigation_table {
+	width: 145px;
+	height: 100px;
+}
+
+
+#navigation_table td{
+	border-top:1px solid gray;
+	border-bottom:1px solid gray;
+	border-left:1px solid gray;
+	background-color: #ffffff;
+	font:bold 14px Myriad Pro;
+	padding:3px;
+	color: gray;	
+}
+
+#navigation_table td:hover {
+	cursor:pointer;
+	background-color: #eeeeee;
+
+
+}
+
+#last_news {
+	width: 500px;
+	height: 320px;
+	float:right;
+	margin-right: 80px;
+	margin-top: -120px;
+}
+
+#last_news_header {
+	width:500px;
+	height: 30px;	
+	background-image: url("/view/images/navBg.png");
+	background-repeat: x-repeat;
+
+
+}
+
+#last_news_header h2 {
+	color:#ffffff;
+    font: bold 16px Myriad Pro;
+	margin-left: 5px;
+	padding-top:4px;
+
+}
+
+div.news {
+	margin-top:3px;
+	width:500px;
+	height: 100px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+
+#news_image {
+	margin-top:5px;
+	margin-left:5px;
+	width:90px;
+	height: 90px;
+	float:left;
+	outline: 1px solid gray;	
+
+}
+
+#news_content {
+	float:right;
+	width:395px;
+	height: 100px;
+}
+
+#news_content h2 {
+	margin-top: 5px;
+	margin-left: 5px;
+
+}
+
+#news_content h2 a {
+    color:#55b5ff;
+    font:bold 16px Myriad Pro;
+
+}
+
+#news_content p {
+	margin-top: 5px;
+	margin-left: 5px;
+    color:#616060;
+    font:bold 14px Myriad Pro;
+
+
+}
+

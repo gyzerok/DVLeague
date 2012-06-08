@@ -39,45 +39,6 @@
 							</tr>
 						</table>
 				</div>
-				<div id="friends">
-					<div id="friends_header">
-						<h2>FRIENDS</h2>					
-					</div>
-					<div class="friends_wrapper">
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>						
-					</div>
-					<div class="friends_wrapper">
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>
-						<div class="friend">
-							<a href=""></a>
-						</div>						
-					</div>
-				</div>
 				<div id="contact_information">
 					<div id="contact_information_header">
 						<h2>CONTACT INFORMATION</h2>					
@@ -93,11 +54,6 @@
 								<td id="skype_status_label">SKYPE</td><td class="c_value_label">AJIekseys</td>							
 							</tr>
 						</table>
-				</div>
-				<div id="last_posts">
-					<div id="last_posts_header">
-						<h2>LAST POSTS</h2>						
-					</div>				
 				</div>
 			</div>
 			<div id="activity">
@@ -121,11 +77,11 @@
 					</tr>				
 				</table>
 			</div>
-		</div>
-        <form action=/controller/CUploadController.php method=post enctype=multipart/form-data>
+		<form action=/controller/CUploadController.php method=post enctype=multipart/form-data>
             <input type="file" name="uploadfile">
             <input type="hidden" name="upload" value="user">
             <input type="submit" value="Upload">
         </form>
+		</div>
 	</div>
 {% endblock %}  

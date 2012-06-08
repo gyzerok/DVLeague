@@ -36,6 +36,7 @@ class MNews implements IMDomainObject
             $query = mysql_fetch_assoc($query);
             $this->id = $query[news_id];
             $this->title = $query[news_title];
+            $this->picture = $query[news_pic];
             $this->summary = $query[news_summary];
             $this->text = $query[news_text];
             $this->newsmaker = $query[news_newsmaker];
@@ -54,7 +55,7 @@ class MNews implements IMDomainObject
 
     function SelectNews( $offset )
     {
-        $query = mysql_query("SELECT * FROM news LIMIT $offset, 10");
+        $query = mysql_query("SELECT * FROM news ORDER BY news_date DESC LIMIT $offset, 10");
         if(mysql_errno() == 0)
         {
             $i = 0;
@@ -64,6 +65,7 @@ class MNews implements IMDomainObject
 
                 $temp['id'] = $news[news_id];
                 $temp['title'] = $news[news_title];
+                $temp['picture'] = $news[news_pic];
                 $temp['summary'] = $news[news_summary];
                 $temp['text'] = $news[news_text];
 
@@ -132,8 +134,8 @@ class MNews implements IMDomainObject
 
     function Insert()
     {
-        mysql_query("INSERT INTO news (news_title, news_summary, news_text, news_newsmaker, news_date, news_look)
-                     VALUES ('$this->title', '$this->summary', '$this->text', '$this->newsmaker', NOW(), '$this->views')");
+        mysql_query("INSERT INTO news (news_title, news_pic, news_summary, news_text, news_newsmaker, news_date, news_look)
+                     VALUES ('$this->title', '$this->picture', '$this->summary', '$this->text', '$this->newsmaker', NOW(), '$this->views')");
         return mysql_error();
     }
     function Update()
