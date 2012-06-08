@@ -93,12 +93,28 @@ p.last_active {
     font: 14px Myriad Pro;
 }
 
+#edit_user {
+	float:right;
+	margin-right: 470px;
+	margin-top: -55px;
+
+}
+
+#edit_user a {
+	display:block;
+	width: 15px;
+	height:15px;	
+	background-image: url("/view/images/edit_user.png");
+	cursor:pointer;
+
+}
+
 #information_wrapper {
 	width:500px;
 	height: 360px;
 	float:right;
 	margin-right:80px;
-	margin-top: -145px;
+	margin-top: -100px;
 
 }
 
@@ -167,9 +183,14 @@ p.last_active {
 	border-bottom:1px solid gray;
 	border-left:1px solid gray;
 	background-color: #ffffff;
-	font:bold 14px Myriad Pro;
-	padding:3px;
+	padding:3px;	
+}
+
+#navigation_table td a {
 	color: gray;	
+	font:bold 14px Myriad Pro;
+	text-decoration:none;
+
 }
 
 #navigation_table td:hover {
