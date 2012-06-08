@@ -116,7 +116,8 @@ class CUserController
 
         if ( $userNameEditor == $userNameAuthor )
         {
-            switch ($type)
+            return true;
+           /* switch ($type)
             {
                 case 'edit':
                     if ( $userEditor->group->access['can_edit_his_news'] )
@@ -132,7 +133,7 @@ class CUserController
                         return false;
                     break;
 
-            }
+            }*/
         }
 
         if ( $userEditor->group->access_level > $userAuthor->group->access_level )

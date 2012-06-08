@@ -48,18 +48,18 @@
 	<div id="content">
 		<form id="form" action="../news.php" method="post" enctype="multipart/form-data">
 
-			<p><label>Заголовок</label></p>
+			<p><label>Title</label></p>
 			<input name="title" value="{{ newsArray['title'] }}"  type="text" />
 
-			<p><label>Краткая новость</label></p>
+			<p><label>Shot news</label></p>
 			<textarea name="summary" value="">{{ newsArray['summary'] }}</textarea>
 
-			<p><label>Основное содержание</label></p>
+			<p><label>All news</label></p>
 			<textarea name="text" value="">{{ newsArray['text'] }}</textarea>
 
 			<input name="id" type="hidden" value="{{ newsArray['id'] }}"/>
 
-			<input id="button" name="submit" type="submit" value="Отправить">
+			<input id="button" name="submit" type="submit" value="Sent">
 		</form>
 	</div>
 {% endblock %}

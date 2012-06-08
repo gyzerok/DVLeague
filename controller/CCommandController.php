@@ -93,6 +93,26 @@ class CCommandController
         }
     }
 
+    static function DeleteGamer( $id, $name )
+    {
+        $mCommand = new MCommand();
+        $mCommand->Select($id);
+
+        $oldPeople = explode(" ", $mCommand->people );
+        $newPeople = '';
+        foreach( $oldPeople as $people )
+        {
+            if ( $people != $name )
+                $newPeople = $newPeople.$people.' ';
+        }
+        $newPeople = substr( $newPeople, 0, strlen( $newPeople ) - 1 );
+
+
+        $mCommand->people = $newPeople;
+
+        $mCommand->Update();
+    }
+
     /*static function DeleteNews( $id )
     {
         $mNews = new MNews();
