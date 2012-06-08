@@ -52,8 +52,14 @@
 .table_title {
     color:#000000;
     font:bold 14px Myriad Pro;	
+	
 
+}
 
+.table_title_name {
+	color:#000000;
+    font:bold 14px Myriad Pro;
+	outline: 1px solid red;
 }
 
 .table_rows {

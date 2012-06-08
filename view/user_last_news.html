@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/user_last_news.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block user_info %}
+	<div id="last_news">
+		<div id="last_news_header">
+			<h2>Last News</h2>
+		</div>
+		<div class="news">
+			<div id="news_image">
+			
+			</div>
+			<div id="news_content">
+				<h2><a href="">News_title</a></h2>
+				<p>News_text News_text News_text News_text News_text News_textNews_text News_text News_text News_text</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}  

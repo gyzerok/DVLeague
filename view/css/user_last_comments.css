@@ -1,0 +1,44 @@
+@import url(reset.css);
+
+
+#last_comments {
+	width: 500px;
+	height: 550px;
+	float:right;
+	margin-right: 80px;
+	margin-top: -120px;
+}
+
+#last_comments_header {
+	width:500px;
+	height: 30px;	
+	background-image: url("/view/images/navBg.png");
+	background-repeat: x-repeat;
+
+
+}
+
+#last_comments_header h2 {
+	color:#ffffff;
+    font: bold 16px Myriad Pro;
+	margin-left: 5px;
+	padding-top:4px;
+
+}
+
+div.comment {
+	margin-top:3px;
+	width:500px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	background-color: #ffffff;
+	padding-bottom: 5px;
+}
+
+div.comment p {
+	margin-top:5px;
+	margin-left:5px;
+	color:gray;
+    font: bold 13px Myriad Pro;
+
+}

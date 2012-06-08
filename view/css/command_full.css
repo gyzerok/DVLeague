@@ -103,14 +103,16 @@
 }
 
 #code {
-	margin-left: 65px;
+	margin-left: 5px;
 	margin-top: 3px;
 	width: 100px;
-
+	outline: 1px solid #55b5ff;
 }
 
 .label {
-
+	margin-left: 50px;
+	color:#000000;
+    font:14px Myriad Pro;
 }
 
 #submit {
@@ -133,7 +135,7 @@
     -moz-border-left-colors: none;
     text-shadow: 1px 1px 10px #000000;
 	margin-top: 6px;
-	margin-left: 100px;
+	margin-left: 90px;
 
 }
 
@@ -148,6 +150,8 @@
 	color:#55b5ff;
     font:bold 18px Myriad Pro;
 	float:left;
+	width: 150px;
+	overflow:hidden;
 }
 
 #result {

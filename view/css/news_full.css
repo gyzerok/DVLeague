@@ -4,7 +4,7 @@
 
 
 #content {
-	height: 400px;
+	height: 650px;
     background-color: white;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
     -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
@@ -19,7 +19,7 @@
 
 
 #news_wrapper {
-	height: 380px;
+	height: 600px;
 	width: 750px;
 	margin:0 auto;
 	background-color: #dddddd;

@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block css_links %}
+	{{ parent() }}
+	<link href="/view/css/user_last_comments.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block user_info %}
+	<div id="last_comments">
+		<div id="last_comments_header">
+			<h2>Last News</h2>
+		</div>
+		<div class="comment">
+			<p>Comments text Comments text Comments text Comments text  Comments text Comments text Comments text Comments text</p>
+		</div>
+	</div>
+{% endblock %}  
