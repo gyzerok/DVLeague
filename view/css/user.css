@@ -26,7 +26,6 @@
 	/*background-image: url("/view/images/large_avatar.png");*/
 	margin: 15px 0 0 15px; 
 	float:left;
-	clear:both;
 }
 
 #avatar img {
@@ -35,11 +34,9 @@
 }
 
 #activity {
-
+	margin-top: 100px;
 	width: 145px;
 	margin-left:15px;
-	float:left;
-	margin-top:-255px;
 
 
 }
@@ -96,9 +93,12 @@ p.last_active {
     font: 14px Myriad Pro;
 }
 
-.information_wrapper {
-	width:580px;
-	margin-left:165px;
+#information_wrapper {
+	width:500px;
+	height: 360px;
+	float:right;
+	margin-right:80px;
+	margin-top: -145px;
 
 }
 
@@ -148,92 +148,12 @@ p.last_active {
 	padding-top:4px;
 }
 
-#friends {
-	width:229.5px;
-	height:165px;
-	overflow:auto;
-	float:right;
-	margin-top: -165px;
-	background-color: #ffffff;
-}
-
-#friends_header {
-	width:229.5px;
-	height: 30px;	
-	background-image: url("/view/images/navBg.png");
-	background-repeat: x-repeat;
-
-}
-
-#friends_header h2 {
-	color:#ffffff;
-    font: bold 16px Myriad Pro;
-	margin-left: 5px;
-	padding-top:4px;
-
-
-}
-
-
-.friends_wrapper {
-	width:227.5px;
-	height:53px;	
-	outline:0px solid red;
-	margin: 3px auto 3px auto;
-
-}
-
-.friend {
-	width:40.5px;
-	height:50px;	
-	float:left;
-	margin-right:5px;
-}
-
-.friend a{
-	display:block;
-	width:40.5px;
-	height:50px;	
-	background-image:url("/view/images/small_avatar.png");
-	background-repeat:no-repeat;
-}
-
-.friend:hover {
-	outline:1px solid #55b5ff;
-
-
-} 
-
-#last_posts {
-	width:229.5px;
-	height: 165px;
-	float:right;
-	margin-top: -165px;
-	background-color: #ffffff;
-}
-
-#last_posts_header {
-	width:229.5px;
-	height: 30px;	
-	background-image: url("/view/images/navBg.png");
-	background-repeat: x-repeat;	
-}
-
-#last_posts_header h2 {
-	color:#ffffff;
-    font: bold 16px Myriad Pro;
-	margin-left: 5px;
-	padding-top:4px;
-
-
-}
 
 #navigation {
 	width: 145px;
 	height: 200px;
 	margin-left:15px;
 	float:left;
-	margin-top:-200px;
 }
 
 #navigation_table {

@@ -1,87 +1,51 @@
-{% extends "template.html" %}
+{% extends "user_template.html" %}
 
 {% block css_links %}
 	{{ parent() }}
-	<link href="/view/css/user.css" type="text/css" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-	<div id="content">
-		<div id="user_wrapper">
-			<div id="avatar"><img src="{{ user.avatar }}" alt=""></div>
-			<div id="nickname">
-				<h2>{{ user.name }}</h2>
-				<p>Member since: 12.12.2012</p>
+{% block user_info %}
+	<div id="information_wrapper">
+		<div id="community">
+			<div id="community_header">
+				<h2>COMMUNITY</h2>
 			</div>
-			<div class="information_wrapper">
-				<div id="community">
-					<div id="community_header">
-						<h2>COMMUNITY</h2>
-					</div>
-						<table id="community_table">
-							<tr>
-								<td class="status_label">Group</td><td class="value_label">{{ user.group.name }}</td>
-							</tr>
-							<tr>
-								<td class="status_label">Active Posts</td><td class="value_label">9999</td>							
-							</tr>
-							<tr>
-								<td class="status_label">Member Title</td><td class="value_label">nobody</td>							
-							</tr>
-							<tr>
-								<td class="status_label">Age</td><td class="value_label">99</td>							
-							</tr>
-							<tr>
-								<td class="status_label">Birthday</td><td class="value_label">12.12.12</td>							
-							</tr>
-							<tr>
-								<td class="status_label">Gender</td><td class="value_label">male</td>							
-							</tr>
-						</table>
-				</div>
-				<div id="contact_information">
-					<div id="contact_information_header">
-						<h2>CONTACT INFORMATION</h2>					
-					</div>
-						<table id="contact_table">
-							<tr>
-								<td id="email_status_label">E-MAIL</td><td class="c_value_label">borozdin.aleksey@gmail.com</td>						
-							</tr>
-							<tr>
-								<td id="icq_status_label">ICQ</td><td class="c_value_label">333-333-333</td>							
-							</tr>
-							<tr>
-								<td id="skype_status_label">SKYPE</td><td class="c_value_label">AJIekseys</td>							
-							</tr>
-						</table>
-				</div>
-			</div>
-			<div id="activity">
-				{% if user_online == true %}
-					<div id="activity_status">Online</div>
-				{% else %}
-					<div id="activity_status_off">Offline</div>
-				{% endif %}
-				<p class="last_active">Last Active: 12.12.2012 13.45</p>
-			</div>
-			<div id="navigation">
-				<table id="navigation_table">
+				<table id="community_table">
 					<tr>
-						<td>Personal Infromation</td>					
+						<td class="status_label">Group</td><td class="value_label">{{ user.group.name }}</td>
 					</tr>
 					<tr>
-						<td>Friends</td>					
+						<td class="status_label">Active Posts</td><td class="value_label">9999</td>							
 					</tr>
 					<tr>
-						<td>Posts</td>					
-					</tr>				
+						<td class="status_label">Member Title</td><td class="value_label">nobody</td>							
+					</tr>
+					<tr>
+						<td class="status_label">Age</td><td class="value_label">99</td>							
+					</tr>
+					<tr>
+						<td class="status_label">Birthday</td><td class="value_label">12.12.12</td>							
+					</tr>
+					<tr>
+						<td class="status_label">Gender</td><td class="value_label">male</td>							
+					</tr>
 				</table>
+		</div>
+		<div id="contact_information">
+			<div id="contact_information_header">
+				<h2>CONTACT INFORMATION</h2>					
 			</div>
-		<form action=/controller/CUploadController.php method=post enctype=multipart/form-data>
-            <input type="file" name="uploadfile">
-            <input type="hidden" name="upload" value="user">
-            <input type="submit" value="Upload">
-        </form>
+				<table id="contact_table">
+					<tr>
+						<td id="email_status_label">E-MAIL</td><td class="c_value_label">borozdin.aleksey@gmail.com</td>						
+					</tr>
+					<tr>
+						<td id="icq_status_label">ICQ</td><td class="c_value_label">333-333-333</td>							
+					</tr>
+					<tr>
+						<td id="skype_status_label">SKYPE</td><td class="c_value_label">AJIekseys</td>							
+					</tr>
+				</table>
 		</div>
 	</div>
 {% endblock %}  
