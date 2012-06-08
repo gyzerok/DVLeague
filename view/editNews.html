@@ -51,6 +51,9 @@
 			<p><label>Title</label></p>
 			<input name="title" value="{{ newsArray['title'] }}"  type="text" />
 
+            <input type="file" name="uploadfile">
+            <input type="hidden" name="upload" value="news">
+
 			<p><label>Shot news</label></p>
 			<textarea name="summary" value="">{{ newsArray['summary'] }}</textarea>
 
