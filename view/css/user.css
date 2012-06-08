@@ -29,6 +29,11 @@
 	clear:both;
 }
 
+#avatar img {
+    width: 140px;
+    height: 140px;
+}
+
 #activity {
 
 	width: 145px;

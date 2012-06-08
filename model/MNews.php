@@ -84,6 +84,40 @@ class MNews implements IMDomainObject
         return false;
     }
 
+    function SelectByUser($name)
+    {
+        $query = mysql_query("SELECT * FROM news
+                                INNER JOIN users ON news.news_newsmaker = users.user_id
+                                WHERE users.user_name = '$name'
+                                LIMIT 0, 3
+                            ");
+        if(mysql_errno() == 0)
+        {
+            $i = 0;
+            while($news = mysql_fetch_array($query))
+            {
+                $temp = array();
+
+                $temp['id'] = $news[news_id];
+                $temp['title'] = $news[news_title];
+                $temp['summary'] = $news[news_summary];
+                $temp['text'] = $news[news_text];
+                $temp['newsmaker'] = $news[user_name];
+                $temp['date'] = $news[news_date];
+                $temp['views'] = $news[news_look];
+
+                $mComments = new MComments();
+                $temp['comments'] = $mComments->CountCommentsByNews( $news[news_id] );
+
+                $this->news[$i] = $temp;
+                $i++;
+
+            }
+            return true;
+        }
+        return false;
+    }
+
     function CountNews()
     {
         $query = mysql_query("SELECT COUNT(*) FROM news");
@@ -111,6 +145,13 @@ class MNews implements IMDomainObject
     {
         $query = mysql_query("DELETE  FROM news WHERE news_id = '$id'");
         return mysql_error();
+    }
+
+    function SetPicture($path)
+    {
+        mysql_query("UPDATE news SET news_pic = '$path' WHERE news_id = '$this->id'");
+
+        return mysql_errno();
     }
 }
 ?>

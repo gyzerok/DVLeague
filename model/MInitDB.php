@@ -40,6 +40,7 @@ class MInitDB
         mysql_query("CREATE TABLE dvl_db.news (
                     news_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
                     news_title VARCHAR( 50 ) NOT NULL ,
+                    news_pic VARCHAR ( 100 ) NULL ,
                     news_summary VARCHAR( 100 ) NOT NULL ,
                     news_text TEXT NOT NULL ,
                     news_newsmaker INT NOT NULL ,
