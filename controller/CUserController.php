@@ -100,23 +100,40 @@ class CUserController
 
         MConnection::Close();
     }
-    static function CheckUser($userNameEditor, $userNameAuthor)
+    static function CheckUser($userNameEditor, $userNameAuthor, $type)
     {
         if( empty($userNameEditor) )
             return false;
 
-        if ( $userNameEditor == $userNameAuthor )
-            return true;
-
         MConnection::Open();
-
         $userEditor = new MUser();
         $userEditor->Select($userNameEditor);
 
         $userAuthor = new MUser();
         $userAuthor->Select($userNameAuthor);
-
         MConnection::Close();
+
+
+        if ( $userNameEditor == $userNameAuthor )
+        {
+            switch ($type)
+            {
+                case 'edit':
+                    if ( $userEditor->group->access['can_edit_his_news'] )
+                        return true;
+                    else
+                        return false;
+                    break;
+
+                case 'delete':
+                    if ( $userEditor->group->access['can_delete_his_news'] )
+                        return true;
+                    else
+                        return false;
+                    break;
+
+            }
+        }
 
         if ( $userEditor->group->access_level > $userAuthor->group->access_level )
             return true;

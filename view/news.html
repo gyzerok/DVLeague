@@ -26,12 +26,14 @@
                             <div id="date"><p>{{ item['date'] }}</p></div>
                             <div id="views"><p>{{ item['views'] }}</p></div>
                             <div id="comments"><p>{{ item['comments'] }}</p></div>
-                        {% if item[ 'access' ] %}
                             <div id="edit_news_pannel">
-                                <div id="editnews"><a title="Edit news" href="news.php?id={{ item['id'] }}&edit=1"></a></div>
-                                <div id="deletenews"><a title="Delete news" href="news.php?id={{ item['id'] }}&delete=1"></a></div>
+                                {% if item[ 'accessEdit' ] %}
+                                    <div id="editnews"><a title="Edit news" href="news.php?id={{ item['id'] }}&edit=1"></a></div>
+                                {% endif %}
+                                {% if item[ 'accessDelete' ] %}
+                                    <div id="deletenews"><a title="Delete news" href="news.php?id={{ item['id'] }}&delete=1"></a></div>
+                                {% endif %}
                             </div>
-                        {% endif %}
                         </div>
                     </div>
                 </div>

@@ -69,7 +69,7 @@ class MCommand implements IMDomainObject
         return false;
     }
 
-    function CountNews()
+   /* function CountNews()
     {
         $query = mysql_query("SELECT COUNT(*) FROM news");
         if(mysql_errno() == 0)
@@ -77,7 +77,7 @@ class MCommand implements IMDomainObject
             $query = mysql_fetch_assoc($query);
             return $query['COUNT(*)'];
         }
-    }
+    }*/
 
     function Insert()
     {
