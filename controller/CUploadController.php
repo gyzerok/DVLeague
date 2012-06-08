@@ -11,10 +11,6 @@ if (!empty($_POST))
             CUploadController::User($_SESSION['user_name']);
             CUploadController::Back();
             break;
-        case 'news':
-            CUploadController::News($_POST['id']);
-            CUploadController::Back();
-            break;
     }
 
 class CUploadController
@@ -36,21 +32,16 @@ class CUploadController
         }
     }
 
-    static function News($id)
+    static function News()
     {
         $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/news_pic/';
         $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
         if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
         {
-            MConnection::Open();
-
-            $news = new MNews();
-            $news->Select($id);
             $path = '/upload/news_pic/'.basename($_FILES['uploadfile']['name']);
-            $news->SetAvatar($path);
-
-            MConnection::Close();
+            return $path;
         }
+        return false;
     }
 
     static function Back()

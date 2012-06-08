@@ -6,6 +6,7 @@ class MNews implements IMDomainObject
 {
     var $id = NULL;
     var $title = NULL;
+    var $picture = NULL;
     var $summary = NULL;
     var $text = NULL;
     var $newsmaker = NULL;
@@ -13,10 +14,11 @@ class MNews implements IMDomainObject
     var $views = 0;
     var $comments = 0;
 
-    function Init($id, $title, $summary, $text, $newsmaker, $date)
+    function Init($id, $title, $picture, $summary, $text, $newsmaker, $date)
     {
         $this->id = $id;
         $this->title = mysql_real_escape_string($title);
+        $this->picture = $picture;
         $this->summary = mysql_real_escape_string($summary);
         $this->text = mysql_real_escape_string($text);
         $this->newsmaker = mysql_real_escape_string($newsmaker);
