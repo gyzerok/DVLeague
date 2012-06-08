@@ -102,13 +102,52 @@
 
 }
 
+#code {
+	margin-left: 65px;
+	margin-top: 3px;
+	width: 100px;
+
+}
+
+.label {
+
+}
+
+#submit {
+	border-radius: 6px;
+    height: 15px;
+    text-align: center;
+    cursor: pointer;
+    min-width:100px;
+    font:10px Helvetica,Arial,sans-serif;
+    -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
+    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
+    background-image: url(/view/images/registration-button.png);
+    border-style: solid;
+    border-color: #0190ff;
+    border-width: 1px 1px 0pt;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    text-shadow: 1px 1px 10px #000000;
+	margin-top: 6px;
+	margin-left: 100px;
+
+}
+
+#submit:active {
+	margin-top: 11px;	
+
+}
 
 .team_name {
 	margin-left: 25px;
 	margin-top: 25px;
 	color:#55b5ff;
     font:bold 18px Myriad Pro;
-
+	float:left;
 }
 
 #result {
