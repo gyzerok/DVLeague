@@ -53,6 +53,35 @@ class MComments implements IMDomainObject
         return false;
     }
 
+    function SelectByUser($name)
+    {
+        $query = mysql_query("SELECT * FROM comments
+                                INNER JOIN users ON users.user_id = comments.comments_newsmaker
+                                WHERE users.user_name = '$name'
+                             ");
+        if(mysql_errno() == 0)
+        {
+            $i = 0;
+            while($comment = mysql_fetch_array($query))
+            {
+                $temp = array();
+
+                $temp['id'] = $comment[comments_id];
+                $temp['newsID'] = $comment[comments_newsID];
+                $temp['text'] = $comment[comments_text];
+                $temp['newsmaker'] = $comment[user_name];
+                $temp['date'] = $comment[comments_date];
+
+                $this->comments[$i] = $temp;
+                $i++;
+
+            }
+
+            return true;
+        }
+        return false;
+    }
+
     function CountCommentsByNews($newsID)
     {
         $newsID = mysql_real_escape_string($newsID);

@@ -58,6 +58,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MComments.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/MComments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="108" column="24" selection-start="3473" selection-end="3473" vertical-scroll-proportion="3.1709845">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MUser.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/MUser.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CUploadController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CUploadController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/CUploadController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="18" selection-start="407" selection-end="407" vertical-scroll-proportion="0.34056762">
+            <state line="44" column="5" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,6 +128,7 @@
         <option value="$PROJECT_DIR$/view/css/user.css" />
         <option value="$PROJECT_DIR$/model/MNews.php" />
         <option value="$PROJECT_DIR$/controller/CUploadController.php" />
+        <option value="$PROJECT_DIR$/model/MComments.php" />
       </list>
     </option>
   </component>
@@ -390,11 +400,6 @@
         <state line="282" column="0" selection-start="7879" selection-end="7879" vertical-scroll-proportion="0.029010238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="41" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.0">
@@ -451,6 +456,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/CUploadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="5" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/MNews.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="24" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
@@ -458,9 +475,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/CUploadController.php">
+    <entry file="file://$PROJECT_DIR$/model/MComments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="18" selection-start="407" selection-end="407" vertical-scroll-proportion="0.34056762">
+        <state line="108" column="24" selection-start="3473" selection-end="3473" vertical-scroll-proportion="3.1709845">
           <folding />
         </state>
       </provider>

@@ -44,6 +44,18 @@ class CUploadController
         return false;
     }
 
+    static function Team()
+    {
+        $uploaddir = $_SERVER["DOCUMENT_ROOT"].'/upload/team_pic/';
+        $uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
+        if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
+        {
+            $path = '/upload/team_pic/'.basename($_FILES['uploadfile']['name']);
+            return $path;
+        }
+        return false;
+    }
+
     static function Back()
     {
         if (!empty($_SERVER['HTTP_REFERER']))
