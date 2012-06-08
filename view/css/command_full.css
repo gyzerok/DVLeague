@@ -121,7 +121,7 @@
     min-width:100px;
     font:10px Helvetica,Arial,sans-serif;
     -moz-box-shadow: 5px 5px 5px #000000; /*firefox*/
-    -webkit-box-shadow: 5px 5px 5px #0000000; /*Chrome and Safari*/
+    -webkit-box-shadow: 5px 5px 5px #000000; /*Chrome and Safari*/
     box-shadow: 1px 1px 10px #000000; /*for all other browsers*/
     background-image: url(/view/images/registration-button.png);
     border-style: solid;

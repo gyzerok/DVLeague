@@ -6,6 +6,7 @@ class MCommand implements IMDomainObject
     var $id = NULL;
     var $name = NULL;
     var $people = NULL;
+    var $code = NULL;
     var $win = 0;
     var $lose = 0;
     var $score = 0;
@@ -16,6 +17,7 @@ class MCommand implements IMDomainObject
     {
         $this->name = mysql_real_escape_string($name);
         $this->people = mysql_real_escape_string($people);
+        $this->code = '';
         $this->win = 0;
         $this->lose = 0;
         $this->score = 0;
@@ -87,11 +89,19 @@ class MCommand implements IMDomainObject
     }
     function Update()
     {
-        mysql_query("UPDATE news SET news_title = '$this->title', news_summary = '$this->summary', news_text = '$this->text',
-                    news_newsmaker = '$this->newsmaker', news_date = '$this->date', news_look = '$this->views'
-                     WHERE news_id = '$this->id'");
+        mysql_query("UPDATE commands SET command_name = '$this->name', command_people = '$this->people', command_win = '$this->win',
+                    command_lose = '$this->lose', command_score = '$this->score', command_date = '$this->data'
+                     WHERE command_id = '$this->id'");
         return mysql_error();
     }
+
+    function SetCode( $id, $code )
+    {
+        mysql_query("UPDATE commands SET command_code = '$code'
+                     WHERE command_id = '$id'");
+        return mysql_error();
+    }
+
     function Delete($id)
     {
         $query = mysql_query("DELETE  FROM news WHERE news_id = '$id'");
