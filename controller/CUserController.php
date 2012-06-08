@@ -168,7 +168,9 @@ class CUserController
         $user->mail = $post['mail'];
         $user->icq = $post['icq'];
         $user->skype = $post['skype'];
-        $user->avatar = CUploadController::User();
+        $path = CUploadController::User();
+        if ($path != false)
+            $user->avatar = $path;
         $user->Update();
 
         MConnection::Close();
