@@ -3,6 +3,8 @@ session_start();
 
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MConnection.php');
 include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MUser.php');
+include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MNews.php');
+include_once ($_SERVER["DOCUMENT_ROOT"].'/model/MComments.php');
 
 if (!empty($_POST))
     switch ($_POST['do'])
@@ -162,6 +164,23 @@ class CUserController
         MConnection::Close();
 
         return $user;
+    }
+
+    static function News($name)
+    {
+        MConnection::Open();
+        $news = MNews::SelectByUser($name);
+        MConnection::Close();
+        return $news;
+
+    }
+
+    static function Comments($name)
+    {
+        MConnection::Open();
+        $comments = MComments::SelectByUser($name);
+        MConnection::Close();
+        return $comments;
     }
 
     static function Back()

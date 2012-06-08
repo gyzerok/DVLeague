@@ -50,16 +50,17 @@ class CCommandController
         $success = $mCommand->Select($id);
         if ( $success )
         {
-            $newsArray = array();
-            $newsArray[ 'id' ] = $id;
-            $newsArray[ 'name' ] = $mCommand->name;
-            $newsArray[ 'people' ] = $mCommand->people;
-            $newsArray[ 'win' ] = $mCommand->win;
-            $newsArray[ 'lose' ] = $mCommand->lose;
-            $newsArray[ 'score' ] = $mCommand->score;
-            $newsArray[ 'data' ] = $mCommand->data;
+            $commandArray = array();
+            $commandArray[ 'id' ] = $id;
+            $commandArray[ 'name' ] = $mCommand->name;
+            $commandArray[ 'people' ] = explode(" ", $mCommand->people );
+            $commandArray[ 'code' ] = $mCommand->code;
+            $commandArray[ 'win' ] = $mCommand->win;
+            $commandArray[ 'lose' ] = $mCommand->lose;
+            $commandArray[ 'score' ] = $mCommand->score;
+            $commandArray[ 'data' ] = $mCommand->data;
 
-            return $newsArray;
+            return $commandArray;
         }
         else
             echo 'Command not found!';
@@ -71,7 +72,7 @@ class CCommandController
     static function SetCode( $post )
     {
         $mCommand = new MCommand();
-        $mCommand->SetCode($post['commandID'], $post['code']);
+        $mCommand->SetCode($post['commandSetID'], $post['code']);
 
 
         if ( empty( $success ) )
@@ -80,7 +81,19 @@ class CCommandController
             echo 'Error! ' . $success;
     }
 
-    static function DeleteNews( $id )
+    static function AddGamer( $post )
+    {
+        $mCommand = new MCommand();
+        $mCommand->Select($post['commandJoinID']);
+
+        if ( $mCommand->code == $post['code'] )
+        {
+            $mCommand->people = $mCommand->people.' '.$_SESSION['user_name'];
+            $mCommand->Update();
+        }
+    }
+
+    /*static function DeleteNews( $id )
     {
         $mNews = new MNews();
 
@@ -118,7 +131,7 @@ class CCommandController
         $success = $mComments->Insert();
         /*   else
       $success = $mComments->Update();*/
-
+/*
         if ( empty( $success ) )
             echo 'Ok';
         else
@@ -154,6 +167,6 @@ class CCommandController
         }
 
         return $pages;
-    }
+    }*/
 
 }

@@ -54,6 +54,25 @@ class MComments implements IMDomainObject
         return false;
     }
 
+    static function SelectByUser($name)
+    {
+        $query = mysql_query("SELECT * FROM comments
+                                INNER JOIN users ON users.user_id = comments.comments_newsmaker
+                                WHERE users.user_name = '$name'
+                                ORDER BY comments_date DESC
+                                LIMIT 0, 10
+                             ");
+
+        $temp = array();
+        $i = 0;
+        while($comments = mysql_fetch_array($query))
+        {
+            $temp[$i] = $comments;
+            $i++;
+        }
+        return $temp;
+    }
+
     function CountCommentsByNews($newsID)
     {
         $newsID = mysql_real_escape_string($newsID);
@@ -68,7 +87,7 @@ class MComments implements IMDomainObject
    function Insert()
     {
         mysql_query("INSERT INTO comments (comments_newsID, comments_text, comments_newsmaker, comments_date)
-                     VALUES ('$this->newsID', '$this->text', '$this->newsmaker', '$this->date')");
+                     VALUES ('$this->newsID', '$this->text', '$this->newsmaker', NOW())");
         return mysql_error();
     }
     function Update()

@@ -41,8 +41,11 @@ div.news {
 	width:90px;
 	height: 90px;
 	float:left;
-	outline: 1px solid gray;	
+}
 
+#news_image img {
+    width:90px;
+    height: 90px;
 }
 
 #news_content {

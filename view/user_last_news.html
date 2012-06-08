@@ -1,4 +1,4 @@
-{% extends "template.html" %}
+{% extends "user_template.html" %}
 
 {% block css_links %}
 	{{ parent() }}
@@ -6,18 +6,22 @@
 {% endblock %}
 
 {% block user_info %}
-	<div id="last_news">
-		<div id="last_news_header">
-			<h2>Last News</h2>
-		</div>
-		<div class="news">
-			<div id="news_image">
-			
-			</div>
-			<div id="news_content">
-				<h2><a href="">News_title</a></h2>
-				<p>News_text News_text News_text News_text News_text News_textNews_text News_text News_text News_text</p>
-			</div>
-		</div>
-	</div>
+    <div id="last_news">
+        <div id="last_news_header">
+            <h2>Last News</h2>
+        </div>
+        {% for item in news %}
+            <div class="news">
+                <div id="news_image">
+                    <img src="{{ item['news_pic'] }}" alt="">
+                </div>
+                <div id="news_content">
+                    <h2><a href="news.php?id={{ item['news_id'] }}&view=1">{{ item['news_title'] }}</a></h2>
+                    {% autoescape false %}
+                        {{ item['news_summary'] }}
+                    {% endautoescape %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}  

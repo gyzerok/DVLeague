@@ -13,6 +13,7 @@ class MNews implements IMDomainObject
     var $date = NULL;
     var $views = 0;
     var $comments = 0;
+    var $news;
 
     function Init($id, $title, $picture, $summary, $text, $newsmaker, $date)
     {
@@ -88,38 +89,23 @@ class MNews implements IMDomainObject
         return false;
     }
 
-    function SelectByUser($name)
+    static function SelectByUser($name)
     {
         $query = mysql_query("SELECT * FROM news
                                 INNER JOIN users ON news.news_newsmaker = users.user_id
                                 WHERE users.user_name = '$name'
+                                ORDER BY news.news_date DESC
                                 LIMIT 0, 3
                             ");
-        if(mysql_errno() == 0)
+
+        $temp = array();
+        $i = 0;
+        while($news = mysql_fetch_array($query))
         {
-            $i = 0;
-            while($news = mysql_fetch_array($query))
-            {
-                $temp = array();
-
-                $temp['id'] = $news[news_id];
-                $temp['title'] = $news[news_title];
-                $temp['summary'] = $news[news_summary];
-                $temp['text'] = $news[news_text];
-                $temp['newsmaker'] = $news[user_name];
-                $temp['date'] = $news[news_date];
-                $temp['views'] = $news[news_look];
-
-                $mComments = new MComments();
-                $temp['comments'] = $mComments->CountCommentsByNews( $news[news_id] );
-
-                $this->news[$i] = $temp;
-                $i++;
-
-            }
-            return true;
+            $temp[$i] = $news;
+            $i++;
         }
-        return false;
+        return $temp;
     }
 
     function CountNews()

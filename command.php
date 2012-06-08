@@ -18,7 +18,18 @@ if ( empty( $_POST ) )
     if ( $_GET[ 'view' ] == 1 )//href='/news.php?id={id}&view=1&'
     {
         $commandArray = CCommandController::ReadCommandID( $_GET[ 'id' ] );
-        echo $twig->render('command_full.html', array('commandArray' => $commandArray, 'countUsers' => count($commandArray['people']), 'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
+
+        $notJoin = true;
+        for($i = 1; $i < count($commandArray['people']); $i++ )
+        {
+            if ( $commandArray['people'][i] == $_SESSION[ 'user_name' ] )
+            {
+                $notJoin = false;
+                break;
+            }
+        }
+
+        echo $twig->render('command_full.html', array('commandArray' => $commandArray, 'countUsers' => count($commandArray['people']), 'notJoin' => $notJoin,'authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'] ));
     }
     else
     {
@@ -43,9 +54,13 @@ else
     else
     {
         if ( empty( $_POST[ 'commandSetID' ] ) )
-            CCommandController::SetCode($_POST);
+        {
+            CCommandController::AddGamer($_POST);
+        }
         else
+        {
             CCommandController::SetCode($_POST);
+        }
     }
 
 

@@ -1,4 +1,4 @@
-{% extends "template.html" %}
+{% extends "user_template.html" %}
 
 {% block css_links %}
 	{{ parent() }}
@@ -8,10 +8,14 @@
 {% block user_info %}
 	<div id="last_comments">
 		<div id="last_comments_header">
-			<h2>Last News</h2>
+			<h2>Last Comments</h2>
 		</div>
-		<div class="comment">
-			<p>Comments text Comments text Comments text Comments text  Comments text Comments text Comments text Comments text</p>
-		</div>
+        {% for item in comments %}
+            <div class="comment">
+                {% autoescape false %}
+                    {{ item['comments_text'] }}
+                {% endautoescape %}
+            </div>
+        {% endfor %}
 	</div>
 {% endblock %}  
