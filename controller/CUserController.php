@@ -105,13 +105,11 @@ class CUserController
         if( empty($userNameEditor) )
             return false;
 
-        MConnection::Open();
         $userEditor = new MUser();
         $userEditor->Select($userNameEditor);
 
         $userAuthor = new MUser();
         $userAuthor->Select($userNameAuthor);
-        MConnection::Close();
 
 
         if ( $userNameEditor == $userNameAuthor )
