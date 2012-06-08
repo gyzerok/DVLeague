@@ -11,5 +11,15 @@ $twig = new Twig_Environment($loader, array('cache' => 'twig_cache',));
 $user = new MUser();
 $user = CUserController::Show($_GET['name']);
 
-echo $twig->render('user.html', array('authed' => CUserController::Logged(), 'user_name' => $_SESSION['user_name'], 'user' => $user));
+switch ($_GET['type'])
+{
+    case 'posts':
+        echo $twig->render('user_last_news.html', array('authed' => CUserController::Logged(), 'user' => $user, 'news' => CUserController::News($_GET['name'])));
+        break;
+    case 'comments':
+        break;
+    default:
+        echo $twig->render('user.html', array('authed' => CUserController::Logged(), 'user' => $user));
+        break;
+}
 ?>
