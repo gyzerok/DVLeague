@@ -19,7 +19,8 @@ class MNews implements IMDomainObject
     {
         $this->id = $id;
         $this->title = mysql_real_escape_string($title);
-        $this->picture = $picture;
+        if ($picture != false)
+            $this->picture = $picture;
         $this->summary = mysql_real_escape_string($summary);
         $this->text = mysql_real_escape_string($text);
         $this->newsmaker = mysql_real_escape_string($newsmaker);
@@ -127,7 +128,7 @@ class MNews implements IMDomainObject
     function Update()
     {
         mysql_query("UPDATE news SET news_title = '$this->title', news_summary = '$this->summary', news_text = '$this->text',
-                    news_newsmaker = '$this->newsmaker', news_date = '$this->date', news_look = '$this->views'
+                    news_newsmaker = '$this->newsmaker', news_look = '$this->views'
                      WHERE news_id = '$this->id'");
         return mysql_error();
     }
